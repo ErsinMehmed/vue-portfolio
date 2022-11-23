@@ -1,0 +1,3472 @@
+<!DOCTYPE html>ve
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="siteLogo.png" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://kit.fontawesome.com/d4b9f98a5c.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Ersin Hyusein</title>
+  </head>
+
+  <body class="scroll-smooth">
+    <div
+      id="app"
+      class="bg-gradient-to-r from-[#007ced] to-[#007bea] w-full h-full lg:px-14 lg:py-10 xl:px-16 xl:py-12 2xl:px-[70px] 2xl:py-14"
+    >
+      <div
+        class="w-full h-[5px] rounded-r-full fixed z-20 bg-red-300 top-0 left-0"
+        :style="{ width: progress }"
+      ></div>
+      <div
+        class="fixed z-20 right-4 bottom-4 w-10 h-10 hidden lg:flex bg-white border border-slate-200 rounded-full justify-center items-center cursor-pointer group hover:bg-slate-100 transition-all"
+        style="
+          box-shadow: rgb(0 0 0 / 25%) 0px 14px 28px,
+            rgb(0 0 0 / 22%) 0px 10px 10px;
+        "
+        v-show="scY > 400"
+        @click="goTop"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2.2"
+          stroke="currentColor"
+          class="w-7 h-7 rounded-full -mt-[1.5px] rext-slate-700 group-hover:text-slate-600 transition-all"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 15.75l7.5-7.5 7.5 7.5"
+          />
+        </svg>
+      </div>
+      <div
+        class="fixed h-64 w-64 bg-[#2990ef] border-[5px] border-[#65aff2] rotate-[60deg] top-0 -ml-64 -mt-24 rounded-2xl"
+      ></div>
+      <div
+        class="fixed h-64 w-64 bg-[#2990ef] border-[5px] border-[#65aff2] rotate-[60deg] top-0 lg:ml-[50rem] xl:ml-[65.5rem] -mt-[16.5rem] rounded-2xl"
+      ></div>
+      <div
+        class="hidden lg:block fixed h-64 w-64 bg-[#2990ef] border-[5px] border-[#65aff2] rotate-[60deg] bottom-0 right-0 rounded-2xl -mb-[13rem] -mr-[3.2rem]"
+      ></div>
+      <div
+        class="lg:rounded-[3rem] bg-white w-full px-4 sm:px-8 relative lg:px-0"
+      >
+        <nav
+          class="bg-white border-gray-200 lg:px-16 py-6 lg:py-10 lg:rounded-[3rem]"
+        >
+          <div class="flex flex-wrap items-center justify-between w-full">
+            <div class="flex items-center">
+              <div
+                class="w-9 h-9 lg:w-12 lg:h-12 bg-blue-500 flex justify-center items-center rounded-full"
+              >
+                <div
+                  class="font-bold text-white flex justify-center items-center text-xl lg:text-3xl lg:-mt-[1px]"
+                >
+                  E
+                </div>
+              </div>
+              <div class="ml-2 text-xl lg:text-3xl font-bold">
+                Ersin<span class="ml-1 font-medium">Hyusein</span>
+              </div>
+            </div>
+            <div class="flex space-x-0.5">
+              <div class="py-2 px-1">
+                <img
+                  class="w-8 h-8 block lg:hidden -mt-[1px] object-cover rounded-full border border-slate-200"
+                  src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Bulgaria.svg"
+                  alt=""
+                />
+              </div>
+              <button
+                data-collapse-toggle="navbar-default"
+                type="button"
+                class="inline-flex items-center py-1.5 pl-1.5 ml-4 text-sm text-gray-500 rounded-lg lg:hidden focus:outline-none focus:ring-0"
+                aria-controls="navbar-default"
+                aria-expanded="false"
+              >
+                <span class="sr-only">Open main menu</span>
+                <svg
+                  class="w-8 h-8"
+                  aria-hidden="true"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <div
+              class="hidden mt-2 w-full lg:block lg:w-auto"
+              id="navbar-default"
+            >
+              <ul
+                class="flex flex-col rounded-md p-4 lg:mt-4 border border-gray-100 bg-slate-100 lg:flex-row lg:space-x-3 xl:space-x-4 2xl:space-x-5 lg:mt-0 lg:font-medium lg:border-0 lg:bg-white"
+              >
+                <li>
+                  <a
+                    href="#contact"
+                    class="block py-2 pl-3 pr-4 text-[19px] flex items-center rounded text-slate-500 hover:bg-slate-200 lg:hover:bg-transparent lg:border-0 lg:hover:text-slate-700 transition-all lg:p-0"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.6"
+                      stroke="currentColor"
+                      class="w-5 h-5 mr-2 lg:hidden"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                      />
+                    </svg>
+                    Contact
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#skills"
+                    class="block py-2 pl-3 pr-4 text-[19px] flex items-center rounded text-gray-500 hover:bg-slate-200 lg:hover:bg-transparent lg:border-0 lg:hover:text-slate-700 transition-all lg:p-0"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.6"
+                      stroke="currentColor"
+                      class="w-5 h-5 mr-2 lg:hidden"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                    Skills
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#education"
+                    class="block py-2 pl-3 pr-4 text-[19px] flex items-center rounded text-slate-500 hover:bg-slate-200 lg:hover:bg-transparent lg:border-0 lg:hover:text-slate-700 transition-all lg:p-0"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-5 h-5 mr-2 lg:hidden"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"
+                      />
+                    </svg>
+                    Education
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#experience"
+                    class="block py-2 pl-3 pr-4 text-[19px] text-slate-500 flex items-center rounded hover:bg-slate-200 lg:hover:bg-transparent lg:border-0 lg:hover:text-slate-700 transition-all lg:p-0"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-5 h-5 mr-2 lg:hidden"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z"
+                      />
+                    </svg>
+                    Experience
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#certifications"
+                    class="block py-2 pl-3 pr-4 text-[19px] flex items-center text-slate-500 rounded hover:bg-slate-200 lg:hover:bg-transparent lg:border-0 lg:hover:text-slate-700 transition-all lg:p-0"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-5 h-5 mr-2 lg:hidden"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
+                      />
+                    </svg>
+                    Certifications
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#projects"
+                    class="block py-2 pl-3 pr-4 text-[19px] flex items-center text-slate-500 hover:bg-slate-200 lg:hover:bg-transparent lg:border-0 lg:hover:text-slate-700 transition-all lg:p-0"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-5 h-5 mr-2 lg:hidden"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"
+                      />
+                    </svg>
+
+                    Projects
+                  </a>
+                </li>
+                <li class="hidden lg:block">
+                  <img
+                    class="-mt-0.5 w-8 h-8 object-cover rounded-full border border-slate-200 cursor-pointer"
+                    src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Bulgaria.svg"
+                    alt=""
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!--Main saction with photo-->
+        <section>
+          <div
+            class="w-full md:flex justify-center items-center md:py-8 lg:pb-14 lg:pt-12"
+          >
+            <div
+              style="
+                box-shadow: rgb(0 0 0 / 25%) 0px 14px 28px,
+                  rgb(0 0 0 / 22%) 0px 10px 10px;
+              "
+              class="mx-auto md:mx-0 w-64 h-64 lg:w-80 lg:h-80 bg-white p-2 lg:p-3 rounded-full border border-slate-200 lg:hover:scale-105 transition-all duration-300"
+            >
+              <img
+                class="h-full w-full border border-slate-200 rounded-full"
+                src="profile.jpg"
+                alt="Profile image"
+              />
+            </div>
+            <div
+              class="w-full md:w-[29rem] text-slate-600 md:ml-6 lg:ml-14 shadow-2xl md:shadow-none rounded-lg md:rounded-none py-5 md:py-0 mt-4 md:mt-0 border md:border-none border-slate-100"
+            >
+              <div
+                class="text-slate-500 text-lg w-full mx-auto mb-1 lg:mb-0 md:mt-0"
+              >
+                <div class="flex h-5 justify-center md:justify-start">
+                  <div id="possition"></div>
+                  <div id="cursor"></div>
+                </div>
+              </div>
+              <div
+                class="text-3xl text-center md:text-left md:text-4xl lg:text-5xl font-bold mb-2 lg:mb-4 text-slate-800"
+              >
+                Ersin Hyusein
+              </div>
+              <div
+                class="text-justify indent-4 leading-[19px] text-base tracking-wide px-6 sm:px-12 md:px-0"
+              >
+                Hi there! I'm Erso, programmer and sports coach. I have been
+                programming for 3 years, both at university and in my spare
+                time. I have knowledge of back-end and front-end programming. My
+                greatest strength is web programming. On this website, you can
+                find a little more information about me and the projects I have
+                worked on.
+              </div>
+              <div
+                id="contact"
+                class="w-full flex sm:justify-end lg:justify-start px-6 sm:px-12 md:px-0"
+              >
+                <button
+                  class="flex rounded overflow-hidden mt-4 active:scale-90 transition-all w-full"
+                >
+                  <div
+                    onclick="window.open('Ersin Hyusein CV.pdf')"
+                    class="flex justify-center w-full md:w-auto items-center text-white text-sm shadow bg-blue-600 transition-all hover:bg-blue-700 text-sm py-[9px] px-4 font-sans tracking-wide font-bold"
+                  >
+                    Download CV
+                  </div>
+                  <div
+                    class="bg-blue-500 shadow py-[9px] px-3 flex justify-center items-center rounded-r"
+                  >
+                    <div>
+                      <svg
+                        class="text-white w-5 h-5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M9 13.5l3 3m0 0l3-3m-3 3v-6m1.06-4.19l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--Personal information-->
+        <section data-aos="fade-up" data-aos-duration="800">
+          <div class="text-center text-4xl font-bold text-slate-700 pt-6 pb-4">
+            Basic Information
+          </div>
+          <div
+            class="sm:flex justify-center flex-wrap md:px-16 py-4 sm:gap-3 lg:gap-4"
+          >
+            <!--First card (Age)-->
+            <div
+              id="skills"
+              class="relative bg-white p-[18px] lg:hover:scale-110 transition-all duration-500 cursor-pointer lg:hover:bg-pink-50 rounded-3xl w-full sm:my-0 sm:w-[252px] md:w-52 mb-8 sm:my-4 shadow-xl border border-slate-100"
+            >
+              <div
+                class="text-white flex items-center absolute rounded-full p-2.5 shadow-xl bg-pink-400 left-4 -top-6 shadow-xl border border-pink-300"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.6"
+                  stroke="currentColor"
+                  class="w-7 h-7"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                  />
+                </svg>
+              </div>
+              <div class="mt-2">
+                <p class="text-xl font-semibold my-1">Age</p>
+                <div class="flex space-x-1 text-gray-400 text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"
+                    />
+                  </svg>
+                  <p>23</p>
+                </div>
+              </div>
+            </div>
+            <!--Second card (Email)-->
+            <div
+              class="relative bg-white p-[18px] lg:hover:scale-110 transition-all duration-500 cursor-pointer lg:hover:bg-blue-50 rounded-3xl w-full sm:w-[252px] md:w-[13.5rem] my-8 sm:my-4 shadow-xl border border-slate-100"
+            >
+              <div
+                class="text-white flex items-center absolute rounded-full p-2.5 shadow-xl bg-blue-400 left-4 -top-6 shadow-xl border border-blue-300"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.6"
+                  stroke="currentColor"
+                  class="h-7 w-7"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                  />
+                </svg>
+              </div>
+              <div class="mt-2">
+                <p class="text-xl font-semibold my-1">Email</p>
+                <div class="flex space-x-1 text-gray-400 text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.6"
+                    stroke="currentColor"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21.75 9v.906a2.25 2.25 0 01-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 001.183 1.981l6.478 3.488m8.839 2.51l-4.66-2.51m0 0l-1.023-.55a2.25 2.25 0 00-2.134 0l-1.022.55m0 0l-4.661 2.51m16.5 1.615a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V8.844a2.25 2.25 0 011.183-1.98l7.5-4.04a2.25 2.25 0 012.134 0l7.5 4.04a2.25 2.25 0 011.183 1.98V19.5z"
+                    />
+                  </svg>
+                  <p>ersin99mehmed@abv.bg</p>
+                </div>
+              </div>
+            </div>
+            <!--Third card (Phone)-->
+            <div
+              class="relative bg-white p-[18px] lg:hover:scale-110 transition-all duration-500 cursor-pointer lg:hover:bg-green-50 rounded-3xl w-full sm:w-[252px] md:w-52 my-8 sm:my-4 shadow-xl border border-slate-100"
+            >
+              <div
+                class="text-white flex items-center absolute rounded-full p-2.5 shadow-xl bg-green-400 left-4 -top-6 shadow-xl border border-green-300"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.6"
+                  stroke="currentColor"
+                  class="w-7 h-7"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                  />
+                </svg>
+              </div>
+              <div class="mt-2">
+                <p class="text-xl font-semibold my-1">Phone</p>
+                <div class="flex space-x-1 text-gray-400 text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.6"
+                    stroke="currentColor"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
+                    />
+                  </svg>
+                  <p>+359 899 626273</p>
+                </div>
+              </div>
+            </div>
+
+            <!--Fourth card (Address)-->
+            <div
+              class="relative bg-white p-[18px] lg:hover:scale-110 transition-all duration-500 cursor-pointer lg:hover:bg-yellow-50 rounded-3xl w-full sm:w-[252px] md:w-52 my-8 sm:my-4 shadow-xl border border-slate-100"
+            >
+              <div
+                class="text-white flex items-center absolute rounded-full p-2.5 shadow-xl bg-yellow-400 left-4 -top-6 shadow-xl border border-yellow-300"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.6"
+                  stroke="currentColor"
+                  class="w-7 h-7"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819"
+                  />
+                </svg>
+              </div>
+              <div class="mt-2">
+                <p class="text-xl font-semibold my-1">Address</p>
+                <div class="flex space-x-1 text-gray-400 text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.6"
+                    stroke="currentColor"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                    />
+                  </svg>
+                  <p>Varna, Bulgaria</p>
+                </div>
+              </div>
+            </div>
+            <!--Fifth card (Language)-->
+            <div
+              class="relative bg-white p-[18px] lg:hover:scale-110 transition-all duration-500 cursor-pointer lg:hover:bg-red-50 rounded-3xl w-full sm:w-[252px] md:w-52 sm:my-4 shadow-xl border border-slate-100"
+            >
+              <div
+                class="text-white flex items-center absolute rounded-full p-2.5 shadow-xl bg-red-400 left-4 -top-6 shadow-xl border border-red-300"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-7 h-7"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802"
+                  />
+                </svg>
+              </div>
+              <div class="mt-2">
+                <p class="text-xl font-semibold my-1">Language</p>
+                <div class="flex space-x-1 text-gray-400 text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.6"
+                    stroke="currentColor"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z"
+                    />
+                  </svg>
+
+                  <p>Bulgarian, English</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--Skills Box-->
+        <section class="skillsBox" data-aos="fade-up" data-aos-duration="800">
+          <div
+            class="text-center text-4xl font-bold text-slate-700 mb-5 md:mb-0 mt-8"
+          >
+            Professional Skills
+          </div>
+          <div class="text-center text-sm text-gray-400 mb-6 hidden md:block">
+            Hover over name of the programming language, technology, library or
+            software to get more information
+          </div>
+          <div
+            class="flex justify-between bg-white shadow-2xl border border-slate-100 lg:mx-24 xl:mx-32 p-4 space-x-5 lg:space-x-6 rounded-md"
+          >
+            <div class="w-1/2">
+              <div>
+                <div class="flex justify-between items-center mb-1 md:mb-1.5">
+                  <div
+                    class="text-lg text-blue-500 font-semibold cursor-pointer hover:text-blue-400 transition-all"
+                    data-popover-target="popover-right"
+                    data-popover-placement="right"
+                  >
+                    HTML
+                  </div>
+                  <div class="text-lg text-blue-500 font-semibold">
+                    <span class="percent mr-[1px]">100</span>
+                    <span>%</span>
+                  </div>
+                </div>
+                <div
+                  data-popover
+                  id="popover-right"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                >
+                  <div class="px-3 py-2">
+                    <p>
+                      I am fluent in HTML. I have used HTML in many projects.
+                    </p>
+                  </div>
+                  <div data-popper-arrow></div>
+                </div>
+                <div>
+                  <div class="w-full bg-blue-200 h-2.5 mb-4">
+                    <div
+                      class="bg-blue-500 h-2.5 rounded-r-full inner"
+                      style="width: 100%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-1 md:mb-1.5">
+                  <div
+                    class="text-lg text-blue-500 font-semibold cursor-pointer hover:text-blue-400 transition-all"
+                    data-popover-target="popover-right-1"
+                    data-popover-placement="right"
+                  >
+                    CSS
+                  </div>
+                  <div class="text-lg text-blue-500 font-semibold">
+                    <span class="percent mr-[1px]">90</span>
+                    <span>%</span>
+                  </div>
+                </div>
+                <div
+                  data-popover
+                  id="popover-right-1"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                >
+                  <div class="px-3 py-2">
+                    <p>
+                      I am fluent in CSS. I have used CSS in many projects. I am
+                      good at using grid and flexbox for positioning and I know
+                      how to animate elements
+                    </p>
+                  </div>
+                  <div data-popper-arrow></div>
+                </div>
+                <div>
+                  <div class="w-full bg-blue-200 h-2.5 mb-4">
+                    <div
+                      class="bg-blue-500 h-2.5 rounded-r-full inner"
+                      style="width: 90%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-1 md:mb-1.5">
+                  <div
+                    class="text-lg text-blue-500 font-semibold cursor-pointer hover:text-blue-400 transition-all"
+                    data-popover-target="popover-right-2"
+                    data-popover-placement="right"
+                  >
+                    Tailwind
+                  </div>
+                  <div class="text-lg text-blue-500 font-semibold">
+                    <span class="percent mr-[1px]">90</span>
+                    <span>%</span>
+                  </div>
+                </div>
+                <div
+                  data-popover
+                  id="popover-right-2"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                >
+                  <div class="px-3 py-2">
+                    <p>
+                      I am fluent in Tailwind. I have used Tailwind in many
+                      projects.
+                    </p>
+                  </div>
+                  <div data-popper-arrow></div>
+                </div>
+                <div>
+                  <div class="w-full bg-blue-200 h-2.5 mb-4">
+                    <div
+                      class="bg-blue-500 h-2.5 rounded-r-full inner"
+                      style="width: 90%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-1 md:mb-1.5">
+                  <div
+                    class="text-lg text-blue-500 font-semibold cursor-pointer hover:text-blue-400 transition-all"
+                    data-popover-target="popover-right-3"
+                    data-popover-placement="right"
+                  >
+                    Bootstrap
+                  </div>
+                  <div class="text-lg text-blue-500 font-semibold">
+                    <span class="percent mr-[1px]">60</span>
+                    <span>%</span>
+                  </div>
+                </div>
+                <div
+                  data-popover
+                  id="popover-right-3"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                >
+                  <div class="px-3 py-2">
+                    <p>I am currently learning Bootstrap.</p>
+                  </div>
+                  <div data-popper-arrow></div>
+                </div>
+                <div>
+                  <div class="w-full bg-blue-200 h-2.5 mb-4">
+                    <div
+                      class="bg-blue-500 h-2.5 rounded-r-full inner"
+                      style="width: 60%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-1 md:mb-1.5">
+                  <div
+                    class="text-lg text-blue-500 font-semibold cursor-pointer hover:text-blue-400 transition-all"
+                    data-popover-target="popover-right-4"
+                    data-popover-placement="right"
+                  >
+                    JavaScript
+                  </div>
+                  <div class="text-lg text-blue-500 font-semibold">
+                    <span class="percent mr-[1px]">70</span>
+                    <span>%</span>
+                  </div>
+                </div>
+                <div
+                  data-popover
+                  id="popover-right-4"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                >
+                  <div class="px-3 py-2">
+                    <p>
+                      I can use JavaScript well. I have used JavaScript in many
+                      projects. I'm using JS for animations, form validations,
+                      showing and hiding elements and more.
+                    </p>
+                  </div>
+                  <div data-popper-arrow></div>
+                </div>
+                <div>
+                  <div class="w-full bg-blue-200 h-2.5 mb-4">
+                    <div
+                      class="bg-blue-500 h-2.5 rounded-r-full inner"
+                      style="width: 70%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-1 md:mb-1.5">
+                  <div
+                    class="text-lg text-blue-500 font-semibold cursor-pointer hover:text-blue-400 transition-all"
+                    data-popover-target="popover-right-5"
+                    data-popover-placement="right"
+                  >
+                    Vue.js
+                  </div>
+                  <div class="text-lg text-blue-500 font-semibold">
+                    <span class="percent mr-[1px]">50</span>
+                    <span>%</span>
+                  </div>
+                </div>
+                <div
+                  data-popover
+                  id="popover-right-5"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                >
+                  <div class="px-3 py-2">
+                    <p>I am currently learning Vue.js.</p>
+                  </div>
+                  <div data-popper-arrow></div>
+                </div>
+                <div>
+                  <div class="w-full bg-blue-200 h-2.5 mb-4">
+                    <div
+                      class="bg-blue-500 h-2.5 rounded-r-full inner"
+                      style="width: 50%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-1 md:mb-1.5">
+                  <div
+                    class="text-lg text-blue-500 font-semibold cursor-pointer hover:text-blue-400 transition-all"
+                    data-popover-target="popover-right-6"
+                    data-popover-placement="right"
+                  >
+                    jQuery
+                  </div>
+                  <div class="text-lg text-blue-500 font-semibold">
+                    <span class="percent mr-[1px]">70</span>
+                    <span>%</span>
+                  </div>
+                </div>
+                <div
+                  data-popover
+                  id="popover-right-6"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                >
+                  <div class="px-3 py-2">
+                    <p>
+                      I can use jQuery well. I have used jQuery in many
+                      projects. I'm using the library to change elements in real
+                      time without the need to press a button.
+                    </p>
+                  </div>
+                  <div data-popper-arrow></div>
+                </div>
+                <div>
+                  <div class="w-full bg-blue-200 h-2.5 mb-4">
+                    <div
+                      class="bg-blue-500 h-2.5 rounded-r-full inner"
+                      style="width: 70%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-1 md:mb-1.5">
+                  <div
+                    class="text-lg text-blue-500 font-semibold cursor-pointer hover:text-blue-400 transition-all"
+                    data-popover-target="popover-right-7"
+                    data-popover-placement="right"
+                  >
+                    AJAX
+                  </div>
+                  <div class="text-lg text-blue-500 font-semibold">
+                    <span class="percent mr-[1px]">50</span>
+                    <span>%</span>
+                  </div>
+                </div>
+                <div
+                  data-popover
+                  id="popover-right-7"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                >
+                  <div class="px-3 py-2">
+                    <p>
+                      I've been using AJAX for a while now. I have used AJAX in
+                      one projects. I am using AJAX to dynamically retrieve data
+                      from the database.
+                    </p>
+                  </div>
+                  <div data-popper-arrow></div>
+                </div>
+                <div>
+                  <div class="w-full bg-blue-200 h-2.5 mb-4">
+                    <div
+                      class="bg-blue-500 h-2.5 rounded-r-full inner"
+                      style="width: 50%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-1 md:mb-1.5">
+                  <div
+                    class="text-lg text-blue-500 font-semibold cursor-pointer hover:text-blue-400 transition-all"
+                    data-popover-target="popover-right-8"
+                    data-popover-placement="right"
+                  >
+                    Qlick Sense
+                  </div>
+                  <div class="text-lg text-blue-500 font-semibold">
+                    <span class="percent mr-[1px]">80</span>
+                    <span>%</span>
+                  </div>
+                </div>
+                <div
+                  data-popover
+                  id="popover-right-8"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                >
+                  <div class="px-3 py-2">
+                    <p>---</p>
+                  </div>
+                  <div data-popper-arrow></div>
+                </div>
+                <div>
+                  <div class="w-full bg-blue-200 h-2.5 mb-4">
+                    <div
+                      class="bg-blue-500 h-2.5 rounded-r-full inner"
+                      style="width: 80%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-1 md:mb-1.5">
+                  <div
+                    class="text-lg text-blue-500 font-semibold cursor-pointer hover:text-blue-400 transition-all"
+                    data-popover-target="popover-right-9"
+                    data-popover-placement="right"
+                  >
+                    Dynamics 365
+                  </div>
+                  <div class="text-lg text-blue-500 font-semibold">
+                    <span class="percent mr-[1px]">60</span>
+                    <span>%</span>
+                  </div>
+                </div>
+                <div
+                  data-popover
+                  id="popover-right-9"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                >
+                  <div class="px-3 py-2">
+                    <p>---</p>
+                  </div>
+                  <div data-popper-arrow></div>
+                </div>
+                <div>
+                  <div class="w-full bg-blue-200 h-2.5 mb-4">
+                    <div
+                      class="bg-blue-500 h-2.5 rounded-r-full inner"
+                      style="width: 60%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-1/2">
+              <div>
+                <div class="flex justify-between items-center mb-1 md:mb-1.5">
+                  <div
+                    class="text-lg text-blue-500 font-semibold cursor-pointer hover:text-blue-400 transition-all"
+                    data-popover-target="popover-right-10"
+                    data-popover-placement="right"
+                  >
+                    .NET
+                  </div>
+                  <div class="text-lg text-blue-500 font-semibold">
+                    <span class="percent mr-[1px]">60</span>
+                    <span>%</span>
+                  </div>
+                </div>
+                <div
+                  data-popover
+                  id="popover-right-10"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                >
+                  <div class="px-3 py-2">
+                    <p>I am fluent in .NET. My level is advanced.</p>
+                  </div>
+                  <div data-popper-arrow></div>
+                </div>
+                <div>
+                  <div class="w-full bg-blue-200 h-2.5 mb-4">
+                    <div
+                      class="bg-blue-500 h-2.5 rounded-r-full inner"
+                      style="width: 60%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-1 md:mb-1.5">
+                  <div
+                    class="text-lg text-blue-500 font-semibold cursor-pointer hover:text-blue-400 transition-all"
+                    data-popover-target="popover-right-11"
+                    data-popover-placement="right"
+                  >
+                    ASP.NET
+                  </div>
+                  <div class="text-lg text-blue-500 font-semibold">
+                    <span class="percent mr-[1px]">60</span>
+                    <span>%</span>
+                  </div>
+                </div>
+                <div
+                  data-popover
+                  id="popover-right-11"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                >
+                  <div class="px-3 py-2">
+                    <p>I am fluent in ASP.NET. My level is advanced.</p>
+                  </div>
+                  <div data-popper-arrow></div>
+                </div>
+                <div>
+                  <div class="w-full bg-blue-200 h-2.5 mb-4">
+                    <div
+                      class="bg-blue-500 h-2.5 rounded-r-full inner"
+                      style="width: 60%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-1 md:mb-1.5">
+                  <div
+                    class="text-lg text-blue-500 font-semibold cursor-pointer hover:text-blue-400 transition-all"
+                    data-popover-target="popover-right-12"
+                    data-popover-placement="right"
+                  >
+                    PHP
+                  </div>
+                  <div class="text-lg text-blue-500 font-semibold">
+                    <span class="percent mr-[1px]">80</span>
+                    <span>%</span>
+                  </div>
+                </div>
+                <div
+                  data-popover
+                  id="popover-right-12"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                >
+                  <div class="px-3 py-2">
+                    <p>
+                      I am fluent in PHP. I have used PHP for data retrieval,
+                      CRUD operations, functionalities. session and etc.
+                    </p>
+                  </div>
+                  <div data-popper-arrow></div>
+                </div>
+                <div>
+                  <div class="w-full bg-blue-200 h-2.5 mb-4">
+                    <div
+                      class="bg-blue-500 h-2.5 rounded-r-full inner"
+                      style="width: 80%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-1 md:mb-1.5">
+                  <div
+                    class="text-lg text-blue-500 font-semibold cursor-pointer hover:text-blue-400 transition-all"
+                    data-popover-target="popover-right-13"
+                    data-popover-placement="right"
+                  >
+                    Laravel
+                  </div>
+                  <div class="text-lg text-blue-500 font-semibold">
+                    <span class="percent mr-[1px]">40</span>
+                    <span>%</span>
+                  </div>
+                </div>
+                <div
+                  data-popover
+                  id="popover-right-13"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                >
+                  <div class="px-3 py-2">
+                    <p>I am currently learning Laravel.</p>
+                  </div>
+                  <div data-popper-arrow></div>
+                </div>
+                <div>
+                  <div class="w-full bg-blue-200 h-2.5 mb-4">
+                    <div
+                      class="bg-blue-500 h-2.5 rounded-r-full inner"
+                      style="width: 40%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-1 md:mb-1.5">
+                  <div
+                    class="text-lg text-blue-500 font-semibold cursor-pointer hover:text-blue-400 transition-all"
+                    data-popover-target="popover-right-14"
+                    data-popover-placement="right"
+                  >
+                    Java
+                  </div>
+                  <div class="text-lg text-blue-500 font-semibold">
+                    <span class="percent mr-[1px]">40</span>
+                    <span>%</span>
+                  </div>
+                </div>
+                <div
+                  data-popover
+                  id="popover-right-14"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                >
+                  <div class="px-3 py-2">
+                    <p>I know basics of JAVA.</p>
+                  </div>
+                  <div data-popper-arrow></div>
+                </div>
+                <div>
+                  <div class="w-full bg-blue-200 h-2.5 mb-4">
+                    <div
+                      class="bg-blue-500 h-2.5 rounded-r-full inner"
+                      style="width: 40%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-1 md:mb-1.5">
+                  <div
+                    class="text-lg text-blue-500 font-semibold cursor-pointer hover:text-blue-400 transition-all"
+                    data-popover-target="popover-right-15"
+                    data-popover-placement="right"
+                  >
+                    MySQL
+                  </div>
+                  <div class="text-lg text-blue-500 font-semibold">
+                    <span class="percent mr-[1px]">80</span>
+                    <span>%</span>
+                  </div>
+                </div>
+                <div
+                  data-popover
+                  id="popover-right-15"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                >
+                  <div class="px-3 py-2">
+                    <p>
+                      I am fluent in MySQL. I have used MySQL in many projects.
+                      I know CRUD operations well.
+                    </p>
+                  </div>
+                  <div data-popper-arrow></div>
+                </div>
+                <div>
+                  <div class="w-full bg-blue-200 h-2.5 mb-4">
+                    <div
+                      class="bg-blue-500 h-2.5 rounded-r-full inner"
+                      style="width: 80%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-1 md:mb-1.5">
+                  <div
+                    class="text-lg text-blue-500 font-semibold cursor-pointer hover:text-blue-400 transition-all"
+                    data-popover-target="popover-right-16"
+                    data-popover-placement="right"
+                  >
+                    SQL
+                  </div>
+                  <div class="text-lg text-blue-500 font-semibold">
+                    <span class="percent mr-[1px]">70</span>
+                    <span>%</span>
+                  </div>
+                </div>
+                <div
+                  data-popover
+                  id="popover-right-16"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                >
+                  <div class="px-3 py-2">
+                    <p>
+                      I am fluent in SQL. I have used SQL in many projects. I
+                      know CRUD operations well.
+                    </p>
+                  </div>
+                  <div data-popper-arrow></div>
+                </div>
+                <div>
+                  <div class="w-full bg-blue-200 h-2.5 mb-4">
+                    <div
+                      class="bg-blue-500 h-2.5 rounded-r-full inner"
+                      style="width: 70%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-1 md:mb-1.5">
+                  <div
+                    class="text-lg text-blue-500 font-semibold cursor-pointer hover:text-blue-400 transition-all"
+                    data-popover-target="popover-right-17"
+                    data-popover-placement="right"
+                  >
+                    Git
+                  </div>
+                  <div class="text-lg text-blue-500 font-semibold">
+                    <span class="percent mr-[1px]">40</span>
+                    <span>%</span>
+                  </div>
+                </div>
+                <div
+                  data-popover
+                  id="popover-right-17"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                >
+                  <div class="px-3 py-2">
+                    <p>---</p>
+                  </div>
+                  <div data-popper-arrow></div>
+                </div>
+                <div>
+                  <div class="w-full bg-blue-200 h-2.5 mb-4">
+                    <div
+                      class="bg-blue-500 h-2.5 rounded-r-full inner"
+                      style="width: 40%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div
+                  class="flex justify-between items-center mb-1 md:mb-1.5"
+                  id="education"
+                >
+                  <div
+                    class="text-lg text-blue-500 font-semibold cursor-pointer hover:text-blue-400 transition-all"
+                    data-popover-target="popover-right-18"
+                    data-popover-placement="right"
+                  >
+                    Power BI
+                  </div>
+                  <div class="text-lg text-blue-500 font-semibold">
+                    <span class="percent mr-[1px]">80</span>
+                    <span>%</span>
+                  </div>
+                </div>
+                <div
+                  data-popover
+                  id="popover-right-18"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                >
+                  <div class="px-3 py-2">
+                    <p>---</p>
+                  </div>
+                  <div data-popper-arrow></div>
+                </div>
+                <div>
+                  <div class="w-full bg-blue-200 h-2.5 mb-4">
+                    <div
+                      class="bg-blue-500 h-2.5 rounded-r-full inner"
+                      style="width: 80%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-1 md:mb-1.5">
+                  <div
+                    class="text-lg text-blue-500 font-semibold cursor-pointer hover:text-blue-400 transition-all"
+                    data-popover-target="popover-right-19"
+                    data-popover-placement="right"
+                  >
+                    Jira
+                  </div>
+                  <div class="text-lg text-blue-500 font-semibold">
+                    <span class="percent mr-[1px]">80</span>
+                    <span>%</span>
+                  </div>
+                </div>
+                <div
+                  data-popover
+                  id="popover-right-19"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                >
+                  <div class="px-3 py-2">
+                    <p>---</p>
+                  </div>
+                  <div data-popper-arrow></div>
+                </div>
+                <div>
+                  <div class="w-full bg-blue-200 h-2.5 mb-4">
+                    <div
+                      class="bg-blue-500 h-2.5 rounded-r-full inner"
+                      style="width: 80%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--Education section-->
+        <section>
+          <div class="mt-12 lg:mx-24 xl:mx-32">
+            <div
+              class="font-semibold text-xl md:text-2xl lg:text-4xl text-slate-700"
+            >
+              Education
+            </div>
+            <div class="flex mt-2.5 mb-7">
+              <div class="w-8 h-[3px] bg-blue-500"></div>
+              <div class="w-16 h-[3px] bg-gray-200"></div>
+            </div>
+
+            <div class="space-y-8">
+              <!--Frist box-->
+              <div
+                class="md:flex w-full md:h-40 rounded xl:h-44 lg:hover:scale-[1.04] transition-all duration-500 cursor-default"
+                style="box-shadow: 0 5px 25px 0 rgb(0 0 0 / 20%)"
+              >
+                <div
+                  data-aos="fade-right"
+                  class="bg-[#FAD5A5] w-full md:w-[17rem] flex text-center justify-center items-center text-white rounded-t md:rounded-t-none md:rounded-l"
+                >
+                  <div class="p-4 md:p-2">
+                    <i class="fa-solid fa-graduation-cap fa-4x mb-1.5"></i>
+                    <div class="font-bold tracking-wide text-xl xl:text-[23px]">
+                      Bachelor
+                    </div>
+                    <div class="uppercase text-sm md:text-xs xl:text-sm">
+                      September 2018 - June 2022
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-aos="fade-left"
+                  class="w-full flex justify-center items-center"
+                >
+                  <div class="w-full px-8 py-4">
+                    <div
+                      class="tracking-wide text-slate-700 text-center md:text-left text-xl xl:text-2xl mb-2"
+                    >
+                      <b>Business Information System</b> - University of
+                      Economics
+                    </div>
+                    <div
+                      class="text-justify text-xs xl:text-sm text-slate-500 tracking-wider"
+                    >
+                      Studying computer science in one of the best Economics
+                      University in Bulgaria. During the first 2 years of
+                      studying economics. In the last 2 years, intensive study
+                      of computer science. Subjects studied: C#, Web
+                      Technologies, Programming and Algorithm, Database SQL,
+                      Server Programming, Java, .NET and Operating Systems.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Second box-->
+              <div
+                class="md:flex w-full rounded md:h-40 xl:h-44 lg:hover:scale-[1.04] transition-all duration-500 cursor-default"
+                style="box-shadow: 0 5px 25px 0 rgb(0 0 0 / 20%)"
+              >
+                <div
+                  data-aos="fade-right"
+                  class="bg-[#FAD5A5] w-full md:w-[17rem] flex text-center justify-center items-center text-white rounded-t md:rounded-t-none md:rounded-l"
+                >
+                  <div class="p-4 md:p-2">
+                    <i class="fa-solid fa-book fa-4x mb-1.5"></i>
+                    <div class="font-bold tracking-wide text-xl xl:text-[23px]">
+                      High School
+                    </div>
+                    <div class="uppercase text-sm md:text-xs xl:text-sm">
+                      September 2013 - May 2018
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-aos="fade-left"
+                  class="w-full flex justify-center items-center"
+                >
+                  <div class="w-full px-8 py-4">
+                    <div
+                      class="tracking-wide text-slate-700 text-center md:text-left text-xl xl:text-2xl mb-2"
+                    >
+                      <b>Business Information System</b> - University of
+                      Economics
+                    </div>
+                    <div
+                      class="text-justify text-xs xl:text-sm text-slate-500 tracking-wider"
+                    >
+                      Studying computer science in one of the best Economics
+                      University in Bulgaria. During the first 2 years of
+                      studying economics. In the last 2 years, intensive study
+                      of computer science. Subjects studied: C#, Web
+                      Technologies, Programming and Algorithm, Database SQL,
+                      Server Programming, Java, .NET and Operating Systems.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--Work experience section-->
+        <section id="experience">
+          <div class="mt-12 lg:mx-24 xl:mx-32">
+            <div
+              class="font-semibold text-xl md:text-2xl lg:text-4xl text-slate-700"
+            >
+              Work Experience
+            </div>
+            <div class="flex mt-2.5 mb-7">
+              <div class="w-8 h-[3px] bg-blue-500"></div>
+              <div class="w-16 h-[3px] bg-gray-200"></div>
+            </div>
+
+            <div class="space-y-8">
+              <!--Frist box-->
+              <div
+                class="md:flex w-full md:h-40 rounded xl:h-44 lg:hover:scale-[1.04] transition-all duration-500 cursor-default"
+                style="box-shadow: 0 5px 25px 0 rgb(0 0 0 / 20%)"
+              >
+                <div
+                  data-aos="fade-right"
+                  class="bg-[#FAA0A0] w-full md:w-[17rem] flex text-center justify-center items-center text-white rounded-t md:rounded-t-none md:rounded-l"
+                >
+                  <div class="p-4 md:p-2">
+                    <i class="fa-solid fa-code fa-4x mb-1.5"></i>
+                    <div class="font-bold tracking-wide text-xl xl:text-[23px]">
+                      James IT Services
+                    </div>
+                    <div class="uppercase text-sm md:text-xs xl:text-sm">
+                      October 2022 - To now
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-aos="fade-left"
+                  class="w-full flex justify-center items-center"
+                >
+                  <div class="w-full px-8 py-4">
+                    <div
+                      class="tracking-wide text-slate-700 text-center md:text-left text-xl xl:text-2xl mb-2"
+                    >
+                      <b>Full Stack Developer</b> - Varna
+                    </div>
+                    <div
+                      class="text-justify text-xs xl:text-sm text-slate-500 tracking-wider"
+                    >
+                      My main responsibilities are planning, developing,
+                      testing, maintaining and deploying software and
+                      maintaining it. Selecting and setting up a suitable
+                      server. Writing documentation for developed systems.
+                      Projects: Valuation Market
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Second box-->
+              <div
+                class="md:flex w-full rounded md:h-40 xl:h-44 lg:hover:scale-[1.04] transition-all duration-500 cursor-default"
+                style="box-shadow: 0 5px 25px 0 rgb(0 0 0 / 20%)"
+              >
+                <div
+                  data-aos="fade-right"
+                  class="bg-[#FAA0A0] w-full md:w-[17rem] flex text-center justify-center items-center text-white rounded-t md:rounded-t-none md:rounded-l"
+                >
+                  <div class="p-4 md:p-2">
+                    <i class="fa-solid fa-bolt fa-4x mb-1.5"></i>
+                    <div class="font-bold tracking-wide text-xl xl:text-[23px]">
+                      ENERGO-PRO
+                    </div>
+                    <div class="uppercase text-sm md:text-xs xl:text-sm">
+                      April 2022 - September 2022
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-aos="fade-left"
+                  class="w-full flex justify-center items-center"
+                >
+                  <div class="w-full px-8 py-4">
+                    <div
+                      class="tracking-wide text-slate-700 text-center md:text-left text-xl xl:text-2xl mb-2"
+                    >
+                      <b>IT Support & Administrator</b> - Varna
+                    </div>
+                    <div
+                      class="text-justify text-xs xl:text-sm text-slate-500 tracking-wider"
+                    >
+                      My role included internal software support. Installation
+                      of internal software on terminals, tablets and laptops Fix
+                      software errors that occur. Grant of access rights to
+                      internal systems Assisting employees with difficulties or
+                      errors encountered with the software.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Third box-->
+              <div
+                class="md:flex w-full rounded md:h-40 xl:h-44 lg:hover:scale-[1.04] transition-all duration-500 cursor-default"
+                style="box-shadow: 0 5px 25px 0 rgb(0 0 0 / 20%)"
+              >
+                <div
+                  data-aos="fade-right"
+                  class="bg-[#FAA0A0] w-full md:w-[17rem] flex text-center justify-center items-center text-white rounded-t md:rounded-t-none md:rounded-l"
+                >
+                  <div class="p-4 md:p-2">
+                    <i class="fa-solid fa-cloud fa-4x mb-1.5"></i>
+                    <div class="font-bold tracking-wide text-xl xl:text-[23px]">
+                      Briella Ltd
+                    </div>
+                    <div class="uppercase text-sm md:text-xs xl:text-sm">
+                      April 2021 - October 2021
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-aos="fade-left"
+                  class="w-full flex justify-center items-center"
+                >
+                  <div class="w-full px-8 py-4">
+                    <div
+                      class="tracking-wide text-slate-700 text-center md:text-left text-xl xl:text-2xl mb-2"
+                    >
+                      <b>Manager of a hookahs company</b> - Varna
+                    </div>
+                    <div
+                      class="text-justify text-xs xl:text-sm text-slate-500 tracking-wider"
+                    >
+                      Preparation of monthly and weekly sales reports.
+                      preparation of the work schedule. preparation of requests
+                      for consumables and accounting of stocks in the warehouse.
+                      Workflow monitoring. Preparation of the monthly employee
+                      salary report.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Fourth box-->
+              <div
+                class="md:flex w-full rounded md:h-40 xl:h-44 lg:hover:scale-[1.04] transition-all duration-500 cursor-default"
+                style="box-shadow: 0 5px 25px 0 rgb(0 0 0 / 20%)"
+              >
+                <div
+                  data-aos="fade-right"
+                  class="bg-[#FAA0A0] w-full md:w-[17rem] flex text-center justify-center items-center text-white rounded-t md:rounded-t-none md:rounded-l"
+                >
+                  <div class="p-4 md:p-2">
+                    <i class="fa-solid fa-coins fa-4x mb-1.5"></i>
+                    <div class="font-bold tracking-wide text-xl xl:text-[23px]">
+                      Edives Ltd
+                    </div>
+                    <div class="uppercase text-sm md:text-xs xl:text-sm">
+                      April 2019 - September 2019
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-aos="fade-left"
+                  class="w-full flex justify-center items-center"
+                >
+                  <div class="w-full px-8 py-4">
+                    <div
+                      class="tracking-wide text-slate-700 text-center md:text-left text-xl xl:text-2xl mb-2"
+                    >
+                      <b>Currency Cashier</b> - Golden Sands
+                    </div>
+                    <div
+                      class="text-justify text-xs xl:text-sm text-slate-500 tracking-wider"
+                    >
+                      Exchange over 30 types of currency. Reporting of available
+                      funds and currency. Closing a report book working with
+                      specialized currency exchange software. Work with a
+                      point-of-sale terminal.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Fifth box-->
+              <div
+                class="md:flex w-full rounded md:h-40 xl:h-44 lg:hover:scale-[1.04] transition-all duration-500 cursor-default"
+                style="box-shadow: 0 5px 25px 0 rgb(0 0 0 / 20%)"
+              >
+                <div
+                  data-aos="fade-right"
+                  class="bg-[#FAA0A0] w-full md:w-[17rem] flex text-center justify-center items-center text-white rounded-t md:rounded-t-none md:rounded-l"
+                >
+                  <div class="p-4 md:p-2">
+                    <i class="fa-solid fa-champagne-glasses fa-4x mb-1.5"></i>
+                    <div class="font-bold tracking-wide text-xl xl:text-[23px]">
+                      Tourism
+                    </div>
+                    <div class="uppercase text-sm md:text-xs xl:text-sm">
+                      April 2019 - September 2018
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="certifications"
+                  data-aos="fade-left"
+                  class="w-full flex justify-center items-center"
+                >
+                  <div class="w-full px-8 py-4">
+                    <div
+                      class="tracking-wide text-slate-700 text-center md:text-left text-xl xl:text-2xl mb-2"
+                    >
+                      <b>Experience in the field of tourism</b> - Golden Sands
+                    </div>
+                    <div
+                      class="text-justify text-xs xl:text-sm text-slate-500 tracking-wider"
+                    >
+                      I have 3 months experience as an a la carte waiter. Main
+                      duties include serving, clearing and working with cash. I
+                      also have three months of experience as a chef. carrying
+                      out the work requirements and accounting of the stock book
+                      in the warehouse.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--Certifications, Courses and Scientific publications section-->
+        <section data-aos="fade-up" data-aos-duration="800">
+          <div class="mt-12 lg:mx-24 xl:mx-32">
+            <div
+              class="font-semibold text-xl md:text-2xl lg:text-4xl text-slate-700"
+            >
+              Certifications, Courses and Scientific publications
+            </div>
+            <div class="flex mt-2.5 mb-7">
+              <div class="w-8 h-[3px] bg-blue-500"></div>
+              <div class="w-16 h-[3px] bg-gray-200"></div>
+            </div>
+
+            <div
+              id="indicators-carousel"
+              class="relative"
+              data-carousel="static"
+            >
+              <div
+                class="relative border border-slate-100 overflow-hidden rounded-md h-40 md:h-52"
+                style="box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3)"
+              >
+                <!-- Item 1 -->
+                <div
+                  class="hidden duration-700 ease-in-out flex justify-center items-center w-full"
+                  data-carousel-item="active"
+                >
+                  <div class="-mt-2">
+                    <div
+                      class="text-center text-slate-700 font-bold text-xl md:text-2xl mb-2.5 md:mb-0"
+                    >
+                      <i class="fa-solid fa-certificate text-[#FAD5A5]"></i>
+                      Certificatе
+                    </div>
+                    <div class="flex md:mx-20 lg:mx-36 items-center">
+                      <img
+                        class="hidden md:block w-32 h-32 rounded-full"
+                        src="uni_logo.png"
+                        alt="University of Economics"
+                      />
+                      <div
+                        class="text-slate-700 md:ml-6 tracking-wide text-justify px-16 sm:px-20 md:px-0 text-xs md:text-base"
+                      >
+                        Certificate for first place in 2022, "Review of student
+                        activities" at the Department of Informatics with
+                        development (Platform for comparison of prices and
+                        products from various websites).
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Item 2 -->
+                <div
+                  class="hidden duration-700 ease-in-out flex justify-center items-center w-full"
+                  data-carousel-item
+                >
+                  <div class="-mt-2">
+                    <div
+                      class="text-center text-slate-700 font-bold text-xl md:text-2xl mb-2.5 md:mb-0"
+                    >
+                      <i class="fa-solid fa-certificate text-[#FAD5A5]"></i>
+                      Certificatе
+                    </div>
+                    <div class="flex md:mx-20 lg:mx-36 items-center">
+                      <img
+                        class="hidden md:block w-32 h-32 rounded-full"
+                        src="mon-logo.png"
+                        alt="MON logo"
+                      />
+                      <div
+                        class="text-slate-700 md:ml-6 tracking-wide text-justify px-16 sm:px-20 md:px-0 text-xs md:text-base"
+                      >
+                        Computer Literacy Certificate. Released in 2018. The
+                        certificate covers an MS Office suite and work with the
+                        Internet and applications.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Item 3 -->
+                <div
+                  class="hidden duration-700 ease-in-out flex justify-center items-center w-full"
+                  data-carousel-item
+                >
+                  <div class="-mt-2">
+                    <div
+                      class="text-center text-slate-700 font-bold text-xl md:text-2xl mb-2.5 md:mb-0"
+                    >
+                      <i class="fa-solid fa-trophy text-[#FFD700]"></i>
+                      Sport achievements
+                    </div>
+                    <div class="flex md:mx-20 lg:mx-36 items-center">
+                      <img
+                        class="hidden md:block w-32 h-32 rounded-full"
+                        src="handball.png"
+                        alt="handball"
+                      />
+                      <div
+                        class="text-slate-700 md:ml-6 tracking-wide text-justify px-16 sm:px-20 md:px-0 text-xs md:text-base"
+                      >
+                        1 time sportman of the year at Varna sports school 2017.
+                        5 times team of the year. 3rd place at the European
+                        handball championship. Many individual awards and medals
+                        from state finals.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Item 4 -->
+                <div
+                  class="hidden duration-700 ease-in-out flex justify-center items-center w-full"
+                  data-carousel-item
+                >
+                  <div class="-mt-2">
+                    <div
+                      class="text-center text-slate-700 font-bold text-xl md:text-2xl mb-2.5 md:mb-0"
+                    >
+                      <i class="fa-solid fa-graduation-cap"></i>
+                      Course
+                    </div>
+                    <div class="flex md:mx-20 lg:mx-36 items-center">
+                      <img
+                        class="hidden md:block w-32 h-32 rounded-full"
+                        src="uni_logo.png"
+                        alt="University of Economics"
+                      />
+                      <div
+                        class="text-slate-700 md:ml-6 tracking-wide text-justify px-16 sm:px-20 md:px-0 text-xs md:text-base"
+                      >
+                        Part of the IT Master Class 9. The university provides
+                        us to become a part of the companies in the IT field and
+                        gain some of their experience.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Item 5 -->
+                <div
+                  class="hidden duration-700 ease-in-out flex justify-center items-center w-full"
+                  data-carousel-item
+                >
+                  <div class="-mt-2">
+                    <div
+                      class="text-center text-slate-700 font-bold text-xl md:text-2xl mb-2.5 md:mb-0"
+                    >
+                      <i class="fa-solid fa-book text-[#007ced]"></i>
+                      Scientific publication
+                    </div>
+                    <div class="flex md:mx-20 lg:mx-36 items-center">
+                      <img
+                        class="hidden md:block w-32 h-32 rounded-full"
+                        src="uni_logo.png"
+                        alt="University of Economics"
+                      />
+                      <div
+                        class="text-slate-700 md:ml-6 tracking-wide text-justify px-16 sm:px-20 md:px-0 text-xs md:text-base"
+                      >
+                        Report in the collection "STUDENT SCIENTIFIC CONFERENCE"
+                        on the topic "Development of web platforms", Publishing
+                        House "Science and Economics" University of Economics -
+                        Varna 2022.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Item 6 -->
+                <div
+                  class="hidden duration-700 ease-in-out flex justify-center items-center w-full"
+                  data-carousel-item
+                >
+                  <div class="-mt-2">
+                    <div
+                      class="text-center text-slate-700 font-bold text-xl md:text-2xl mb-2.5 md:mb-0"
+                    >
+                      <i class="fa-solid fa-certificate text-[#FAD5A5]"></i>
+                      Certificatе
+                    </div>
+                    <div class="flex md:mx-20 lg:mx-36 items-center">
+                      <img
+                        class="hidden md:block w-32 h-32 rounded-full"
+                        src="Microsoft_Azure.svg.png"
+                        alt="Microsoft Azure"
+                      />
+                      <div
+                        class="text-slate-700 md:ml-6 tracking-wide text-justify px-16 sm:px-20 md:px-0 text-xs md:text-base"
+                      >
+                        Certificate of successfully completed course on
+                        Microsoft Azure Cloud (fundamental). The course includes
+                        working with Databricks, Data Factory, Key Vault,
+                        Containers.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="projects"
+                  class="hidden duration-700 ease-in-out flex justify-center items-center w-full"
+                  data-carousel-item
+                >
+                  <div class="-mt-2">
+                    <div
+                      class="text-center text-slate-700 font-bold text-xl md:text-2xl mb-2.5 md:mb-0"
+                    >
+                      <i class="fa-solid fa-certificate text-[#FAD5A5]"></i>
+                      Certificatе
+                    </div>
+                    <div class="flex md:mx-20 lg:mx-36 items-center">
+                      <img
+                        class="hidden md:block w-32 h-32 rounded-full"
+                        src="SAFe-cert.png"
+                        alt="SAFe"
+                      />
+                      <div
+                        class="text-slate-700 md:ml-6 tracking-wide text-left md:text-justify px-16 sm:px-20 md:px-0 text-sm md:text-base"
+                      >
+                        Certificate of successfully completed course on Scaled
+                        Agile (SAFe methodology). The course topics includes
+                        Benefits of SAFe, SAFe Principles, SAFe and Agile, Why
+                        SAFe.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Slider indicators -->
+              <div
+                class="hidden md:block absolute z-30 flex space-x-3 -translate-x-1/2 bottom-4 left-1/2"
+              >
+                <button
+                  type="button"
+                  class="w-3 h-3 rounded-full"
+                  aria-current="true"
+                  data-carousel-slide-to="0"
+                ></button>
+                <button
+                  type="button"
+                  class="w-3 h-3 rounded-full"
+                  aria-current="false"
+                  data-carousel-slide-to="1"
+                ></button>
+                <button
+                  type="button"
+                  class="w-3 h-3 rounded-full"
+                  aria-current="false"
+                  data-carousel-slide-to="2"
+                ></button>
+                <button
+                  type="button"
+                  class="w-3 h-3 rounded-full"
+                  aria-current="false"
+                  data-carousel-slide-to="3"
+                ></button>
+                <button
+                  type="button"
+                  class="w-3 h-3 rounded-full"
+                  aria-current="false"
+                  data-carousel-slide-to="4"
+                ></button>
+                <button
+                  type="button"
+                  class="w-3 h-3 rounded-full"
+                  aria-current="false"
+                  data-carousel-slide-to="5"
+                ></button>
+                <button
+                  type="button"
+                  class="w-3 h-3 rounded-full"
+                  aria-current="false"
+                  data-carousel-slide-to="6"
+                ></button>
+              </div>
+              <!-- Slider controls -->
+              <button
+                type="button"
+                class="absolute top-0 -left-1 lg:-left-10 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                data-carousel-prev
+              >
+                <span
+                  class="inline-flex items-center justify-center rounded-full w-10 h-10 sm:w-12 sm:h-12 bg-white group-hover:bg-blue-400 transition-all"
+                  style="box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3)"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="w-6 h-6 text-slate-700 sm:w-6 sm:h-6 group-hover:text-white transition-all"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 19l-7-7 7-7"
+                    ></path>
+                  </svg>
+                </span>
+              </button>
+              <button
+                type="button"
+                class="absolute top-0 -right-1 lg:-right-10 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                data-carousel-next
+              >
+                <span
+                  class="inline-flex items-center justify-center rounded-full w-10 h-10 sm:w-12 sm:h-12 bg-white group-hover:bg-blue-400 transition-all"
+                  style="box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3)"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="w-6 h-6 text-slate-700 sm:w-6 sm:h-6 group-hover:text-white transition-all"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    ></path>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!--Portfolio section-->
+        <section data-aos="fade-up" data-aos-duration="800">
+          <div class="mt-12 lg:mx-24 xl:mx-32">
+            <div
+              class="font-semibold text-xl md:text-2xl lg:text-4xl text-slate-700"
+            >
+              Projects
+            </div>
+            <div class="flex mt-2.5 mb-7">
+              <div class="w-8 h-[3px] bg-blue-500"></div>
+              <div class="w-16 h-[3px] bg-gray-200"></div>
+            </div>
+
+            <div class="space-y-8">
+              <!--Web platform box-->
+              <div
+                class="relative flex items-center flex-col md:flex-row hover:scale-105 transition-all duration-500 space-y-2.5 md:space-y-0 rounded-md p-2 lg:p-3 w-full border border-white bg-white"
+                style="box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3)"
+              >
+                <div
+                  class="rounded-full flex justify-center items-center mx-auto my-auto shadow w-40 h-40 bg-white grid place-items-cente bg-blue-100 border border-blue-200 shadow-2xl"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-28 h-28 text-blue-300"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="w-full md:w-3/4 bg-white flex flex-col space-y-2 p-2 lg:p-3"
+                >
+                  <div class="gap-2 flex flex-wrap">
+                    <span
+                      class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 border border-blue-200 py-[1px] rounded-md"
+                      >HTML</span
+                    >
+                    <span
+                      class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 border border-blue-200 py-[1px] rounded-md"
+                      >CSS</span
+                    >
+                    <span
+                      class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 border border-blue-200 py-[1px] rounded-md"
+                      >JavaScript</span
+                    >
+                    <span
+                      class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 border border-blue-200 py-[1px] rounded-md"
+                      >jQuery</span
+                    >
+                    <span
+                      class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 border border-blue-200 py-[1px] rounded-md"
+                      >AJAX</span
+                    >
+                    <span
+                      class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 border border-blue-200 py-[1px] rounded-md"
+                      >PHP</span
+                    >
+                    <span
+                      class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 border border-blue-200 py-[1px] rounded-md"
+                      >MySQL</span
+                    >
+                  </div>
+                  <h3 class="font-bold text-slate-700 text-lg">
+                    Web platform for price comparing and products
+                  </h3>
+                  <p class="text-gray-500 text-sm lg:text-base">
+                    Web platform for comparing prices and products from various
+                    sites. With the development of e-commerce, the online space
+                    is crowded with a lot of information. There comes.....
+                  </p>
+
+                  <button
+                    data-modal-toggle="projectModal1"
+                    class="flex justify-center items-center w-full md:w-28 px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-md transition"
+                  >
+                    View More
+                  </button>
+                </div>
+              </div>
+
+              <!-- Main web system -->
+              <div
+                id="projectModal1"
+                tabindex="-1"
+                aria-hidden="true"
+                class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 p-4 w-full md:inset-0 h-modal md:h-full"
+              >
+                <div class="relative w-full max-w-2xl h-full md:h-auto">
+                  <!-- Modal content -->
+                  <div class="relative bg-white rounded-lg shadow">
+                    <!-- Modal header -->
+
+                    <div class="w-full flex justify-end">
+                      <button
+                        type="button"
+                        class="text-gray-400 bg-transparent mt-1.5 mb-1 mr-1.5 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                        data-modal-toggle="projectModal1"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="w-5 h-5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="px-4 pb-4 space-y-6">
+                      <div
+                        class="shadow-2xl rounded-md border boreder-slate-100"
+                      >
+                        <div>
+                          <ul
+                            class="flex -mb-px text-sm font-medium text-center justify-between rounded-lg bg-slate-50 mx-5 mt-2 p-4"
+                            data-tabs-toggle="#project1Tabs"
+                          >
+                            <li class="mr-2">
+                              <input
+                                class="hidden peer"
+                                type="radio"
+                                id="information1"
+                                name="tabs"
+                                checked
+                              />
+                              <label
+                                class="rounded-lg py-2.5 px-3.5 peer-checked:bg-white peer-checked:border font-semibold peer-checked:border-slate-100 peer-checked:shadow-xl font-medium peer-checked text-blue-700 cursor-pointer"
+                                data-tabs-target="#informationTab1"
+                                role="tab"
+                                for="information1"
+                              >
+                                Information
+                              </label>
+                            </li>
+                            <li class="mr-2">
+                              <input
+                                class="hidden peer"
+                                type="radio"
+                                id="technologies1"
+                                name="tabs"
+                              />
+                              <label
+                                class="rounded-lg py-2.5 px-3.5 peer-checked:bg-white peer-checked:border font-semibold peer-checked:border-slate-100 peer-checked:shadow-xl peer-checked text-blue-700 cursor-pointer"
+                                data-tabs-target="#technologiesTab1"
+                                role="tab"
+                                for="technologies1"
+                              >
+                                Technologies
+                              </label>
+                            </li>
+                            <li class="mr-2">
+                              <input
+                                class="hidden peer"
+                                type="radio"
+                                id="gallery1"
+                                name="tabs"
+                              />
+                              <label
+                                class="rounded-lg py-2.5 px-3.5 active:scale-90 peer-checked:bg-white peer-checked:border font-semibold peer-checked:border-slate-100 peer-checked:shadow-xl peer-checked text-blue-700 cursor-pointer"
+                                data-tabs-target="#galleryTab1"
+                                role="tab"
+                                for="gallery1"
+                              >
+                                Gallery
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                        <div id="project1Tabs">
+                          <div class="hidden p-4" id="informationTab1">
+                            <p
+                              class="text-sm text-gray-500 text-justify px-2 indent-4 tracking-wide"
+                            >
+                              Web platform for comparing prices and products
+                              from various sites. With the development of
+                              e-commerce, the online space is crowded with a lot
+                              of information. There comes the need for such
+                              platforms for comparing products and services. The
+                              idea is for consumers to easily make their choice
+                              when purchasing a product.
+                            </p>
+                            <a
+                              href="https://github.com/webDevVarna/webPlatformForPriceComparing"
+                              target="_blank"
+                              class="inline-flex justify-center items-center transition-all ml-2 mt-3 py-1 px-3.5 text-base font-medium text-gray-500 bg-gray-100 rounded-lg hover:text-gray-900 hover:bg-gray-200"
+                            >
+                              <i
+                                class="fa-brands fa-github text-slate-700 mr-2"
+                              ></i>
+                              <span class="w-full">
+                                Link to project in GitHub
+                              </span>
+                              <svg
+                                aria-hidden="true"
+                                class="ml-2 w-6 h-6 mt-0.5"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                  clip-rule="evenodd"
+                                ></path>
+                              </svg>
+                            </a>
+                          </div>
+                          <div class="hidden p-4" id="technologiesTab1">
+                            <div class="px-2 tracking-wide w-full flex">
+                              <div class="w-1/2 space-y-4">
+                                <!--HTML-->
+                                <div class="flex items-center">
+                                  <div
+                                    class="w-12 h-12 p-1.5 rounded-lg"
+                                    style="
+                                      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px
+                                        8px;
+                                    "
+                                  >
+                                    <img
+                                      class="h-full w-full object-contain"
+                                      src="html.png"
+                                      alt="HTML"
+                                    />
+                                  </div>
+                                  <div
+                                    class="text-lg font-bold ml-2 text-slate-700 tracking-wide"
+                                  >
+                                    HTML
+                                  </div>
+                                </div>
+
+                                <!--CSS-->
+                                <div class="flex items-center">
+                                  <div
+                                    class="w-12 h-12 p-1.5 rounded-lg flex justify-center"
+                                    style="
+                                      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px
+                                        8px;
+                                    "
+                                  >
+                                    <img
+                                      class="h-full w-full object-contain"
+                                      src="css.png"
+                                      alt="CSS"
+                                    />
+                                  </div>
+                                  <div
+                                    class="text-lg font-bold ml-2 text-slate-700 tracking-wide"
+                                  >
+                                    CSS
+                                  </div>
+                                </div>
+
+                                <!--JS-->
+                                <div class="flex items-center">
+                                  <div
+                                    class="w-12 h-12 p-1.5 rounded-lg flex justify-center"
+                                    style="
+                                      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px
+                                        8px;
+                                    "
+                                  >
+                                    <img
+                                      class="h-full w-full object-contain"
+                                      src="js.png"
+                                      alt="JavaScript"
+                                    />
+                                  </div>
+                                  <div
+                                    class="text-lg font-bold ml-2 text-slate-700 tracking-wide"
+                                  >
+                                    JavaScript
+                                  </div>
+                                </div>
+
+                                <!--jQuery-->
+                                <div class="flex items-center">
+                                  <div
+                                    class="w-12 h-12 p-1.5 rounded-lg flex justify-center"
+                                    style="
+                                      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px
+                                        8px;
+                                    "
+                                  >
+                                    <img
+                                      class="h-full w-full object-contain"
+                                      src="jQuery.png"
+                                      alt="jQuery"
+                                    />
+                                  </div>
+                                  <div
+                                    class="text-lg font-bold ml-2 text-slate-700 tracking-wide"
+                                  >
+                                    jQuery
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="w-1/2 space-y-4">
+                                <!--AJAX-->
+                                <div class="flex items-center">
+                                  <div
+                                    class="w-12 h-12 p-1.5 rounded-lg flex justify-center"
+                                    style="
+                                      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px
+                                        8px;
+                                    "
+                                  >
+                                    <img
+                                      class="h-full w-full object-contain"
+                                      src="AJAX.png"
+                                      alt="AJAX"
+                                    />
+                                  </div>
+                                  <div
+                                    class="text-lg font-bold ml-2 text-slate-700 tracking-wide"
+                                  >
+                                    AJAX
+                                  </div>
+                                </div>
+
+                                <!--PHP-->
+                                <div class="flex items-center">
+                                  <div
+                                    class="w-12 h-12 p-1.5 rounded-lg flex justify-center"
+                                    style="
+                                      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px
+                                        8px;
+                                    "
+                                  >
+                                    <img
+                                      class="h-full w-full object-contain"
+                                      src="PHP.png"
+                                      alt="PHP"
+                                    />
+                                  </div>
+                                  <div
+                                    class="text-lg font-bold ml-2 text-slate-700 tracking-wide"
+                                  >
+                                    PHP
+                                  </div>
+                                </div>
+
+                                <!--MySQL-->
+                                <div class="flex items-center">
+                                  <div
+                                    class="w-12 h-12 p-1.5 rounded-lg flex justify-center"
+                                    style="
+                                      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px
+                                        8px;
+                                    "
+                                  >
+                                    <img
+                                      class="h-full w-full object-contain"
+                                      src="MySQL.png"
+                                      alt="MySQL"
+                                    />
+                                  </div>
+                                  <div
+                                    class="text-lg font-bold ml-2 text-slate-700 tracking-wide"
+                                  >
+                                    MySQL
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="hidden p-4" id="galleryTab1">
+                            <div class="space-y-5">
+                              <div class="flex flex-wrap gap-5 justify-between">
+                                <img
+                                  class="object-contain w-72 rounded-lg border border-slate-100"
+                                  src="platform1.png"
+                                  alt="web platform"
+                                />
+                                <img
+                                  class="object-contain w-72 rounded-lg border border-slate-100"
+                                  src="platform2.png"
+                                  alt="web platform"
+                                />
+                              </div>
+                              <div class="flex flex-wrap gap-5 justify-between">
+                                <img
+                                  class="object-contain w-72 rounded-lg border border-slate-100"
+                                  src="platform3.png"
+                                  alt="web platform"
+                                />
+                                <img
+                                  class="object-contain w-72 rounded-lg border border-slate-100"
+                                  src="platform4.png"
+                                  alt="web platform"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Web system box-->
+              <div
+                class="relative flex flex-col md:flex-row hover:scale-105 transition-all duration-500 space-y-2.5 md:space-y-0 rounded-md p-2 lg:p-3 w-full border border-white bg-white"
+                style="box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3)"
+              >
+                <div
+                  class="rounded-full flex justify-center items-center mx-auto my-auto shadow w-40 h-40 bg-white grid place-items-cente bg-indigo-100 border border-indigo-200 shadow-2xl"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-28 h-28 text-indigo-300"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 13.5V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 9.75V10.5"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="w-full md:w-3/4 bg-white flex flex-col space-y-2 p-2 lg:p-3"
+                >
+                  <div class="gap-2 flex flex-wrap">
+                    <span
+                      class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2 border border-indigo-200 py-[1px] rounded-md"
+                    >
+                      HTML
+                    </span>
+                    <span
+                      class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2 border border-indigo-200 py-[1px] rounded-md"
+                    >
+                      CSS
+                    </span>
+                    <span
+                      class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2 border border-indigo-200 py-[1px] rounded-md"
+                    >
+                      Bootstrap
+                    </span>
+                    <span
+                      class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2 border border-indigo-200 py-[1px] rounded-md"
+                    >
+                      Tailwind
+                    </span>
+                    <span
+                      class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2 border border-indigo-200 py-[1px] rounded-md"
+                    >
+                      JavaScript
+                    </span>
+                    <span
+                      class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2 border border-indigo-200 py-[1px] rounded-md"
+                    >
+                      jQuery
+                    </span>
+                    <span
+                      class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2 border border-indigo-200 py-[1px] rounded-md"
+                    >
+                      AJAX
+                    </span>
+                    <span
+                      class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2 border border-indigo-200 py-[1px] rounded-md"
+                    >
+                      PHP
+                    </span>
+                    <span
+                      class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2 border border-indigo-200 py-[1px] rounded-md"
+                    >
+                      MySQL
+                    </span>
+                  </div>
+                  <h3 class="font-bold text-slate-700 text-lg">
+                    Work flow management system
+                  </h3>
+                  <p class="text-gray-500 text-sm lg:text-base">
+                    Web-based workflow management system. I have envisioned a
+                    site from where every user will be able to make a
+                    request/order for the type of service. An administrator will
+                    then process their.....
+                  </p>
+                  <button
+                    data-modal-toggle="projectModal2"
+                    class="flex justify-center items-center w-full md:w-28 px-4 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-md transition"
+                  >
+                    View More
+                  </button>
+                </div>
+              </div>
+
+              <!-- Main web system -->
+              <div
+                id="projectModal2"
+                tabindex="-1"
+                aria-hidden="true"
+                class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 p-4 w-full md:inset-0 h-modal md:h-full"
+              >
+                <div class="relative w-full max-w-2xl h-full md:h-auto">
+                  <!-- Modal content -->
+                  <div class="relative bg-white rounded-lg shadow">
+                    <!-- Modal header -->
+
+                    <div class="w-full flex justify-end">
+                      <button
+                        type="button"
+                        class="text-gray-400 bg-transparent mt-1.5 mb-1 mr-1.5 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                        data-modal-toggle="projectModal2"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="w-5 h-5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="px-4 pb-4 space-y-6">
+                      <div
+                        class="shadow-2xl rounded-md border boreder-slate-100"
+                      >
+                        <div>
+                          <ul
+                            class="flex -mb-px text-sm font-medium text-center justify-between rounded-lg bg-slate-50 mx-5 mt-2 p-4"
+                            data-tabs-toggle="#project2Tabs"
+                          >
+                            <li class="mr-2">
+                              <input
+                                class="hidden peer"
+                                type="radio"
+                                id="information"
+                                name="tabs1"
+                                checked
+                              />
+                              <label
+                                class="rounded-lg py-2.5 px-3.5 peer-checked:bg-white peer-checked:border font-semibold peer-checked:border-slate-100 peer-checked:shadow-xl font-medium peer-checked text-blue-700 cursor-pointer"
+                                data-tabs-target="#informationTab"
+                                role="tab"
+                                for="information"
+                              >
+                                Information
+                              </label>
+                            </li>
+                            <li class="mr-2">
+                              <input
+                                class="hidden peer"
+                                type="radio"
+                                id="technologies"
+                                name="tabs1"
+                              />
+                              <label
+                                class="rounded-lg py-2.5 px-3.5 peer-checked:bg-white peer-checked:border font-semibold peer-checked:border-slate-100 peer-checked:shadow-xl peer-checked text-blue-700 cursor-pointer"
+                                data-tabs-target="#technologiesTab"
+                                role="tab"
+                                for="technologies"
+                              >
+                                Technologies
+                              </label>
+                            </li>
+                            <li class="mr-2">
+                              <input
+                                class="hidden peer"
+                                type="radio"
+                                id="gallery"
+                                name="tabs1"
+                              />
+                              <label
+                                class="rounded-lg py-2.5 px-3.5 active:scale-90 peer-checked:bg-white peer-checked:border font-semibold peer-checked:border-slate-100 peer-checked:shadow-xl peer-checked text-blue-700 cursor-pointer"
+                                data-tabs-target="#galleryTab"
+                                role="tab"
+                                for="gallery"
+                              >
+                                Gallery
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                        <div id="project2Tabs">
+                          <div class="hidden p-4" id="informationTab">
+                            <p
+                              class="text-sm text-gray-500 text-justify px-2 indent-4 tracking-wide"
+                            >
+                              Web-based workflow management system. I have
+                              envisioned a site from where every user will be
+                              able to make a request/order for the type of
+                              service. An administrator will then process their
+                              order, via an admin panel/window where a task will
+                              begin for a specific team. Employees from the team
+                              will access the tasks from a mobile device
+                              (tablet). <b>(in process)</b>
+                            </p>
+                            <a
+                              href="https://github.com/webDevVarna/webWorkFlowSystem"
+                              target="_blank"
+                              class="inline-flex justify-center items-center transition-all ml-2 mt-3 py-1 px-3.5 text-base font-medium text-gray-500 bg-gray-100 rounded-lg hover:text-gray-900 hover:bg-gray-200"
+                            >
+                              <i
+                                class="fa-brands fa-github text-slate-700 mr-2"
+                              ></i>
+                              <span class="w-full">
+                                Link to project in GitHub
+                              </span>
+                              <svg
+                                aria-hidden="true"
+                                class="ml-2 w-6 h-6 mt-0.5"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                  clip-rule="evenodd"
+                                ></path>
+                              </svg>
+                            </a>
+                          </div>
+                          <div class="hidden p-4" id="technologiesTab">
+                            <div class="px-2 tracking-wide w-full flex">
+                              <div class="w-1/2 space-y-4">
+                                <!--HTML-->
+                                <div class="flex items-center">
+                                  <div
+                                    class="w-12 h-12 p-1.5 rounded-lg"
+                                    style="
+                                      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px
+                                        8px;
+                                    "
+                                  >
+                                    <img
+                                      class="h-full w-full object-contain"
+                                      src="html.png"
+                                      alt="HTML"
+                                    />
+                                  </div>
+                                  <div
+                                    class="text-lg font-bold ml-2 text-slate-700 tracking-wide"
+                                  >
+                                    HTML
+                                  </div>
+                                </div>
+
+                                <!--CSS-->
+                                <div class="flex items-center">
+                                  <div
+                                    class="w-12 h-12 p-1.5 rounded-lg flex justify-center"
+                                    style="
+                                      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px
+                                        8px;
+                                    "
+                                  >
+                                    <img
+                                      class="h-full w-full object-contain"
+                                      src="css.png"
+                                      alt="CSS"
+                                    />
+                                  </div>
+                                  <div
+                                    class="text-lg font-bold ml-2 text-slate-700 tracking-wide"
+                                  >
+                                    CSS
+                                  </div>
+                                </div>
+
+                                <!--Bootstrap-->
+                                <div class="flex items-center">
+                                  <div
+                                    class="w-12 h-12 p-1.5 rounded-lg flex justify-center"
+                                    style="
+                                      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px
+                                        8px;
+                                    "
+                                  >
+                                    <img
+                                      class="h-full w-full object-contain"
+                                      src="Bootstrap.png"
+                                      alt="Bootstrap"
+                                    />
+                                  </div>
+                                  <div
+                                    class="text-lg font-bold ml-2 text-slate-700 tracking-wide"
+                                  >
+                                    Bootstrap
+                                  </div>
+                                </div>
+
+                                <!--Tailwind-->
+                                <div class="flex items-center">
+                                  <div
+                                    class="w-12 h-12 p-1.5 rounded-lg flex justify-center"
+                                    style="
+                                      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px
+                                        8px;
+                                    "
+                                  >
+                                    <img
+                                      class="h-full w-full object-contain"
+                                      src="tailwind.png"
+                                      alt="Tailwind"
+                                    />
+                                  </div>
+                                  <div
+                                    class="text-lg font-bold ml-2 text-slate-700 tracking-wide"
+                                  >
+                                    Tailwind
+                                  </div>
+                                </div>
+
+                                <!--JS-->
+                                <div class="flex items-center">
+                                  <div
+                                    class="w-12 h-12 p-1.5 rounded-lg flex justify-center"
+                                    style="
+                                      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px
+                                        8px;
+                                    "
+                                  >
+                                    <img
+                                      class="h-full w-full object-contain"
+                                      src="js.png"
+                                      alt="JavaScript"
+                                    />
+                                  </div>
+                                  <div
+                                    class="text-lg font-bold ml-2 text-slate-700 tracking-wide"
+                                  >
+                                    JavaScript
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="w-1/2 space-y-4">
+                                <!--jQuery-->
+                                <div class="flex items-center">
+                                  <div
+                                    class="w-12 h-12 p-1.5 rounded-lg flex justify-center"
+                                    style="
+                                      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px
+                                        8px;
+                                    "
+                                  >
+                                    <img
+                                      class="h-full w-full object-contain"
+                                      src="jQuery.png"
+                                      alt="jQuery"
+                                    />
+                                  </div>
+                                  <div
+                                    class="text-lg font-bold ml-2 text-slate-700 tracking-wide"
+                                  >
+                                    jQuery
+                                  </div>
+                                </div>
+
+                                <!--AJAX-->
+                                <div class="flex items-center">
+                                  <div
+                                    class="w-12 h-12 p-1.5 rounded-lg flex justify-center"
+                                    style="
+                                      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px
+                                        8px;
+                                    "
+                                  >
+                                    <img
+                                      class="h-full w-full object-contain"
+                                      src="AJAX.png"
+                                      alt="AJAX"
+                                    />
+                                  </div>
+                                  <div
+                                    class="text-lg font-bold ml-2 text-slate-700 tracking-wide"
+                                  >
+                                    AJAX
+                                  </div>
+                                </div>
+
+                                <!--PHP-->
+                                <div class="flex items-center">
+                                  <div
+                                    class="w-12 h-12 p-1.5 rounded-lg flex justify-center"
+                                    style="
+                                      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px
+                                        8px;
+                                    "
+                                  >
+                                    <img
+                                      class="h-full w-full object-contain"
+                                      src="PHP.png"
+                                      alt="PHP"
+                                    />
+                                  </div>
+                                  <div
+                                    class="text-lg font-bold ml-2 text-slate-700 tracking-wide"
+                                  >
+                                    PHP
+                                  </div>
+                                </div>
+
+                                <!--MySQL-->
+                                <div class="flex items-center">
+                                  <div
+                                    class="w-12 h-12 p-1.5 rounded-lg flex justify-center"
+                                    style="
+                                      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px
+                                        8px;
+                                    "
+                                  >
+                                    <img
+                                      class="h-full w-full object-contain"
+                                      src="MySQL.png"
+                                      alt="MySQL"
+                                    />
+                                  </div>
+                                  <div
+                                    class="text-lg font-bold ml-2 text-slate-700 tracking-wide"
+                                  >
+                                    MySQL
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="hidden p-4" id="galleryTab">
+                            <div class="space-y-5">
+                              <div class="flex flex-wrap gap-5 justify-between">
+                                <img
+                                  class="object-contain w-72 rounded-lg border border-slate-100"
+                                  src="web-system4.png"
+                                  alt="web system"
+                                />
+                                <img
+                                  class="object-contain w-72 rounded-lg border border-slate-100"
+                                  src="web-system3.png"
+                                  alt="web system"
+                                />
+                              </div>
+                              <div class="flex flex-wrap gap-5 justify-between">
+                                <img
+                                  class="object-contain w-72 rounded-lg border border-slate-100"
+                                  src="web-system1.png"
+                                  alt="web system"
+                                />
+                                <img
+                                  class="object-contain w-72 rounded-lg border border-slate-100"
+                                  src="web-system2.png"
+                                  alt="web system"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Back-end sysytem C# box-->
+              <div
+                class="relative flex flex-col md:flex-row hover:scale-105 transition-all duration-500 space-y-2.5 md:space-y-0 rounded-md p-2 lg:p-3 w-full border border-white bg-white"
+                style="box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3)"
+              >
+                <div
+                  class="rounded-full flex justify-center items-center mx-auto my-auto shadow w-40 h-40 bg-white grid place-items-cente bg-purple-100 border border-purple-200 shadow-2xl"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-28 h-28 text-purple-300"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 011.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.765.383-.93.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 01-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.397.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 01-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.107-1.204l-.527-.738a1.125 1.125 0 01.12-1.45l.773-.773a1.125 1.125 0 011.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="w-full md:w-3/4 bg-white flex flex-col space-y-2 p-2 lg:p-3"
+                >
+                  <div class="gap-2 flex flex-wrap">
+                    <span
+                      class="bg-purple-100 text-purple-800 text-xs font-semibold px-2 border border-purple-200 py-[1px] rounded-md"
+                    >
+                      C#
+                    </span>
+                    <span
+                      class="bg-purple-100 text-purple-800 text-xs font-semibold px-2 border border-purple-200 py-[1px] rounded-md"
+                    >
+                      SQL
+                    </span>
+                  </div>
+                  <h3 class="font-bold text-slate-700 text-lg">
+                    System for work process management
+                  </h3>
+                  <p class="text-gray-500 text-sm lg:text-base">
+                    The system allows users after logging into the system and
+                    many functional options. The main functionalities are:
+                    adding new products and employees, screen with
+                    employees.....
+                  </p>
+                  <button
+                    data-modal-toggle="projectModal3"
+                    class="flex justify-center items-center w-full md:w-28 px-4 py-1.5 bg-purple-600 hover:bg-purple-700 text-white text-sm font-semibold rounded-md transition"
+                  >
+                    View More
+                  </button>
+                </div>
+              </div>
+
+              <!-- Main C# -->
+              <div
+                id="projectModal3"
+                tabindex="-1"
+                aria-hidden="true"
+                class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 p-4 w-full md:inset-0 h-modal md:h-full"
+              >
+                <div class="relative w-full max-w-2xl h-full md:h-auto">
+                  <!-- Modal content -->
+                  <div class="relative bg-white rounded-lg shadow">
+                    <!-- Modal header -->
+
+                    <div class="w-full flex justify-end">
+                      <button
+                        type="button"
+                        class="text-gray-400 bg-transparent mt-1.5 mb-1 mr-1.5 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                        data-modal-toggle="projectModal3"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="w-5 h-5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="px-4 pb-4 space-y-6">
+                      <div
+                        class="shadow-2xl rounded-md border boreder-slate-100"
+                      >
+                        <div>
+                          <ul
+                            class="flex -mb-px text-sm font-medium text-center justify-between rounded-lg bg-slate-50 mx-5 mt-2 p-4"
+                            data-tabs-toggle="#project3Tabs"
+                          >
+                            <li class="mr-2">
+                              <input
+                                class="hidden peer"
+                                type="radio"
+                                id="information2"
+                                name="tabs2"
+                                checked
+                              />
+                              <label
+                                class="rounded-lg py-2.5 px-3.5 peer-checked:bg-white peer-checked:border font-semibold peer-checked:border-slate-100 peer-checked:shadow-xl font-medium peer-checked text-blue-700 cursor-pointer"
+                                data-tabs-target="#informationTab2"
+                                role="tab"
+                                for="information2"
+                              >
+                                Information
+                              </label>
+                            </li>
+                            <li class="mr-2">
+                              <input
+                                class="hidden peer"
+                                type="radio"
+                                id="technologies2"
+                                name="tabs2"
+                              />
+                              <label
+                                class="rounded-lg py-2.5 px-3.5 peer-checked:bg-white peer-checked:border font-semibold peer-checked:border-slate-100 peer-checked:shadow-xl peer-checked text-blue-700 cursor-pointer"
+                                data-tabs-target="#technologiesTab2"
+                                role="tab"
+                                for="technologies2"
+                              >
+                                Technologies
+                              </label>
+                            </li>
+                            <li class="mr-2">
+                              <input
+                                class="hidden peer"
+                                type="radio"
+                                id="gallery2"
+                                name="tabs2"
+                              />
+                              <label
+                                class="rounded-lg py-2.5 px-3.5 active:scale-90 peer-checked:bg-white peer-checked:border font-semibold peer-checked:border-slate-100 peer-checked:shadow-xl peer-checked text-blue-700 cursor-pointer"
+                                data-tabs-target="#galleryTab2"
+                                role="tab"
+                                for="gallery2"
+                              >
+                                Gallery
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                        <div id="project3Tabs">
+                          <div class="hidden p-4" id="informationTab2">
+                            <p
+                              class="text-sm text-gray-500 text-justify px-2 indent-4 tracking-wide"
+                            >
+                              The system allows users after logging into the
+                              system and many functional options. The main
+                              functionalities are: adding new products and
+                              employees, screen with employees and products,
+                              editing employees and products, exporting data
+                              from the system.
+                            </p>
+                            <a
+                              href="https://github.com/webDevVarna/Management-system-C"
+                              target="_blank"
+                              class="inline-flex justify-center items-center ml-2 transition-all mt-3 py-1 px-3.5 text-base font-medium text-gray-500 bg-gray-100 rounded-lg hover:text-gray-900 hover:bg-gray-200"
+                            >
+                              <i
+                                class="fa-brands fa-github text-slate-700 mr-2"
+                              ></i>
+                              <span class="w-full">
+                                Link to project in GitHub
+                              </span>
+                              <svg
+                                aria-hidden="true"
+                                class="ml-2 w-6 h-6 mt-0.5"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                  clip-rule="evenodd"
+                                ></path>
+                              </svg>
+                            </a>
+                          </div>
+                          <div class="hidden p-4" id="technologiesTab2">
+                            <div class="px-2 tracking-wide w-full flex">
+                              <div class="w-1/2 space-y-4">
+                                <!--C#-->
+                                <div class="flex items-center">
+                                  <div
+                                    class="w-12 h-12 p-1.5 rounded-lg"
+                                    style="
+                                      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px
+                                        8px;
+                                    "
+                                  >
+                                    <img
+                                      class="h-full w-full object-contain"
+                                      src="C.png"
+                                      alt="C"
+                                    />
+                                  </div>
+                                  <div
+                                    class="text-lg font-bold ml-2 text-slate-700 tracking-wide"
+                                  >
+                                    C#
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="w-1/2 space-y-4">
+                                <!--SQL-->
+                                <div class="flex items-center">
+                                  <div
+                                    class="w-12 h-12 p-1.5 rounded-lg flex justify-center"
+                                    style="
+                                      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px
+                                        8px;
+                                    "
+                                  >
+                                    <img
+                                      class="h-full w-full object-contain"
+                                      src="SQL.png"
+                                      alt="SQL"
+                                    />
+                                  </div>
+                                  <div
+                                    class="text-lg font-bold ml-2 text-slate-700 tracking-wide"
+                                  >
+                                    SQL
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="hidden p-4" id="galleryTab2">
+                            <div
+                              class="font-semibold text-slate-700 text-2xl py-8 text-center"
+                            >
+                              No images
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Back-end sysytem Java box-->
+              <div
+                class="relative flex flex-col md:flex-row hover:scale-105 transition-all duration-500 space-y-2.5 md:space-y-0 rounded-md p-2 lg:p-3 w-full border border-white bg-white"
+                style="box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3)"
+              >
+                <div
+                  class="rounded-full flex justify-center items-center mx-auto my-auto shadow w-40 h-40 bg-white grid place-items-cente bg-pink-100 border border-pink-200 shadow-2xl"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-28 h-28 text-pink-300"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 12a7.5 7.5 0 0015 0m-15 0a7.5 7.5 0 1115 0m-15 0H3m16.5 0H21m-1.5 0H12m-8.457 3.077l1.41-.513m14.095-5.13l1.41-.513M5.106 17.785l1.15-.964m11.49-9.642l1.149-.964M7.501 19.795l.75-1.3m7.5-12.99l.75-1.3m-6.063 16.658l.26-1.477m2.605-14.772l.26-1.477m0 17.726l-.26-1.477M10.698 4.614l-.26-1.477M16.5 19.794l-.75-1.299M7.5 4.205L12 12m6.894 5.785l-1.149-.964M6.256 7.178l-1.15-.964m15.352 8.864l-1.41-.513M4.954 9.435l-1.41-.514M12.002 12l-3.75 6.495"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="w-full md:w-3/4 bg-white flex flex-col space-y-2 p-2 lg:p-3"
+                >
+                  <div class="gap-2 flex flex-wrap">
+                    <span
+                      class="bg-pink-100 text-pink-800 text-xs font-semibold px-2 border border-pink-200 py-[1px] rounded-md"
+                    >
+                      Java
+                    </span>
+                    <span
+                      class="bg-pink-100 text-pink-800 text-xs font-semibold px-2 border border-pink-200 py-[1px] rounded-md"
+                    >
+                      SQL
+                    </span>
+                    <span
+                      class="bg-pink-100 text-pink-800 text-xs font-semibold px-2 border border-pink-200 py-[1px] rounded-md"
+                    >
+                      SQLite
+                    </span>
+                  </div>
+                  <h3 class="font-bold text-slate-700 text-lg">
+                    System for work process management in a pizzeria
+                  </h3>
+                  <p class="text-gray-500 text-sm lg:text-base">
+                    The system allows users, after logging into the system, many
+                    functional options. The main functionalities are: adding new
+                    products according to different criteria, viewing products
+                    and filtering.....
+                  </p>
+                  <button
+                    data-modal-toggle="projectModal4"
+                    class="flex justify-center items-center w-full md:w-28 px-4 py-1.5 bg-pink-600 hover:bg-pink-700 text-white text-sm font-semibold rounded-md transition"
+                  >
+                    View More
+                  </button>
+                </div>
+              </div>
+
+              <!-- Main Java -->
+              <div
+                id="projectModal4"
+                tabindex="-1"
+                aria-hidden="true"
+                class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 p-4 w-full md:inset-0 h-modal md:h-full"
+              >
+                <div class="relative w-full max-w-2xl h-full md:h-auto">
+                  <!-- Modal content -->
+                  <div class="relative bg-white rounded-lg shadow">
+                    <!-- Modal header -->
+
+                    <div class="w-full flex justify-end">
+                      <button
+                        type="button"
+                        class="text-gray-400 bg-transparent mt-1.5 mb-1 mr-1.5 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                        data-modal-toggle="projectModal4"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="w-5 h-5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="px-4 pb-4 space-y-6">
+                      <div
+                        class="shadow-2xl rounded-md border boreder-slate-100"
+                      >
+                        <div>
+                          <ul
+                            class="flex -mb-px text-sm font-medium text-center justify-between rounded-lg bg-slate-50 mx-5 mt-2 p-4"
+                            data-tabs-toggle="#project4Tabs"
+                          >
+                            <li class="mr-2">
+                              <input
+                                class="hidden peer"
+                                type="radio"
+                                id="information3"
+                                name="tabs3"
+                                checked
+                              />
+                              <label
+                                class="rounded-lg py-2.5 px-3.5 peer-checked:bg-white peer-checked:border font-semibold peer-checked:border-slate-100 peer-checked:shadow-xl font-medium peer-checked text-blue-700 cursor-pointer"
+                                data-tabs-target="#informationTab3"
+                                role="tab"
+                                for="information3"
+                              >
+                                Information
+                              </label>
+                            </li>
+                            <li class="mr-2">
+                              <input
+                                class="hidden peer"
+                                type="radio"
+                                id="technologies3"
+                                name="tabs3"
+                              />
+                              <label
+                                class="rounded-lg py-2.5 px-3.5 peer-checked:bg-white peer-checked:border font-semibold peer-checked:border-slate-100 peer-checked:shadow-xl peer-checked text-blue-700 cursor-pointer"
+                                data-tabs-target="#technologiesTab3"
+                                role="tab"
+                                for="technologies3"
+                              >
+                                Technologies
+                              </label>
+                            </li>
+                            <li class="mr-2">
+                              <input
+                                class="hidden peer"
+                                type="radio"
+                                id="gallery3"
+                                name="tabs3"
+                              />
+                              <label
+                                class="rounded-lg py-2.5 px-3.5 active:scale-90 peer-checked:bg-white peer-checked:border font-semibold peer-checked:border-slate-100 peer-checked:shadow-xl peer-checked text-blue-700 cursor-pointer"
+                                data-tabs-target="#galleryTab3"
+                                role="tab"
+                                for="gallery3"
+                              >
+                                Gallery
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                        <div id="project4Tabs">
+                          <div class="hidden p-4" id="informationTab3">
+                            <p
+                              class="text-sm text-gray-500 text-justify px-2 indent-4 tracking-wide"
+                            >
+                              The system allows users, after logging into the
+                              system, many functional options. The main
+                              functionalities are: adding new products according
+                              to different criteria, viewing products and
+                              filtering according to different criteria,
+                              entering stocks, reporting used products.
+                            </p>
+                            <a
+                              href="https://github.com/webDevVarna/Managament-system-JAVA"
+                              target="_blank"
+                              class="inline-flex justify-center items-center transition-all ml-2 mt-3 py-1 px-3.5 text-base font-medium text-gray-500 bg-gray-100 rounded-lg hover:text-gray-900 hover:bg-gray-200"
+                            >
+                              <i
+                                class="fa-brands fa-github text-slate-700 mr-2"
+                              ></i>
+                              <span class="w-full">
+                                Link to project in GitHub
+                              </span>
+                              <svg
+                                aria-hidden="true"
+                                class="ml-2 w-6 h-6 mt-0.5"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                  clip-rule="evenodd"
+                                ></path>
+                              </svg>
+                            </a>
+                          </div>
+                          <div class="hidden p-4" id="technologiesTab3">
+                            <div class="px-2 tracking-wide w-full flex">
+                              <div class="w-1/2 space-y-4">
+                                <!--JAVA-->
+                                <div class="flex items-center">
+                                  <div
+                                    class="w-12 h-12 p-1.5 rounded-lg"
+                                    style="
+                                      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px
+                                        8px;
+                                    "
+                                  >
+                                    <img
+                                      class="h-full w-full object-contain"
+                                      src="java.png"
+                                      alt="java"
+                                    />
+                                  </div>
+                                  <div
+                                    class="text-lg font-bold ml-2 text-slate-700 tracking-wide"
+                                  >
+                                    JAVA
+                                  </div>
+                                </div>
+
+                                <!--SQLite-->
+                                <div class="flex items-center">
+                                  <div
+                                    class="w-12 h-12 p-1.5 rounded-lg"
+                                    style="
+                                      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px
+                                        8px;
+                                    "
+                                  >
+                                    <img
+                                      class="h-full w-full object-contain"
+                                      src="sqlite.png"
+                                      alt="SQLite"
+                                    />
+                                  </div>
+                                  <div
+                                    class="text-lg font-bold ml-2 text-slate-700 tracking-wide"
+                                  >
+                                    SQLite
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="w-1/2 space-y-4">
+                                <!--SQL-->
+                                <div class="flex items-center">
+                                  <div
+                                    class="w-12 h-12 p-1.5 rounded-lg flex justify-center"
+                                    style="
+                                      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px
+                                        8px;
+                                    "
+                                  >
+                                    <img
+                                      class="h-full w-full object-contain"
+                                      src="SQL.png"
+                                      alt="SQL"
+                                    />
+                                  </div>
+                                  <div
+                                    class="text-lg font-bold ml-2 text-slate-700 tracking-wide"
+                                  >
+                                    SQL
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="hidden p-4" id="galleryTab3">
+                            <div
+                              class="font-semibold text-slate-700 text-2xl py-8 text-center"
+                            >
+                              No images
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer>
+          <div
+            class="w-full mt-16 px-2 lg:px-12 py-5 bg-slate-50 lg:rounded-b-[3rem] border-t-2 border-slate-100"
+          >
+            <div class="flex justify-center lg:justify-between items-center">
+              <div class="flex items-center gap-4 flex-wrap">
+                <a
+                  target="_blank"
+                  class="group hover:scale-110 transition-all duration-500"
+                  href="https://www.facebook.com/ersin.mehmed/"
+                >
+                  <i class="text-[#3b5998] fa-brands fa-facebook-f"></i>
+                  <span class="group-hover:text-blue-600"> Facebook</span>
+                </a>
+                <a
+                  target="_blank"
+                  class="group hover:scale-110 transition-all duration-500"
+                  href="https://www.instagram.com/ersogram/"
+                >
+                  <i
+                    class="fa-brands fa-instagram"
+                    style="
+                      background: radial-gradient(
+                        circle at 30% 107%,
+                        #fdf497 0%,
+                        #fdf497 5%,
+                        #fd5949 45%,
+                        #d6249f 60%,
+                        #285aeb 90%
+                      );
+                      -webkit-background-clip: text;
+                      background-clip: text;
+                      -webkit-text-fill-color: transparent;
+                    "
+                  ></i>
+                  <span class="group-hover:text-blue-600"> Instagram</span>
+                </a>
+                <a
+                  target="_blank"
+                  class="group hover:scale-110 transition-all duration-500"
+                  href="https://www.linkedin.com/in/ersin-hyusein-72a184241/"
+                >
+                  <i class="text-[#0a66c2] fa-brands fa-linkedin"></i>
+                  <span class="group-hover:text-blue-600"> LinkedIn</span>
+                </a>
+                <a
+                  target="_blank"
+                  class="group hover:scale-110 transition-all duration-500"
+                  href="https://github.com/webDevVarna?tab=repositories"
+                >
+                  <i class="fa-brands fa-github group-hover:text-blue-600"></i>
+                  <span class="group-hover:text-blue-600"> GitHub</span>
+                </a>
+              </div>
+              <div class="hidden lg:block">© 2022 Ersin Hyusein</div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="vue.js"></script>
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <script></script>
+  </body>
+</html>
