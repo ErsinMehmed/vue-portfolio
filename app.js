@@ -108,3 +108,49 @@ $(function () {
     }
   });
 });
+
+//Bg version
+var _CONTENT1 = ["Програмист", "Студент", "Хандбалист"];
+
+var _PART1 = 0;
+var _PART_INDEX1 = 0;
+var _INTERVAL_VAL1;
+var _ELEMENT1 = document.querySelector("#possition1");
+var _CURSOR1 = document.querySelector("#cursor1");
+
+function Type1() {
+  var text1 = _CONTENT1[_PART1].substring(0, _PART_INDEX1 + 1);
+  _ELEMENT1.innerHTML = text1;
+  _PART_INDEX1++;
+
+  if (text1 === _CONTENT1[_PART1]) {
+    _CURSOR1.style.display = "none";
+
+    clearInterval(_INTERVAL_VAL1);
+    setTimeout(function () {
+      _INTERVAL_VAL1 = setInterval(Delete1, 120);
+    }, 1200);
+  }
+}
+
+function Delete1() {
+  var text1 = _CONTENT1[_PART1].substring(0, _PART_INDEX1 - 1);
+  _ELEMENT1.innerHTML = text1;
+  _PART_INDEX1--;
+
+  if (text1 === "") {
+    clearInterval(_INTERVAL_VAL1);
+
+    if (_PART1 == _CONTENT1.length - 1) _PART1 = 0;
+    else _PART1++;
+
+    _PART_INDEX1 = 0;
+
+    setTimeout(function () {
+      _CURSOR1.style.display = "inline-block";
+      _INTERVAL_VAL1 = setInterval(Type1, 140);
+    }, 200);
+  }
+}
+
+_INTERVAL_VAL1 = setInterval(Type1, 120);
