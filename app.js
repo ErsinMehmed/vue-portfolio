@@ -1,5 +1,5 @@
 //Auto writter
-var _CONTENT = ["Programmer", "Student", "Handball Player"];
+var _CONTENT = ["Programmer", "Student"];
 
 var _PART = 0;
 var _PART_INDEX = 0;
@@ -110,7 +110,7 @@ $(function () {
 });
 
 //Bg version
-var _CONTENT1 = ["Програмист", "Студент", "Хандбалист"];
+var _CONTENT1 = ["Програмист", "Студент"];
 
 var _PART1 = 0;
 var _PART_INDEX1 = 0;
@@ -154,3 +154,5 @@ function Delete1() {
 }
 
 _INTERVAL_VAL1 = setInterval(Type1, 120);
+
+
