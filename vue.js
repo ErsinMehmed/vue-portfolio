@@ -6,6 +6,7 @@ createApp({
     return {
       scY: 0,
       progress: 0,
+      hamburgerIcon: true,
     };
   },
   mounted() {

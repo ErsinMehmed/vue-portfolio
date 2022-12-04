@@ -154,5 +154,3 @@ function Delete1() {
 }
 
 _INTERVAL_VAL1 = setInterval(Type1, 120);
-
-
