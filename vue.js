@@ -7,6 +7,7 @@ createApp({
       scY: 0,
       progress: 0,
       hamburgerIcon: true,
+      screenMode: true,
     };
   },
   mounted() {
