@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,7 +16,7 @@
     <title>Ерсин Хюсеин</title>
   </head>
 
-  <body class="scroll-smooth">
+  <body class="scroll-smooth box-border">
     <div id="app">
       <div
         class="bg-gradient-to-r w-full lg:px-14 lg:py-10 xl:px-16 xl:py-12 2xl:px-[70px] 2xl:py-14"
@@ -28,7 +28,7 @@
           :style="{ width: progress }"
         ></div>
         <div
-          class="fixed z-20 right-4 bottom-4 w-10 h-10 hidden lg:flex border border-slate-200 rounded-full justify-center items-center cursor-pointer group transition-all"
+          class="fixed z-20 right-3 bottom-3 w-10 h-10 hidden lg:flex border border-slate-200 rounded-full justify-center items-center cursor-pointer group transition-all"
           :class="screenMode? 'bg-white hover:bg-slate-100 ':'bg-slate-100 hover:bg-slate-200'"
           style="
             box-shadow: rgb(0 0 0 / 25%) 0px 14px 28px,
@@ -67,14 +67,14 @@
         <div data-aos="fade-up">
           <div>
             <div
-              class="lg:rounded-t-[3rem] pb-10 md:pb-14 lg:pb-16 bg-white w-full px-4 sm:px-8 relative lg:px-0"
+              class="border-gray-200 lg:px-16 py-4 lg:py-10 lg:rounded-[3rem] w-full"
               :class="screenMode? 'bg-white':'bg-gray-600'"
             >
               <nav
-                class="border-gray-200 lg:px-16 py-6 lg:py-10 lg:rounded-[3rem]"
+                class="border-gray-200 lg:px-16 py-6 lg:py-10 lg:rounded-[3rem] w-full"
                 :class="screenMode? 'bg-white':'bg-gray-600'"
               >
-                <div class="flex flex-wrap items-center justify-between w-full">
+                <div class="flex flex-wrap items-center justify-between">
                   <div class="flex items-center">
                     <div
                       class="w-9 h-9 lg:w-12 lg:h-12 flex justify-center items-center rounded-full"
@@ -98,7 +98,7 @@
                       <a href="en.html">
                         <img
                           class="w-8 h-8 block lg:hidden -mt-[1px] object-cover rounded-full"
-                          :class="screenMode? 'border border-slate-200':''"
+                          style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px"
                           src="images/great-britain.png"
                           alt="English"
                         />
@@ -109,6 +109,7 @@
                         @click="screenMode = !screenMode"
                         class="lg:hidden w-8 h-8 rounded-full flex justify-center items-center cursor-pointer transition-all duration-300 border hover:opacity-80 hover:scale-110"
                         :class="screenMode? 'bg-blue-400 border-blue-400':'bg-gray-300 border-gray-300'"
+                        style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -314,7 +315,7 @@
                         <a href="en.html">
                           <img
                             class="w-8 h-8 object-cover rounded-full cursor-pointer hover:scale-110 hover:opacity-70 transition-all duration-500"
-                            :class="screenMode? 'border border-slate-200':''"
+                            style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px"
                             src="images/great-britain.png"
                             alt="English"
                           />
@@ -325,6 +326,7 @@
                           @click="screenMode = !screenMode"
                           class="w-8 h-8 rounded-full flex justify-center items-center cursor-pointer transition-all duration-300 border hover:opacity-80 hover:scale-110"
                           :class="screenMode? 'bg-blue-400 border-blue-400':'bg-gray-300 border-gray-300'"
+                          style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px"
                         >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -404,6 +406,7 @@
                     <div
                       class="text-justify indent-4 leading-[19px] text-base tracking-wide px-6 sm:px-12 md:px-0"
                       :class="screenMode? 'text-slate-700':'text-slate-100'"
+                      style="text-justify: distribute"
                     >
                       Здравейте ! Аз съм Ерсо, програмист и спортен треньор.
                       Занимавам се с програмиране от 3 години, както в
@@ -1458,7 +1461,10 @@
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>
                             Умея отлично HTML. Използвал съм HTML в много от
                             моите проекти.
@@ -1468,7 +1474,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -1506,7 +1512,10 @@
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>
                             Умея отлично CSS. Използвал съм CSS в много от моите
                             проекти. Добър съм в изполването на grid и flexbox
@@ -1518,7 +1527,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -1556,7 +1565,10 @@
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>
                             Умея отлично Tailwind. Използвал съм Tailwind в
                             много от моите проекти.
@@ -1566,7 +1578,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -1604,7 +1616,10 @@
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>
                             Умея добре Bootstrap. Използвал съм Bootstrap в един
                             от моите проекти.
@@ -1614,7 +1629,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -1652,7 +1667,10 @@
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>
                             Добре владея JavaScript. Използвал съм JavaScript в
                             много от моите проекти. Използвам JS за анимации, за
@@ -1664,7 +1682,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -1702,14 +1720,17 @@
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>Все още съм начинаещ с Vue.js.</p>
                         </div>
                         <div data-popper-arrow></div>
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -1747,7 +1768,10 @@
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>
                             Умея jQuery добре. Използвал съм jQuery в много от
                             моите проекти. Използвам библиотеката за промени по
@@ -1759,7 +1783,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -1797,7 +1821,10 @@
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>
                             Използвам AJAX от известно време. Използвам съм AJAX
                             в един проект. Използвам технологията за динамичното
@@ -1808,7 +1835,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -1839,7 +1866,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -1870,7 +1897,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -1910,7 +1937,10 @@
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>
                             Владея добре .NET. Нивото ми е напреднал (advanced).
                           </p>
@@ -1919,7 +1949,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -1957,7 +1987,10 @@
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>
                             Владея добре ASP.NET. Нивото ми е напреднал
                             (advanced).
@@ -1967,7 +2000,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -2005,7 +2038,10 @@
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>
                             Владея много добре PHP. Използвал съм PHP за
                             извличане на данни, CRUD операции, функционалности и
@@ -2016,7 +2052,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -2054,14 +2090,17 @@
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>В момента изучавам Laravel.</p>
                         </div>
                         <div data-popper-arrow></div>
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -2099,14 +2138,17 @@
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>Знам основите на JAVA.</p>
                         </div>
                         <div data-popper-arrow></div>
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -2144,7 +2186,10 @@
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>
                             Владея отлично MySQL. Използвал съм MySQL в няколко
                             проекта. Познавам отлично CRUD операциите.
@@ -2154,7 +2199,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -2192,7 +2237,10 @@
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>
                             Влядея добре SQL. Използвал съм MySQL в няколко
                             проекта. Познавам отлично CRUD операциите.
@@ -2202,7 +2250,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -2240,14 +2288,17 @@
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>В момента изучавам Git.</p>
                         </div>
                         <div data-popper-arrow></div>
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -2279,7 +2330,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -2310,7 +2361,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -2348,7 +2399,7 @@
                     >
                       <div
                         data-aos="fade-right"
-                        class="bg-[#FAD5A5] w-full md:w-72 flex text-center justify-center items-center text-white rounded-t md:rounded-t-none md:rounded-l"
+                        class="bg-[#FAD5A5] w-full md:w-72 flex text-center text-white justify-center items-center rounded-t md:rounded-t-none md:rounded-l"
                       >
                         <div class="p-4 md:p-2">
                           <i
@@ -2378,6 +2429,7 @@
                           <div
                             class="text-justify text-xs xl:text-sm tracking-wider"
                             :class="screenMode? 'text-slate-500':'text-slate-100'"
+                            style="text-justify: distribute"
                           >
                             Изучаване на копютърни науки в един от най-добрите
                             икономически университети в България. През първите 2
@@ -2427,6 +2479,7 @@
                           <div
                             class="text-justify text-xs xl:text-sm tracking-wider"
                             :class="screenMode? 'text-slate-500':'text-slate-100'"
+                            style="text-justify: distribute"
                           >
                             Завършил съм спортното училище във Варна. Дипломиран
                             съм като треньор по хандбал. Имам познания за
@@ -2493,6 +2546,7 @@
                           <div
                             class="text-justify text-xs xl:text-sm tracking-wider"
                             :class="screenMode? 'text-slate-500':'text-slate-100'"
+                            style="text-justify: distribute"
                           >
                             Основните ми задължения са планиране, разработване,
                             тестване, внедряване и поддържане на софтуер. Избор
@@ -2540,6 +2594,7 @@
                           <div
                             class="text-justify text-xs xl:text-sm tracking-wider"
                             :class="screenMode? 'text-slate-500':'text-slate-100'"
+                            style="text-justify: distribute"
                           >
                             Основната ми задача беше да поддържам вътрешни
                             софтуерни продукти. Инсталиране на вътрешни софтуери
@@ -2589,6 +2644,7 @@
                           <div
                             class="text-justify text-xs xl:text-sm tracking-wider"
                             :class="screenMode? 'text-slate-500':'text-slate-100'"
+                            style="text-justify: distribute"
                           >
                             Изготвяне на месечни и седмични отчети за продажби.
                             Изготвяне на работен график за служителите.
@@ -2637,6 +2693,7 @@
                           <div
                             class="text-justify text-xs xl:text-sm tracking-wider"
                             :class="screenMode? 'text-slate-500':'text-slate-100'"
+                            style="text-justify: distribute"
                           >
                             Професионален опит при работа с финансови средства.
                             Обмяна на над 30 вида валути. Отчитане на наличната
@@ -2687,6 +2744,7 @@
                           <div
                             class="text-justify text-xs xl:text-sm tracking-wider"
                             :class="screenMode? 'text-slate-500':'text-slate-100'"
+                            style="text-justify: distribute"
                           >
                             Имам 3 месеца опит като а ла карт сервитьор.
                             Задълженията ми бяха сервиране, отсервиране и работа
@@ -2720,7 +2778,7 @@
                     data-carousel="static"
                   >
                     <div
-                      class="relative border overflow-hidden rounded-md h-44 md:h-52"
+                      class="relative border overflow-hidden rounded-md h-[180px] md:h-52"
                       :class="screenMode? 'bg-white border-slate-100':'bg-slate-700 border-slate-600'"
                       style="box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3)"
                     >
@@ -2731,7 +2789,7 @@
                       >
                         <div class="-mt-2">
                           <div
-                            class="text-center font-bold text-xl md:text-2xl mb-2.5 md:mb-0"
+                            class="text-center font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5 md:mb-0"
                             :class="screenMode? 'text-slate-700':'text-slate-100'"
                           >
                             <i
@@ -2748,6 +2806,7 @@
                             <div
                               class="text-slate-700 md:ml-6 tracking-wide text-justify px-16 sm:px-20 md:px-0 text-xs md:text-base"
                               :class="screenMode? 'text-slate-700':'text-slate-100'"
+                              style="text-justify: distribute"
                             >
                               Сертификат за първо място през 2022, "Преглед на
                               студетската дейност" към катедра "Информатика" с
@@ -2764,7 +2823,7 @@
                       >
                         <div class="-mt-2">
                           <div
-                            class="text-center font-bold text-xl md:text-2xl mb-2.5 md:mb-0"
+                            class="text-center font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5 md:mb-0"
                             :class="screenMode? 'text-slate-700':'text-slate-100'"
                           >
                             <i
@@ -2781,6 +2840,7 @@
                             <div
                               class="text-slate-700 md:ml-6 tracking-wide text-justify px-16 sm:px-20 md:px-0 text-xs md:text-base"
                               :class="screenMode? 'text-slate-700':'text-slate-100'"
+                              style="text-justify: distribute"
                             >
                               Сертификат за компютърна грамотност. Изкаран през
                               2018. Обхваща работа с MS Office и уеб базирани
@@ -2796,7 +2856,7 @@
                       >
                         <div class="-mt-2">
                           <div
-                            class="text-center font-bold text-xl md:text-2xl mb-2.5 md:mb-0"
+                            class="text-center font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5 md:mb-0"
                             :class="screenMode? 'text-slate-700':'text-slate-100'"
                           >
                             <i class="fa-solid fa-trophy text-[#FFD700]"></i>
@@ -2811,6 +2871,7 @@
                             <div
                               class="text-slate-700 md:ml-6 tracking-wide text-justify px-16 sm:px-20 md:px-0 text-xs md:text-base"
                               :class="screenMode? 'text-slate-700':'text-slate-100'"
+                              style="text-justify: distribute"
                             >
                               1 път спотртист на годината на спортно училище
                               Варна през 2017. 5 пъти отличаван с отбор на
@@ -2828,7 +2889,7 @@
                       >
                         <div class="-mt-2">
                           <div
-                            class="text-center font-bold text-xl md:text-2xl mb-2.5 md:mb-0"
+                            class="text-center font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5 md:mb-0"
                             :class="screenMode? 'text-slate-700':'text-slate-100'"
                           >
                             <i class="fa-solid fa-graduation-cap"></i>
@@ -2843,6 +2904,7 @@
                             <div
                               class="text-slate-700 md:ml-6 tracking-wide text-justify px-16 sm:px-20 md:px-0 text-xs md:text-base"
                               :class="screenMode? 'text-slate-700':'text-slate-100'"
+                              style="text-justify: distribute"
                             >
                               Част от IT Master Class 9. Университета ни
                               позволява да станем част от компаниите в IT
@@ -2858,7 +2920,7 @@
                       >
                         <div class="-mt-2">
                           <div
-                            class="text-center font-bold text-xl md:text-2xl mb-2.5 md:mb-0"
+                            class="text-center font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5 md:mb-0"
                             :class="screenMode? 'text-slate-700':'text-slate-100'"
                           >
                             <i class="fa-solid fa-book text-[#007ced]"></i>
@@ -2873,6 +2935,7 @@
                             <div
                               class="text-slate-700 md:ml-6 tracking-wide text-justify px-16 sm:px-20 md:px-0 text-xs md:text-base"
                               :class="screenMode? 'text-slate-700':'text-slate-100'"
+                              style="text-justify: distribute"
                             >
                               Научна публикация в сборник "Студентска научна
                               конференция" с тема "Развитие на уеб платформите
@@ -2890,7 +2953,7 @@
                       >
                         <div class="-mt-2">
                           <div
-                            class="text-center font-bold text-xl md:text-2xl mb-2.5 md:mb-0"
+                            class="text-center font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5 md:mb-0"
                             :class="screenMode? 'text-slate-700':'text-slate-100'"
                           >
                             <i
@@ -2907,6 +2970,7 @@
                             <div
                               class="text-slate-700 md:ml-6 tracking-wide text-justify px-16 sm:px-20 md:px-0 text-xs md:text-base"
                               :class="screenMode? 'text-slate-700':'text-slate-100'"
+                              style="text-justify: distribute"
                             >
                               Сертификат за упешно преминат курс по Microsoft
                               Azure Claud (fundamental). Курса включва работа с
@@ -2922,7 +2986,7 @@
                       >
                         <div class="-mt-2">
                           <div
-                            class="text-center font-bold text-xl md:text-2xl mb-2.5 md:mb-0"
+                            class="text-center font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5 md:mb-0"
                             :class="screenMode? 'text-slate-700':'text-slate-100'"
                           >
                             <i
@@ -2937,13 +3001,14 @@
                               alt="SAFe"
                             />
                             <div
-                              class="md:ml-6 tracking-wide text-left md:text-justify px-16 sm:px-20 md:px-0 text-sm md:text-base"
+                              class="text-slate-700 md:ml-6 tracking-wide text-justify px-16 sm:px-20 md:px-0 text-xs md:text-base"
                               :class="screenMode? 'text-slate-700':'text-slate-100'"
+                              style="text-justify: distribute"
                             >
                               Сертификат за упешно преминат курс по Scaled Agile
                               (SAFe methodology). Темите на курса обхващат
                               Предимства от използването на SAFe, SAFe принципи,
-                              SAFe и Agile, Защо да използваме SAFe.
+                              SAFe и Agile.
                             </div>
                           </div>
                         </div>
@@ -2999,12 +3064,12 @@
                     <!-- Slider controls -->
                     <button
                       type="button"
-                      class="absolute top-0 -left-4 md:-left-10 z-20 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                      class="absolute top-0 -left-4 md:-left-10 z-20 flex items-center justify-center h-full px-4 cursor-pointer md:group focus:outline-none"
                       data-carousel-prev
                     >
                       <span
                         class="inline-flex items-center justify-center shadow-xl hover:border-transparent rounded-l-lg md:rounded-full md:h-12 w-12 h-full bg-white transition-all lg:active:scale-90"
-                        :class="screenMode? 'bg-white md:group-hover:bg-blue-400 border border-slate-100':'bg-slate-300 md:group-hover:bg-blue-500'"
+                        :class="screenMode? 'bg-white md:group-hover:bg-blue-400 border border-slate-100':'bg-slate-400 md:group-hover:bg-blue-500'"
                       >
                         <svg
                           aria-hidden="true"
@@ -3030,7 +3095,7 @@
                     >
                       <span
                         class="inline-flex items-center justify-center shadow-xl hover:border-transparent rounded-r-lg md:rounded-full md:h-12 w-12 h-full bg-white transition-all lg:active:scale-90"
-                        :class="screenMode? 'bg-white md:group-hover:bg-blue-400 border border-slate-100':'bg-slate-300 md:group-hover:bg-blue-500'"
+                        :class="screenMode? 'bg-white md:group-hover:bg-blue-400 border border-slate-100':'bg-slate-400 md:group-hover:bg-blue-500'"
                       >
                         <svg
                           aria-hidden="true"
@@ -3153,6 +3218,7 @@
                         <p
                           class="text-sm lg:text-base text-justify sm:text-left"
                           :class="screenMode? 'text-gray-500':'text-gray-400'"
+                          style="text-justify: distribute"
                         >
                           Платформа за сравняване на цени и продукти от различни
                           сайтове. С развитието на е-търговията, онлайн
@@ -3316,6 +3382,7 @@
                                 <div id="informationTab1" class="hidden p-4">
                                   <p
                                     class="text-sm text-gray-500 text-justify px-2 indent-4 tracking-wide"
+                                    style="text-justify: distribute"
                                   >
                                     Платформа за сравняване на цени и продукти
                                     от различни сайтове. С развитието на
@@ -3651,6 +3718,7 @@
                         <p
                           class="text-sm lg:text-base text-justify sm:text-left"
                           :class="screenMode? 'text-gray-500':'text-gray-400'"
+                          style="text-justify: distribute"
                         >
                           Уеб базирана систма за управление на работния процес.
                           Предвидено е всеки потребител през сайта да може да
@@ -3813,6 +3881,7 @@
                                 <div id="informationTab" class="hidden p-4">
                                   <p
                                     class="text-sm text-gray-500 text-justify px-2 indent-4 tracking-wide"
+                                    style="text-justify: distribute"
                                   >
                                     Уеб базирана систма за управление на
                                     работния процес. Предвидено е всеки
@@ -4157,6 +4226,7 @@
                         <p
                           class="text-sm lg:text-base text-justify sm:text-left"
                           :class="screenMode? 'text-gray-500':'text-gray-400'"
+                          style="text-justify: distribute"
                         >
                           Система позволява на потребителите вписване в
                           системата и много функционални възможности. Основни
@@ -4319,6 +4389,7 @@
                                 <div id="informationTab2" class="hidden p-4">
                                   <p
                                     class="text-sm text-gray-500 text-justify px-2 indent-4 tracking-wide"
+                                    style="text-justify: distribute"
                                   >
                                     Система позволява на потребителите вписване
                                     в системата и много функционални
@@ -4479,6 +4550,7 @@
                         <p
                           class="text-sm lg:text-base text-justify sm:text-left"
                           :class="screenMode? 'text-gray-500':'text-gray-400'"
+                          style="text-justify: distribute"
                         >
                           Система позволява на потребителите вписване в
                           системата и много функционални възможности. Основни
@@ -4641,6 +4713,7 @@
                                 <div id="informationTab3" class="hidden p-4">
                                   <p
                                     class="text-sm text-gray-500 text-justify px-2 indent-4 tracking-wide"
+                                    style="text-justify: distribute"
                                   >
                                     Система позволява на потребителите вписване
                                     в системата и много функционални

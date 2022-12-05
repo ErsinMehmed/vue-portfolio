@@ -16,7 +16,7 @@
     <title>Ersin Hyusein</title>
   </head>
 
-  <body class="scroll-smooth">
+  <body class="scroll-smooth box-border">
     <div id="app">
       <div
         class="bg-gradient-to-r w-full lg:px-14 lg:py-10 xl:px-16 xl:py-12 2xl:px-[70px] 2xl:py-14"
@@ -28,7 +28,7 @@
           :style="{ width: progress }"
         ></div>
         <div
-          class="fixed z-20 right-4 bottom-4 w-10 h-10 hidden lg:flex border border-slate-200 rounded-full justify-center items-center cursor-pointer group transition-all"
+          class="fixed z-20 right-3 bottom-3 w-10 h-10 hidden lg:flex border border-slate-200 rounded-full justify-center items-center cursor-pointer group transition-all"
           :class="screenMode? 'bg-white hover:bg-slate-100 ':'bg-slate-100 hover:bg-slate-200'"
           style="
             box-shadow: rgb(0 0 0 / 25%) 0px 14px 28px,
@@ -71,10 +71,10 @@
               :class="screenMode? 'bg-white':'bg-gray-600'"
             >
               <nav
-                class="border-gray-200 lg:px-16 py-6 lg:py-10 lg:rounded-[3rem]"
+                class="border-gray-200 lg:px-16 py-4 lg:py-10 lg:rounded-[3rem] w-full"
                 :class="screenMode? 'bg-white':'bg-gray-600'"
               >
-                <div class="flex flex-wrap items-center justify-between w-full">
+                <div class="flex flex-wrap items-center justify-between">
                   <div class="flex items-center">
                     <div
                       class="w-9 h-9 lg:w-12 lg:h-12 flex justify-center items-center rounded-full"
@@ -98,7 +98,7 @@
                       <a href="bg.html">
                         <img
                           class="w-8 h-8 block lg:hidden -mt-[1px] object-cover rounded-full"
-                          :class="screenMode? 'border border-slate-200':''"
+                          style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px"
                           src="images/bulgaria.png"
                           alt="Bulgarian"
                         />
@@ -109,6 +109,7 @@
                         @click="screenMode = !screenMode"
                         class="lg:hidden w-8 h-8 rounded-full flex justify-center items-center cursor-pointer transition-all duration-300 border hover:opacity-80 hover:scale-110"
                         :class="screenMode? 'bg-blue-400 border-blue-400':'bg-gray-300 border-gray-300'"
+                        style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -315,7 +316,7 @@
                         <a href="bg.html">
                           <img
                             class="w-8 h-8 object-cover rounded-full cursor-pointer hover:scale-110 hover:opacity-70 transition-all duration-500"
-                            :class="screenMode? 'border border-slate-200':''"
+                            style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px"
                             src="images/bulgaria.png"
                             alt="Bulgarian"
                           />
@@ -325,6 +326,7 @@
                         <div
                           @click="screenMode = !screenMode"
                           class="w-8 h-8 rounded-full flex justify-center items-center cursor-pointer transition-all duration-300 border hover:opacity-80 hover:scale-110"
+                          style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px"
                           :class="screenMode? 'bg-blue-400 border-blue-400':'bg-gray-300 border-gray-300'"
                         >
                           <svg
@@ -407,6 +409,7 @@
                     <div
                       class="text-justify indent-4 leading-[19px] text-base tracking-wide px-6 sm:px-12 md:px-0"
                       :class="screenMode? 'text-slate-700':'text-slate-100'"
+                      style="text-justify: distribute"
                     >
                       Hi there! I'm Erso, programmer and sports coach. I have
                       been programming for 3 years, both at university and in my
@@ -1456,7 +1459,10 @@
                         role="tooltip"
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>
                             I am fluent in HTML. I have used HTML in many
                             projects.
@@ -1466,7 +1472,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -1503,7 +1509,10 @@
                         role="tooltip"
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>
                             I am fluent in CSS. I have used CSS in many
                             projects. I am good at using grid and flexbox for
@@ -1514,7 +1523,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -1551,7 +1560,10 @@
                         role="tooltip"
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>
                             I am fluent in Tailwind. I have used Tailwind in
                             many projects.
@@ -1561,7 +1573,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -1598,7 +1610,10 @@
                         role="tooltip"
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>
                             I'm good at Bootstrap. I have used Bootstrap in one
                             of the my projects.
@@ -1608,7 +1623,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -1645,7 +1660,10 @@
                         role="tooltip"
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>
                             I can use JavaScript well. I have used JavaScript in
                             many projects. I'm using JS for animations, form
@@ -1656,7 +1674,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -1693,14 +1711,17 @@
                         role="tooltip"
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>I am currently learning Vue.js.</p>
                         </div>
                         <div data-popper-arrow></div>
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -1737,7 +1758,10 @@
                         role="tooltip"
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>
                             I can use jQuery well. I have used jQuery in many
                             projects. I'm using the library to change elements
@@ -1748,7 +1772,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -1785,7 +1809,10 @@
                         role="tooltip"
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>
                             I've been using AJAX for a while now. I have used
                             AJAX in one projects. I am using AJAX to dynamically
@@ -1796,7 +1823,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -1827,7 +1854,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -1858,7 +1885,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -1897,14 +1924,17 @@
                         role="tooltip"
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>I am fluent in .NET. My level is advanced.</p>
                         </div>
                         <div data-popper-arrow></div>
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -1941,14 +1971,17 @@
                         role="tooltip"
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>I am fluent in ASP.NET. My level is advanced.</p>
                         </div>
                         <div data-popper-arrow></div>
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -1985,7 +2018,10 @@
                         role="tooltip"
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>
                             I am fluent in PHP. I have used PHP for data
                             retrieval, CRUD operations, functionalities. session
@@ -1996,7 +2032,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -2033,14 +2069,17 @@
                         role="tooltip"
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>I am currently learning Laravel.</p>
                         </div>
                         <div data-popper-arrow></div>
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -2077,14 +2116,17 @@
                         role="tooltip"
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>I know basics of JAVA.</p>
                         </div>
                         <div data-popper-arrow></div>
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -2121,7 +2163,10 @@
                         role="tooltip"
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>
                             I am fluent in MySQL. I have used MySQL in many
                             projects. I know CRUD operations well.
@@ -2131,7 +2176,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -2168,7 +2213,10 @@
                         role="tooltip"
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>
                             I am fluent in SQL. I have used SQL in many
                             projects. I know CRUD operations well.
@@ -2178,7 +2226,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -2215,14 +2263,17 @@
                         role="tooltip"
                         class="hidden md:block absolute z-10 invisible inline-block w-64 text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                       >
-                        <div class="px-3 py-2">
+                        <div
+                          class="px-3 py-2 text-justify"
+                          style="text-justify: distribute"
+                        >
                           <p>I am currently learning Git.</p>
                         </div>
                         <div data-popper-arrow></div>
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -2254,7 +2305,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -2285,7 +2336,7 @@
                       </div>
                       <div>
                         <div
-                          class="w-full h-2.5 mb-4"
+                          class="w-full rounded-r-full h-2.5 mb-4"
                           :class="screenMode? 'bg-blue-200 ':'bg-blue-300'"
                         >
                           <div
@@ -2354,6 +2405,7 @@
                           <div
                             class="text-justify text-xs xl:text-sm tracking-wider"
                             :class="screenMode? 'text-slate-500':'text-slate-100'"
+                            style="text-justify: distribute"
                           >
                             Studying computer science in one of the best
                             Economics University in Bulgaria. During the first 2
@@ -2403,6 +2455,7 @@
                           <div
                             class="text-justify text-xs xl:text-sm tracking-wider"
                             :class="screenMode? 'text-slate-500':'text-slate-100'"
+                            style="text-justify: distribute"
                           >
                             I am a graduate of the sports school in Varna. I
                             graduated as a handball coach. I have a good
@@ -2469,6 +2522,7 @@
                           <div
                             class="text-justify text-xs xl:text-sm tracking-wider"
                             :class="screenMode? 'text-slate-500':'text-slate-100'"
+                            style="text-justify: distribute"
                           >
                             My main responsibilities are planning, developing,
                             testing, maintaining and deploying software and
@@ -2516,6 +2570,7 @@
                           <div
                             class="text-justify text-xs xl:text-sm tracking-wider"
                             :class="screenMode? 'text-slate-500':'text-slate-100'"
+                            style="text-justify: distribute"
                           >
                             My role included internal software support.
                             Installation of internal software on terminals,
@@ -2564,6 +2619,7 @@
                           <div
                             class="text-justify text-xs xl:text-sm tracking-wider"
                             :class="screenMode? 'text-slate-500':'text-slate-100'"
+                            style="text-justify: distribute"
                           >
                             Preparation of monthly and weekly sales reports.
                             preparation of the work schedule. preparation of
@@ -2611,6 +2667,7 @@
                           <div
                             class="text-justify text-xs xl:text-sm tracking-wider"
                             :class="screenMode? 'text-slate-500':'text-slate-100'"
+                            style="text-justify: distribute"
                           >
                             Exchange over 30 types of currency. Reporting of
                             available funds and currency. Closing a report book
@@ -2661,6 +2718,7 @@
                           <div
                             class="text-justify text-xs xl:text-sm tracking-wider"
                             :class="screenMode? 'text-slate-500':'text-slate-100'"
+                            style="text-justify: distribute"
                           >
                             I have 3 months experience as an a la carte waiter.
                             Main duties include serving, clearing and working
@@ -2695,7 +2753,7 @@
                     data-carousel="static"
                   >
                     <div
-                      class="relative border overflow-hidden rounded-md h-44 md:h-52"
+                      class="relative border overflow-hidden rounded-md h-[180px] md:h-52"
                       :class="screenMode? 'bg-white border-slate-100':'bg-slate-700 border-slate-600'"
                       style="box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3)"
                     >
@@ -2706,7 +2764,7 @@
                       >
                         <div class="-mt-2">
                           <div
-                            class="text-center font-bold text-xl md:text-2xl mb-2.5 md:mb-0"
+                            class="text-center font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5 md:mb-0"
                             :class="screenMode? 'text-slate-700':'text-slate-100'"
                           >
                             <i
@@ -2723,6 +2781,7 @@
                             <div
                               class="text-slate-700 md:ml-6 tracking-wide text-justify px-16 sm:px-20 md:px-0 text-xs md:text-base"
                               :class="screenMode? 'text-slate-700':'text-slate-100'"
+                              style="text-justify: distribute"
                             >
                               Certificate for first place in 2022, "Review of
                               student activities" at the Department of
@@ -2740,7 +2799,7 @@
                       >
                         <div class="-mt-2">
                           <div
-                            class="text-center font-bold text-xl md:text-2xl mb-2.5 md:mb-0"
+                            class="text-center font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5 md:mb-0"
                             :class="screenMode? 'text-slate-700':'text-slate-100'"
                           >
                             <i
@@ -2757,6 +2816,7 @@
                             <div
                               class="text-slate-700 md:ml-6 tracking-wide text-justify px-16 sm:px-20 md:px-0 text-xs md:text-base"
                               :class="screenMode? 'text-slate-700':'text-slate-100'"
+                              style="text-justify: distribute"
                             >
                               Computer Literacy Certificate. Released in 2018.
                               The certificate covers an MS Office suite and work
@@ -2772,7 +2832,7 @@
                       >
                         <div class="-mt-2">
                           <div
-                            class="text-center font-bold text-xl md:text-2xl mb-2.5 md:mb-0"
+                            class="text-center font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5 md:mb-0"
                             :class="screenMode? 'text-slate-700':'text-slate-100'"
                           >
                             <i class="fa-solid fa-trophy text-[#FFD700]"></i>
@@ -2787,6 +2847,7 @@
                             <div
                               class="text-slate-700 md:ml-6 tracking-wide text-justify px-16 sm:px-20 md:px-0 text-xs md:text-base"
                               :class="screenMode? 'text-slate-700':'text-slate-100'"
+                              style="text-justify: distribute"
                             >
                               1 time sportman of the year at Varna sports school
                               2017. 5 times team of the year. 3rd place at the
@@ -2803,7 +2864,7 @@
                       >
                         <div class="-mt-2">
                           <div
-                            class="text-center font-bold text-xl md:text-2xl mb-2.5 md:mb-0"
+                            class="text-center font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5 md:mb-0"
                             :class="screenMode? 'text-slate-700':'text-slate-100'"
                           >
                             <i class="fa-solid fa-graduation-cap"></i>
@@ -2818,6 +2879,7 @@
                             <div
                               class="text-slate-700 md:ml-6 tracking-wide text-justify px-16 sm:px-20 md:px-0 text-xs md:text-base"
                               :class="screenMode? 'text-slate-700':'text-slate-100'"
+                              style="text-justify: distribute"
                             >
                               Part of the IT Master Class 9. The university
                               provides us to become a part of the companies in
@@ -2833,7 +2895,7 @@
                       >
                         <div class="-mt-2">
                           <div
-                            class="text-center font-bold text-xl md:text-2xl mb-2.5 md:mb-0"
+                            class="text-center font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5 md:mb-0"
                             :class="screenMode? 'text-slate-700':'text-slate-100'"
                           >
                             <i class="fa-solid fa-book text-[#007ced]"></i>
@@ -2848,6 +2910,7 @@
                             <div
                               class="text-slate-700 md:ml-6 tracking-wide text-justify px-16 sm:px-20 md:px-0 text-xs md:text-base"
                               :class="screenMode? 'text-slate-700':'text-slate-100'"
+                              style="text-justify: distribute"
                             >
                               Report in the collection "STUDENT SCIENTIFIC
                               CONFERENCE" on the topic "Development of web
@@ -2864,7 +2927,7 @@
                       >
                         <div class="-mt-2">
                           <div
-                            class="text-center font-bold text-xl md:text-2xl mb-2.5 md:mb-0"
+                            class="text-center font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5 md:mb-0"
                             :class="screenMode? 'text-slate-700':'text-slate-100'"
                           >
                             <i
@@ -2881,6 +2944,7 @@
                             <div
                               class="text-slate-700 md:ml-6 tracking-wide text-justify px-16 sm:px-20 md:px-0 text-xs md:text-base"
                               :class="screenMode? 'text-slate-700':'text-slate-100'"
+                              style="text-justify: distribute"
                             >
                               Certificate of successfully completed course on
                               Microsoft Azure Cloud (fundamental). The course
@@ -2897,7 +2961,7 @@
                       >
                         <div class="-mt-2">
                           <div
-                            class="text-center font-bold text-xl md:text-2xl mb-2.5 md:mb-0"
+                            class="text-center font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5 md:mb-0"
                             :class="screenMode? 'text-slate-700':'text-slate-100'"
                           >
                             <i
@@ -2914,6 +2978,7 @@
                             <div
                               class="text-slate-700 md:ml-6 tracking-wide text-justify px-16 sm:px-20 md:px-0 text-xs md:text-base"
                               :class="screenMode? 'text-slate-700':'text-slate-100'"
+                              style="text-justify: distribute"
                             >
                               Certificate of successfully completed course on
                               Scaled Agile (SAFe methodology). The course topics
@@ -2974,16 +3039,16 @@
                     <!-- Slider controls -->
                     <button
                       type="button"
-                      class="absolute top-0 -left-4 md:-left-10 z-20 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                      class="absolute top-0 -left-4 md:-left-10 z-20 flex items-center justify-center h-full px-4 cursor-pointer md:group focus:outline-none"
                       data-carousel-prev
                     >
                       <span
                         class="inline-flex items-center justify-center shadow-xl hover:border-transparent rounded-l-lg md:rounded-full md:h-12 w-12 h-full bg-white transition-all lg:active:scale-90"
-                        :class="screenMode? 'bg-white md:group-hover:bg-blue-400 border border-slate-100':'bg-slate-300 md:group-hover:bg-blue-500'"
+                        :class="screenMode? 'bg-white md:group-hover:bg-blue-400 border border-slate-100':'bg-slate-400 md:group-hover:bg-blue-500'"
                       >
                         <svg
                           aria-hidden="true"
-                          class="w-6 h-6 text-slate-700 sm:w-6 sm:h-6 group-hover:text-white transition-all"
+                          class="w-6 h-6 text-slate-700 sm:w-6 sm:h-6 md:group-hover:text-white transition-all"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -3005,11 +3070,11 @@
                     >
                       <span
                         class="inline-flex items-center justify-center shadow-xl hover:border-transparent rounded-r-lg md:rounded-full md:h-12 w-12 h-full bg-white transition-all lg:active:scale-90"
-                        :class="screenMode? 'bg-white md:group-hover:bg-blue-400 border border-slate-100':'bg-slate-300 md:group-hover:bg-blue-500'"
+                        :class="screenMode? 'bg-white md:group-hover:bg-blue-400 border border-slate-100':'bg-slate-400 md:group-hover:bg-blue-500'"
                       >
                         <svg
                           aria-hidden="true"
-                          class="w-6 h-6 text-slate-700 sm:w-6 sm:h-6 group-hover:text-white transition-all"
+                          class="w-6 h-6 text-slate-700 sm:w-6 sm:h-6 md:group-hover:text-white transition-all"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -3128,6 +3193,7 @@
                         <p
                           class="text-sm lg:text-base text-justify sm:text-left"
                           :class="screenMode? 'text-gray-500':'text-gray-400'"
+                          style="text-justify: distribute"
                         >
                           Web platform for comparing prices and products from
                           various sites. With the development of e-commerce, the
@@ -3290,6 +3356,7 @@
                                 <div class="hidden p-4" id="informationTab1">
                                   <p
                                     class="text-sm text-gray-500 text-justify px-2 indent-4 tracking-wide"
+                                    style="text-justify: distribute"
                                   >
                                     Web platform for comparing prices and
                                     products from various sites. With the
@@ -3624,6 +3691,7 @@
                         <p
                           class="text-sm lg:text-base text-justify sm:text-left"
                           :class="screenMode? 'text-gray-500':'text-gray-400'"
+                          style="text-justify: distribute"
                         >
                           Web-based workflow management system. I have
                           envisioned a site from where every user will be able
@@ -3785,6 +3853,7 @@
                                 <div class="hidden p-4" id="informationTab">
                                   <p
                                     class="text-sm text-gray-500 text-justify px-2 indent-4 tracking-wide"
+                                    style="text-justify: distribute"
                                   >
                                     Web-based workflow management system. I have
                                     envisioned a site from where every user will
@@ -4127,6 +4196,7 @@
                         <p
                           class="text-sm lg:text-base text-justify sm:text-left"
                           :class="screenMode? 'text-gray-500':'text-gray-400'"
+                          style="text-justify: distribute"
                         >
                           The system allows users after logging into the system
                           and many functional options. The main functionalities
@@ -4288,6 +4358,7 @@
                                 <div class="hidden p-4" id="informationTab2">
                                   <p
                                     class="text-sm text-gray-500 text-justify px-2 indent-4 tracking-wide"
+                                    style="text-justify: distribute"
                                   >
                                     The system allows users after logging into
                                     the system and many functional options. The
@@ -4448,6 +4519,7 @@
                         <p
                           class="text-sm lg:text-base text-justify sm:text-left"
                           :class="screenMode? 'text-gray-500':'text-gray-400'"
+                          style="text-justify: distribute"
                         >
                           The system allows users, after logging into the
                           system, many functional options. The main
@@ -4610,6 +4682,7 @@
                                 <div class="hidden p-4" id="informationTab3">
                                   <p
                                     class="text-sm text-gray-500 text-justify px-2 indent-4 tracking-wide"
+                                    style="text-justify: distribute"
                                   >
                                     The system allows users, after logging into
                                     the system, many functional options. The
