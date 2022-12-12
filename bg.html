@@ -2,8 +2,11 @@
 <html lang="bg">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ерсин Хюсеин, бакалавър по Информатика и компютърни науки и уеб разработчик"
+    />
 
     <link rel="shortcut icon" href="images/siteLogo.png" />
     <link href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
@@ -11,7 +14,6 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="https://kit.fontawesome.com/d4b9f98a5c.js"></script>
 
     <title>Ерсин Хюсеин</title>
   </head>
@@ -28,7 +30,7 @@
           :style="{ width: progress }"
         ></div>
         <div
-          class="fixed z-20 right-3 bottom-3 w-10 h-10 hidden lg:flex border border-slate-200 rounded-full justify-center items-center cursor-pointer group transition-all"
+          class="fixed z-20 right-3.5 bottom-3.5 w-10 h-10 hidden lg:flex border border-slate-200 rounded-full justify-center items-center cursor-pointer group transition-all"
           :class="screenMode? 'bg-white hover:bg-slate-100 ':'bg-slate-100 hover:bg-slate-200'"
           style="
             box-shadow: rgb(0 0 0 / 25%) 0px 14px 28px,
@@ -38,7 +40,6 @@
           @click="goTop"
         >
           <svg
-            xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke-width="2.2"
@@ -67,7 +68,7 @@
         <div data-aos="fade-up">
           <div>
             <div
-              class="border-gray-200 lg:px-16 py-4 lg:py-10 lg:rounded-[3rem] w-full"
+              class="lg:rounded-t-[3rem] pb-10 md:pb-14 lg:pb-16 bg-white w-full px-4 sm:px-8 relative lg:px-0"
               :class="screenMode? 'bg-white':'bg-gray-600'"
             >
               <nav
@@ -100,7 +101,7 @@
                           class="w-8 h-8 block lg:hidden -mt-[1px] object-cover rounded-full"
                           style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px"
                           src="images/great-britain.png"
-                          alt="English"
+                          alt="English-flag"
                         />
                       </a>
                     </div>
@@ -112,7 +113,6 @@
                         style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px"
                       >
                         <svg
-                          xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke-width="1.5"
@@ -127,7 +127,6 @@
                           />
                         </svg>
                         <svg
-                          xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke-width="1.4"
@@ -158,7 +157,6 @@
                         aria-hidden="true"
                         fill="currentColor"
                         viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
                           fill-rule="evenodd"
@@ -168,7 +166,6 @@
                       </svg>
                       <svg
                         v-show="!hamburgerIcon"
-                        xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke-width="2.4"
@@ -188,17 +185,16 @@
                     class="hidden mt-2 w-full lg:block lg:w-auto"
                   >
                     <ul
-                      class="flex flex-col rounded-md p-4 lg:mt-4 border lg:flex-row lg:space-x-3 xl:space-x-4 2xl:space-x-5 lg:mt-0 lg:font-medium lg:border-0"
+                      class="flex flex-col rounded-md p-4 border lg:flex-row lg:space-x-3 xl:space-x-4 2xl:space-x-5 lg:mt-0 lg:font-medium lg:border-0"
                       :class="screenMode? 'bg-slate-100 lg:bg-white border-gray-100':'bg-slate-500 lg:bg-gray-600 border-gray-500'"
                     >
                       <li>
                         <a
                           href="#skills"
-                          class="block py-2 pl-3 pr-4 text-[19px] flex items-center rounded lg:hover:bg-transparent lg:border-0 transition-all lg:p-0"
+                          class="py-2 pl-3 pr-4 text-[19px] flex items-center rounded lg:hover:bg-transparent lg:border-0 transition-all lg:p-0"
                           :class="screenMode? 'text-gray-500 lg:hover:text-slate-700 hover:bg-slate-200':'text-white lg:hover:text-slate-300 hover:bg-slate-400'"
                         >
                           <svg
-                            xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke-width="1.6"
@@ -222,11 +218,10 @@
                       <li>
                         <a
                           href="#education"
-                          class="block py-2 pl-3 pr-4 text-[19px] flex items-center rounded lg:hover:bg-transparent lg:border-0 transition-all lg:p-0"
+                          class="py-2 pl-3 pr-4 text-[19px] flex items-center rounded lg:hover:bg-transparent lg:border-0 transition-all lg:p-0"
                           :class="screenMode? 'text-gray-500 lg:hover:text-slate-700 hover:bg-slate-200':'text-white lg:hover:text-slate-300 hover:bg-slate-400'"
                         >
                           <svg
-                            xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke-width="1.5"
@@ -245,11 +240,10 @@
                       <li>
                         <a
                           href="#experience"
-                          class="block py-2 pl-3 pr-4 text-[19px] flex items-center rounded lg:hover:bg-transparent lg:border-0 transition-all lg:p-0"
+                          class="py-2 pl-3 pr-4 text-[19px] flex items-center rounded lg:hover:bg-transparent lg:border-0 transition-all lg:p-0"
                           :class="screenMode? 'text-gray-500 lg:hover:text-slate-700 hover:bg-slate-200':'text-white lg:hover:text-slate-300 hover:bg-slate-400'"
                         >
                           <svg
-                            xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke-width="1.5"
@@ -268,11 +262,10 @@
                       <li>
                         <a
                           href="#certifications"
-                          class="block py-2 pl-3 pr-4 text-[19px] flex items-center rounded lg:hover:bg-transparent lg:border-0 transition-all lg:p-0"
+                          class="py-2 pl-3 pr-4 text-[19px] flex items-center rounded lg:hover:bg-transparent lg:border-0 transition-all lg:p-0"
                           :class="screenMode? 'text-gray-500 lg:hover:text-slate-700 hover:bg-slate-200':'text-white lg:hover:text-slate-300 hover:bg-slate-400'"
                         >
                           <svg
-                            xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke-width="1.5"
@@ -291,11 +284,10 @@
                       <li>
                         <a
                           href="#projects"
-                          class="block py-2 pl-3 pr-4 text-[19px] flex items-center rounded lg:hover:bg-transparent lg:border-0 transition-all lg:p-0"
+                          class="py-2 pl-3 pr-4 text-[19px] flex items-center rounded lg:hover:bg-transparent lg:border-0 transition-all lg:p-0"
                           :class="screenMode? 'text-gray-500 lg:hover:text-slate-700 hover:bg-slate-200':'text-white lg:hover:text-slate-300 hover:bg-slate-400'"
                         >
                           <svg
-                            xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke-width="1.5"
@@ -317,7 +309,7 @@
                             class="w-8 h-8 object-cover rounded-full cursor-pointer hover:scale-110 hover:opacity-70 transition-all duration-500"
                             style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px"
                             src="images/great-britain.png"
-                            alt="English"
+                            alt="English-flag"
                           />
                         </a>
                       </li>
@@ -329,7 +321,6 @@
                           style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px"
                         >
                           <svg
-                            xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke-width="1.5"
@@ -344,7 +335,6 @@
                             />
                           </svg>
                           <svg
-                            xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke-width="1.4"
@@ -406,15 +396,16 @@
                     <div
                       class="text-justify indent-4 leading-[19px] text-base tracking-wide px-6 sm:px-12 md:px-0"
                       :class="screenMode? 'text-slate-700':'text-slate-100'"
-                      style="text-justify: distribute"
+                      style="hyphens: auto; -webkit-hyphens: auto"
                     >
-                      Здравейте ! Аз съм Ерсо, програмист и спортен треньор.
-                      Занимавам се с програмиране от 3 години, както в
-                      университета така и в свободното си време. Имам теоретични
-                      и практически знания в областта на back-end и front-end
-                      програмирането. По-силната ми страна е уеб програмирането.
-                      В този сайт можете да намерите малко повече информация
-                      относно моите разработки и проекти върху, които работя.
+                      Аз съм Ерсин, софтуерен разработчик и спортен треньор.
+                      Занимавам се с програмиране от 3 години и половина, както
+                      в университета така и в свободното си време, а от скоро и
+                      на работа. Имам теоретични и практически знания в областта
+                      на back-end и front-end програмирането. По-силната ми
+                      страна е уеб програмирането. В този сайт можете да
+                      намерите малко повече информация относно моите разработки
+                      и проекти върху, които работя.
                     </div>
                     <div
                       id="contact"
@@ -425,7 +416,7 @@
                         class="flex rounded overflow-hidden mt-4 active:scale-90 transition-all w-full md:w-72 ring-0 outline-none border-none"
                       >
                         <div
-                          class="flex justify-center w-full md:w-auto items-center text-white text-sm shadow transition-all text-sm py-[9px] px-4 font-sans tracking-wide font-bold"
+                          class="flex justify-center w-full md:w-auto items-center text-white shadow transition-all text-sm py-[9px] px-4 font-sans tracking-wide font-bold"
                           :class="screenMode? 'bg-blue-600 hover:bg-blue-700':'bg-blue-700 hover:bg-blue-800'"
                         >
                           Изтегли CV
@@ -437,12 +428,10 @@
                           <div>
                             <svg
                               class="text-white w-5 h-5"
-                              xmlns="http://www.w3.org/2000/svg"
                               fill="none"
                               viewBox="0 0 24 24"
                               stroke-width="1.5"
                               stroke="currentColor"
-                              class="w-6 h-6"
                             >
                               <path
                                 stroke-linecap="round"
@@ -459,7 +448,7 @@
                         class="hidden md:flex rounded overflow-hidden mt-4 active:scale-90 transition-all w-full ring-0 outline-none border-none"
                       >
                         <div
-                          class="flex justify-center w-full md:w-auto items-center text-white text-sm shadow transition-all text-sm py-[9px] px-4 font-sans tracking-wide font-bold"
+                          class="flex justify-center w-full md:w-auto items-center text-white shadow transition-all text-sm py-[9px] px-4 font-sans tracking-wide font-bold"
                           :class="screenMode? 'bg-purple-600 hover:bg-purple-700':'bg-purple-700 hover:bg-purple-800'"
                         >
                           История
@@ -470,7 +459,6 @@
                         >
                           <div>
                             <svg
-                              xmlns="http://www.w3.org/2000/svg"
                               fill="none"
                               viewBox="0 0 24 24"
                               stroke-width="1.5"
@@ -515,7 +503,6 @@
                             class="w-5 h-5"
                             fill="currentColor"
                             viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
                               fill-rule="evenodd"
@@ -537,7 +524,6 @@
                             class="h-14 w-14 flex justify-center items-center group shadow-lg rounded-lg border border-slate-200 cursor-pointer hover:bg-slate-50 hover:shadow-inner hover:scale-110 transition-all duration-[400ms]"
                           >
                             <svg
-                              xmlns="http://www.w3.org/2000/svg"
                               fill="currentColor"
                               viewBox="0 0 496.013 496.013"
                               class="h-9 w-9 text-slate-600 group-hover:text-slate-800 transition-all"
@@ -594,7 +580,6 @@
                             class="h-14 w-14 flex justify-center items-center group shadow-lg rounded-lg border border-slate-200 cursor-pointer hover:bg-slate-50 hover:shadow-inner hover:scale-110 transition-all duration-[400ms]"
                           >
                             <svg
-                              xmlns="http://www.w3.org/2000/svg"
                               fill="currentColor"
                               viewBox="0 0 512 512"
                               class="h-9 w-9 text-slate-600 group-hover:text-slate-800 transition-all"
@@ -670,7 +655,6 @@
                             class="h-14 w-14 flex justify-center items-center group shadow-lg rounded-lg border border-slate-200 cursor-pointer hover:bg-slate-50 hover:shadow-inner hover:scale-110 transition-all duration-[400ms]"
                           >
                             <svg
-                              xmlns="http://www.w3.org/2000/svg"
                               fill="none"
                               viewBox="0 0 24 24"
                               stroke-width="1.5"
@@ -720,7 +704,6 @@
                             class="h-14 w-14 flex justify-center items-center group shadow-lg rounded-lg border border-slate-200 cursor-pointer hover:bg-slate-50 hover:shadow-inner hover:scale-110 transition-all duration-[400ms]"
                           >
                             <svg
-                              xmlns="http://www.w3.org/2000/svg"
                               fill="none"
                               viewBox="0 0 24 24"
                               stroke-width="1.5"
@@ -770,7 +753,6 @@
                             class="h-14 w-14 flex justify-center items-center group shadow-lg rounded-lg border border-slate-200 cursor-pointer hover:bg-slate-50 hover:shadow-inner hover:scale-110 transition-all duration-[400ms]"
                           >
                             <svg
-                              xmlns="http://www.w3.org/2000/svg"
                               fill="none"
                               viewBox="0 0 24 24"
                               stroke-width="1.5"
@@ -820,7 +802,6 @@
                             class="h-14 w-14 flex justify-center items-center group shadow-lg rounded-lg border border-slate-200 cursor-pointer hover:bg-slate-50 hover:shadow-inner hover:scale-110 transition-all duration-[400ms]"
                           >
                             <svg
-                              xmlns="http://www.w3.org/2000/svg"
                               fill="none"
                               viewBox="0 0 24 24"
                               stroke-width="1.5"
@@ -872,7 +853,6 @@
                             class="h-14 w-14 flex justify-center items-center group shadow-lg rounded-lg border border-slate-200 cursor-pointer hover:bg-slate-50 hover:shadow-inner hover:scale-110 transition-all duration-[400ms]"
                           >
                             <svg
-                              xmlns="http://www.w3.org/2000/svg"
                               fill="none"
                               viewBox="0 0 24 24"
                               stroke-width="1.5"
@@ -922,7 +902,6 @@
                             class="h-14 w-14 flex justify-center items-center group shadow-lg rounded-lg border border-slate-200 cursor-pointer hover:bg-slate-50 hover:shadow-inner hover:scale-110 transition-all duration-[400ms]"
                           >
                             <svg
-                              xmlns="http://www.w3.org/2000/svg"
                               fill="none"
                               viewBox="0 0 24 24"
                               stroke-width="1.5"
@@ -973,7 +952,6 @@
                             class="h-14 w-14 flex justify-center items-center group shadow-lg rounded-lg border border-slate-200 cursor-pointer hover:bg-slate-50 hover:shadow-inner hover:scale-110 transition-all duration-[400ms]"
                           >
                             <svg
-                              xmlns="http://www.w3.org/2000/svg"
                               fill="none"
                               viewBox="0 0 24 24"
                               stroke-width="1.5"
@@ -1005,6 +983,7 @@
                               >
                                 2022г.
                               </div>
+                              energo
                             </div>
                           </div>
                         </div>
@@ -1025,7 +1004,6 @@
                             class="h-14 w-14 flex justify-center items-center group shadow-lg rounded-lg border border-slate-200 cursor-pointer hover:bg-slate-50 hover:shadow-inner hover:scale-110 transition-all duration-[400ms]"
                           >
                             <svg
-                              xmlns="http://www.w3.org/2000/svg"
                               fill="none"
                               viewBox="0 0 24 24"
                               stroke-width="1.5"
@@ -1075,7 +1053,6 @@
                             class="h-14 w-14 flex justify-center items-center group shadow-lg rounded-lg border border-slate-200 cursor-pointer hover:bg-slate-50 hover:shadow-inner hover:scale-110 transition-all duration-[400ms]"
                           >
                             <svg
-                              xmlns="http://www.w3.org/2000/svg"
                               fill="none"
                               viewBox="0 0 24 24"
                               stroke-width="1.5"
@@ -1130,15 +1107,14 @@
                   <!--First card (Age)-->
                   <div
                     id="skills"
-                    class="relative p-[18px] lg:hover:scale-110 transition-all duration-500 cursor-pointer rounded-3xl w-full sm:my-0 sm:w-[252px] md:w-52 mb-8 sm:my-4 shadow-xl border"
+                    class="relative p-[18px] lg:hover:scale-110 transition-all duration-500 cursor-pointer rounded-3xl w-full sm:w-[252px] md:w-52 mb-8 sm:my-4 shadow-xl border"
                     :class="screenMode? 'bg-white lg:hover:border-pink-50 border-slate-100 lg:hover:bg-pink-50':'bg-slate-700 border-none lg:hover:bg-slate-600'"
                   >
                     <div
-                      class="text-white flex items-center absolute rounded-full p-2.5 shadow-xl left-4 -top-6 shadow-xl border"
+                      class="text-white flex items-center absolute rounded-full p-2.5 left-4 -top-6 shadow-xl border"
                       :class="screenMode? 'bg-pink-400 border-pink-300':'bg-pink-600 border-pink-500'"
                     >
                       <svg
-                        xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke-width="1.6"
@@ -1165,7 +1141,6 @@
                         :class="screenMode? 'text-gray-400':'text-gray-300'"
                       >
                         <svg
-                          xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke-width="1.5"
@@ -1189,11 +1164,10 @@
                     :class="screenMode? 'bg-white lg:hover:border-red-50 border-slate-100 lg:hover:bg-red-50':'bg-slate-700 border-none lg:hover:bg-slate-600'"
                   >
                     <div
-                      class="text-white flex items-center absolute rounded-full p-2.5 shadow-xl left-4 -top-6 shadow-xl border"
+                      class="text-white flex items-center absolute rounded-full p-2.5 left-4 -top-6 shadow-xl border"
                       :class="screenMode? 'bg-red-400 border-red-300':'bg-red-600 border-red-500'"
                     >
                       <svg
-                        xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke-width="1.6"
@@ -1220,7 +1194,6 @@
                         :class="screenMode? 'text-gray-400':'text-gray-300'"
                       >
                         <svg
-                          xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke-width="1.6"
@@ -1244,11 +1217,10 @@
                     :class="screenMode? 'bg-white lg:hover:border-green-50 border-slate-100 lg:hover:bg-green-50':'bg-slate-700 border-none lg:hover:bg-slate-600'"
                   >
                     <div
-                      class="text-white flex items-center absolute rounded-full p-2.5 shadow-xl left-4 -top-6 shadow-xl border"
+                      class="text-white flex items-center absolute rounded-full p-2.5 left-4 -top-6 shadow-xl border"
                       :class="screenMode? 'bg-green-400 border-green-300':'bg-green-600 border-green-500'"
                     >
                       <svg
-                        xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke-width="1.6"
@@ -1275,7 +1247,6 @@
                         :class="screenMode? 'text-gray-400':'text-gray-300'"
                       >
                         <svg
-                          xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke-width="1.6"
@@ -1299,11 +1270,10 @@
                     :class="screenMode? 'bg-white lg:hover:border-blue-50 border-slate-100 lg:hover:bg-blue-50':'bg-slate-700 border-none lg:hover:bg-slate-600'"
                   >
                     <div
-                      class="text-white flex items-center absolute rounded-full p-2.5 shadow-xl left-4 -top-6 shadow-xl border"
+                      class="text-white flex items-center absolute rounded-full p-2.5 left-4 -top-6 shadow-xl border"
                       :class="screenMode? 'bg-blue-400 border-blue-300':'bg-blue-600 border-blue-500'"
                     >
                       <svg
-                        xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke-width="1.5"
@@ -1330,7 +1300,6 @@
                         :class="screenMode? 'text-gray-400':'text-gray-300'"
                       >
                         <svg
-                          xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke-width="1.6"
@@ -1359,11 +1328,10 @@
                     :class="screenMode? 'bg-white lg:hover:border-indigo-50 border-slate-100 lg:hover:bg-indigo-50':'bg-slate-700 border-none lg:hover:bg-slate-600'"
                   >
                     <div
-                      class="text-white flex items-center absolute rounded-full p-2.5 shadow-xl left-4 -top-6 shadow-xl border"
+                      class="text-white flex items-center absolute rounded-full p-2.5 left-4 -top-6 shadow-xl border"
                       :class="screenMode? 'bg-indigo-400 border-indigo-300':'bg-indigo-600 border-indigo-500'"
                     >
                       <svg
-                        xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke-width="1.5"
@@ -1390,7 +1358,6 @@
                         :class="screenMode? 'text-gray-400':'text-gray-300'"
                       >
                         <svg
-                          xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke-width="1.6"
@@ -1417,7 +1384,7 @@
                 data-aos-duration="800"
               >
                 <div
-                  class="text-center text-3xl md:text-4xl font-bold mb-3.5 md:mb-5 md:mb-0 mt-8"
+                  class="text-center text-3xl md:text-4xl font-bold mb-3.5 md:mb-0 mt-8"
                   :class="screenMode? 'text-slate-700':'text-slate-100'"
                 >
                   Професионални умения
@@ -1426,8 +1393,8 @@
                   class="text-center text-sm mb-6 hidden md:block mt-1"
                   :class="screenMode? 'text-gray-400':'text-gray-300'"
                 >
-                  Поставете мишката върху пгорамния език, технология, билиотека
-                  или софтуер за да получите повече информация.
+                  Поставете мишката върху програмния език, технология,
+                  библиотека или софтуер за да получите повече информация.
                 </div>
                 <div
                   class="md:flex justify-between shadow-2xl lg:mx-24 xl:mx-32 p-4 md:space-x-5 lg:space-x-6 rounded-md"
@@ -1458,12 +1425,12 @@
                         data-popover
                         id="popover-right"
                         role="tooltip"
-                        class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                        class="hidden md:inline-block absolute z-10 invisible w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
                         <div
                           class="px-3 py-2 text-justify"
-                          style="text-justify: distribute"
+                          style="hyphens: auto; -webkit-hyphens: auto"
                         >
                           <p>
                             Умея отлично HTML. Използвал съм HTML в много от
@@ -1509,17 +1476,17 @@
                         data-popover
                         id="popover-right-1"
                         role="tooltip"
-                        class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                        class="hidden md:inline-block absolute z-10 invisible w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
                         <div
                           class="px-3 py-2 text-justify"
-                          style="text-justify: distribute"
+                          style="hyphens: auto; -webkit-hyphens: auto"
                         >
                           <p>
                             Умея отлично CSS. Използвал съм CSS в много от моите
-                            проекти. Добър съм в изполването на grid и flexbox
-                            за позоционирането на елементите, изполвам още CSS
+                            проекти. Добър съм в използването на grid и flexbox
+                            за позиционирането на елементите, използвам още CSS
                             за анимиране на елементите.
                           </p>
                         </div>
@@ -1562,12 +1529,12 @@
                         data-popover
                         id="popover-right-2"
                         role="tooltip"
-                        class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                        class="hidden md:inline-block absolute z-10 invisible w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
                         <div
                           class="px-3 py-2 text-justify"
-                          style="text-justify: distribute"
+                          style="hyphens: auto; -webkit-hyphens: auto"
                         >
                           <p>
                             Умея отлично Tailwind. Използвал съм Tailwind в
@@ -1613,12 +1580,12 @@
                         data-popover
                         id="popover-right-3"
                         role="tooltip"
-                        class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                        class="hidden md:inline-block absolute z-10 invisible w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
                         <div
                           class="px-3 py-2 text-justify"
-                          style="text-justify: distribute"
+                          style="hyphens: auto; -webkit-hyphens: auto"
                         >
                           <p>
                             Умея добре Bootstrap. Използвал съм Bootstrap в един
@@ -1664,12 +1631,12 @@
                         data-popover
                         id="popover-right-4"
                         role="tooltip"
-                        class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                        class="hidden md:inline-block absolute z-10 invisible w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
                         <div
                           class="px-3 py-2 text-justify"
-                          style="text-justify: distribute"
+                          style="hyphens: auto; -webkit-hyphens: auto"
                         >
                           <p>
                             Добре владея JavaScript. Използвал съм JavaScript в
@@ -1717,12 +1684,12 @@
                         data-popover
                         id="popover-right-5"
                         role="tooltip"
-                        class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                        class="hidden md:inline-block absolute z-10 invisible w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
                         <div
                           class="px-3 py-2 text-justify"
-                          style="text-justify: distribute"
+                          style="hyphens: auto; -webkit-hyphens: auto"
                         >
                           <p>Все още съм начинаещ с Vue.js.</p>
                         </div>
@@ -1765,12 +1732,12 @@
                         data-popover
                         id="popover-right-6"
                         role="tooltip"
-                        class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                        class="hidden md:inline-block absolute z-10 invisible w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
                         <div
                           class="px-3 py-2 text-justify"
-                          style="text-justify: distribute"
+                          style="hyphens: auto; -webkit-hyphens: auto"
                         >
                           <p>
                             Умея jQuery добре. Използвал съм jQuery в много от
@@ -1818,17 +1785,17 @@
                         data-popover
                         id="popover-right-7"
                         role="tooltip"
-                        class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                        class="hidden md:inline-block absolute z-10 invisible w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
                         <div
                           class="px-3 py-2 text-justify"
-                          style="text-justify: distribute"
+                          style="hyphens: auto; -webkit-hyphens: auto"
                         >
                           <p>
                             Използвам AJAX от известно време. Използвам съм AJAX
                             в един проект. Използвам технологията за динамичното
-                            извличане на даннии от базата от данни.
+                            извличане на данни от базата от данни.
                           </p>
                         </div>
                         <div data-popper-arrow></div>
@@ -1934,12 +1901,12 @@
                         data-popover
                         id="popover-right-10"
                         role="tooltip"
-                        class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                        class="hidden md:inline-block absolute z-10 invisible w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
                         <div
                           class="px-3 py-2 text-justify"
-                          style="text-justify: distribute"
+                          style="hyphens: auto; -webkit-hyphens: auto"
                         >
                           <p>
                             Владея добре .NET. Нивото ми е напреднал (advanced).
@@ -1984,12 +1951,12 @@
                         data-popover
                         id="popover-right-11"
                         role="tooltip"
-                        class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                        class="hidden md:inline-block absolute z-10 invisible w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
                         <div
                           class="px-3 py-2 text-justify"
-                          style="text-justify: distribute"
+                          style="hyphens: auto; -webkit-hyphens: auto"
                         >
                           <p>
                             Владея добре ASP.NET. Нивото ми е напреднал
@@ -2035,12 +2002,12 @@
                         data-popover
                         id="popover-right-12"
                         role="tooltip"
-                        class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                        class="hidden md:inline-block absolute z-10 invisible w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
                         <div
                           class="px-3 py-2 text-justify"
-                          style="text-justify: distribute"
+                          style="hyphens: auto; -webkit-hyphens: auto"
                         >
                           <p>
                             Владея много добре PHP. Използвал съм PHP за
@@ -2087,12 +2054,12 @@
                         data-popover
                         id="popover-right-13"
                         role="tooltip"
-                        class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                        class="hidden md:inline-block absolute z-10 invisible w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
                         <div
                           class="px-3 py-2 text-justify"
-                          style="text-justify: distribute"
+                          style="hyphens: auto; -webkit-hyphens: auto"
                         >
                           <p>В момента изучавам Laravel.</p>
                         </div>
@@ -2135,12 +2102,12 @@
                         data-popover
                         id="popover-right-14"
                         role="tooltip"
-                        class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                        class="hidden md:inline-block absolute z-10 invisible w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
                         <div
                           class="px-3 py-2 text-justify"
-                          style="text-justify: distribute"
+                          style="hyphens: auto; -webkit-hyphens: auto"
                         >
                           <p>Знам основите на JAVA.</p>
                         </div>
@@ -2183,12 +2150,12 @@
                         data-popover
                         id="popover-right-15"
                         role="tooltip"
-                        class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                        class="hidden md:inline-block absolute z-10 invisible w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
                         <div
                           class="px-3 py-2 text-justify"
-                          style="text-justify: distribute"
+                          style="hyphens: auto; -webkit-hyphens: auto"
                         >
                           <p>
                             Владея отлично MySQL. Използвал съм MySQL в няколко
@@ -2234,12 +2201,12 @@
                         data-popover
                         id="popover-right-16"
                         role="tooltip"
-                        class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                        class="hidden md:inline-block absolute z-10 invisible w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
                         <div
                           class="px-3 py-2 text-justify"
-                          style="text-justify: distribute"
+                          style="hyphens: auto; -webkit-hyphens: auto"
                         >
                           <p>
                             Влядея добре SQL. Използвал съм MySQL в няколко
@@ -2285,12 +2252,12 @@
                         data-popover
                         id="popover-right-17"
                         role="tooltip"
-                        class="hidden md:block absolute z-10 invisible inline-block w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
+                        class="hidden md:inline-block absolute z-10 invisible w-64 text-gray-500 text-sm font-light transition-opacity duration-300 bg-white border border-slate-200 rounded-lg shadow-lg opacity-0"
                         :class="screenMode? 'bg-white':'bg-slate-200'"
                       >
                         <div
                           class="px-3 py-2 text-justify"
-                          style="text-justify: distribute"
+                          style="hyphens: auto; -webkit-hyphens: auto"
                         >
                           <p>В момента изучавам Git.</p>
                         </div>
@@ -2402,9 +2369,25 @@
                         class="bg-[#FAD5A5] w-full md:w-72 flex text-center text-white justify-center items-center rounded-t md:rounded-t-none md:rounded-l"
                       >
                         <div class="p-4 md:p-2">
-                          <i
-                            class="fa-solid fa-graduation-cap fa-4x mb-1.5"
-                          ></i>
+                          <div
+                            class="flex justify-center items-center h-full w-full"
+                          >
+                            <svg
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              class="w-28 h-28 md:w-20 md:h-20"
+                            >
+                              <path
+                                d="M11.7 2.805a.75.75 0 01.6 0A60.65 60.65 0 0122.83 8.72a.75.75 0 01-.231 1.337 49.949 49.949 0 00-9.902 3.912l-.003.002-.34.18a.75.75 0 01-.707 0A50.009 50.009 0 007.5 12.174v-.224c0-.131.067-.248.172-.311a54.614 54.614 0 014.653-2.52.75.75 0 00-.65-1.352 56.129 56.129 0 00-4.78 2.589 1.858 1.858 0 00-.859 1.228 49.803 49.803 0 00-4.634-1.527.75.75 0 01-.231-1.337A60.653 60.653 0 0111.7 2.805z"
+                              />
+                              <path
+                                d="M13.06 15.473a48.45 48.45 0 017.666-3.282c.134 1.414.22 2.843.255 4.285a.75.75 0 01-.46.71 47.878 47.878 0 00-8.105 4.342.75.75 0 01-.832 0 47.877 47.877 0 00-8.104-4.342.75.75 0 01-.461-.71c.035-1.442.121-2.87.255-4.286A48.4 48.4 0 016 13.18v1.27a1.5 1.5 0 00-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.661a6.729 6.729 0 00.551-1.608 1.5 1.5 0 00.14-2.67v-.645a48.549 48.549 0 013.44 1.668 2.25 2.25 0 002.12 0z"
+                              />
+                              <path
+                                d="M4.462 19.462c.42-.419.753-.89 1-1.394.453.213.902.434 1.347.661a6.743 6.743 0 01-1.286 1.794.75.75 0 11-1.06-1.06z"
+                              />
+                            </svg>
+                          </div>
                           <div
                             class="font-bold tracking-wide text-xl xl:text-[23px]"
                           >
@@ -2429,9 +2412,9 @@
                           <div
                             class="text-justify text-xs xl:text-sm tracking-wider"
                             :class="screenMode? 'text-slate-500':'text-slate-100'"
-                            style="text-justify: distribute"
+                            style="hyphens: auto; -webkit-hyphens: auto"
                           >
-                            Изучаване на копютърни науки в един от най-добрите
+                            Изучаване на компютърни науки в един от най-добрите
                             икономически университети в България. През първите 2
                             години изучавах икономика. В последните 2 години
                             интензивно изучавах компютърни науки. Изучавани
@@ -2454,11 +2437,23 @@
                         class="bg-[#FAD5A5] w-full md:w-72 flex text-center justify-center items-center text-white rounded-t md:rounded-t-none md:rounded-l"
                       >
                         <div class="p-4 md:p-2">
-                          <i class="fa-solid fa-book fa-4x mb-1.5"></i>
+                          <div
+                            class="flex justify-center items-center h-full w-full"
+                          >
+                            <svg
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              class="w-28 h-28 md:w-20 md:h-20"
+                            >
+                              <path
+                                d="M11.25 4.533A9.707 9.707 0 006 3a9.735 9.735 0 00-3.25.555.75.75 0 00-.5.707v14.25a.75.75 0 001 .707A8.237 8.237 0 016 18.75c1.995 0 3.823.707 5.25 1.886V4.533zM12.75 20.636A8.214 8.214 0 0118 18.75c.966 0 1.89.166 2.75.47a.75.75 0 001-.708V4.262a.75.75 0 00-.5-.707A9.735 9.735 0 0018 3a9.707 9.707 0 00-5.25 1.533v16.103z"
+                              />
+                            </svg>
+                          </div>
                           <div
                             class="font-bold tracking-wide text-xl xl:text-[23px]"
                           >
-                            Ср. Oбразование
+                            Ср. Образование
                           </div>
                           <div class="uppercase text-sm md:text-xs xl:text-sm">
                             Септември 2013 - Май 2018
@@ -2479,7 +2474,7 @@
                           <div
                             class="text-justify text-xs xl:text-sm tracking-wider"
                             :class="screenMode? 'text-slate-500':'text-slate-100'"
-                            style="text-justify: distribute"
+                            style="hyphens: auto; -webkit-hyphens: auto"
                           >
                             Завършил съм спортното училище във Варна. Дипломиран
                             съм като треньор по хандбал. Имам познания за
@@ -2521,7 +2516,21 @@
                         class="bg-[#FAA0A0] w-full md:w-72 flex text-center justify-center items-center text-white rounded-t md:rounded-t-none md:rounded-l"
                       >
                         <div class="p-4 md:p-2">
-                          <i class="fa-solid fa-code fa-4x mb-1.5"></i>
+                          <div
+                            class="flex justify-center items-center h-full w-full"
+                          >
+                            <svg
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              class="w-28 h-28 md:w-20 md:h-20"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M14.447 3.027a.75.75 0 01.527.92l-4.5 16.5a.75.75 0 01-1.448-.394l4.5-16.5a.75.75 0 01.921-.526zM16.72 6.22a.75.75 0 011.06 0l5.25 5.25a.75.75 0 010 1.06l-5.25 5.25a.75.75 0 11-1.06-1.06L21.44 12l-4.72-4.72a.75.75 0 010-1.06zm-9.44 0a.75.75 0 010 1.06L2.56 12l4.72 4.72a.75.75 0 11-1.06 1.06L.97 12.53a.75.75 0 010-1.06l5.25-5.25a.75.75 0 011.06 0z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           <div
                             class="font-bold tracking-wide text-xl xl:text-[23px]"
                           >
@@ -2546,7 +2555,7 @@
                           <div
                             class="text-justify text-xs xl:text-sm tracking-wider"
                             :class="screenMode? 'text-slate-500':'text-slate-100'"
-                            style="text-justify: distribute"
+                            style="hyphens: auto; -webkit-hyphens: auto"
                           >
                             Основните ми задължения са планиране, разработване,
                             тестване, внедряване и поддържане на софтуер. Избор
@@ -2569,7 +2578,21 @@
                         class="bg-[#FAA0A0] w-full md:w-72 flex text-center justify-center items-center text-white rounded-t md:rounded-t-none md:rounded-l"
                       >
                         <div class="p-4 md:p-2">
-                          <i class="fa-solid fa-bolt fa-4x mb-1.5"></i>
+                          <div
+                            class="flex justify-center items-center h-full w-full"
+                          >
+                            <svg
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              class="w-28 h-28 md:w-20 md:h-20"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           <div
                             class="font-bold tracking-wide text-xl xl:text-[23px]"
                           >
@@ -2589,12 +2612,12 @@
                             class="tracking-wide text-center md:text-left text-xl xl:text-2xl mb-2"
                             :class="screenMode? 'text-slate-700':'text-slate-100'"
                           >
-                            <b>ИТ съпорт & администратор</b> - Варна
+                            <b>ИТ съпорт & консултант</b> - Варна
                           </div>
                           <div
                             class="text-justify text-xs xl:text-sm tracking-wider"
                             :class="screenMode? 'text-slate-500':'text-slate-100'"
-                            style="text-justify: distribute"
+                            style="hyphens: auto; -webkit-hyphens: auto"
                           >
                             Основната ми задача беше да поддържам вътрешни
                             софтуерни продукти. Инсталиране на вътрешни софтуери
@@ -2619,7 +2642,21 @@
                         class="bg-[#FAA0A0] w-full md:w-72 flex text-center justify-center items-center text-white rounded-t md:rounded-t-none md:rounded-l"
                       >
                         <div class="p-4 md:p-2">
-                          <i class="fa-solid fa-cloud fa-4x mb-1.5"></i>
+                          <div
+                            class="flex justify-center items-center h-full w-full"
+                          >
+                            <svg
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              class="w-28 h-28 md:w-20 md:h-20"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M4.5 9.75a6 6 0 0111.573-2.226 3.75 3.75 0 014.133 4.303A4.5 4.5 0 0118 20.25H6.75a5.25 5.25 0 01-2.23-10.004 6.072 6.072 0 01-.02-.496z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           <div
                             class="font-bold tracking-wide text-xl xl:text-[23px]"
                           >
@@ -2644,7 +2681,7 @@
                           <div
                             class="text-justify text-xs xl:text-sm tracking-wider"
                             :class="screenMode? 'text-slate-500':'text-slate-100'"
-                            style="text-justify: distribute"
+                            style="hyphens: auto; -webkit-hyphens: auto"
                           >
                             Изготвяне на месечни и седмични отчети за продажби.
                             Изготвяне на работен график за служителите.
@@ -2668,7 +2705,24 @@
                         class="bg-[#FAA0A0] w-full md:w-72 flex text-center justify-center items-center text-white rounded-t md:rounded-t-none md:rounded-l"
                       >
                         <div class="p-4 md:p-2">
-                          <i class="fa-solid fa-coins fa-4x mb-1.5"></i>
+                          <div
+                            class="flex justify-center items-center h-full w-full"
+                          >
+                            <svg
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              class="w-28 h-28 md:w-20 md:h-20"
+                            >
+                              <path
+                                d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 01-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004zM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 01-.921.42z"
+                              />
+                              <path
+                                fill-rule="evenodd"
+                                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v.816a3.836 3.836 0 00-1.72.756c-.712.566-1.112 1.35-1.112 2.178 0 .829.4 1.612 1.113 2.178.502.4 1.102.647 1.719.756v2.978a2.536 2.536 0 01-.921-.421l-.879-.66a.75.75 0 00-.9 1.2l.879.66c.533.4 1.169.645 1.821.75V18a.75.75 0 001.5 0v-.81a4.124 4.124 0 001.821-.749c.745-.559 1.179-1.344 1.179-2.191 0-.847-.434-1.632-1.179-2.191a4.122 4.122 0 00-1.821-.75V8.354c.29.082.559.213.786.393l.415.33a.75.75 0 00.933-1.175l-.415-.33a3.836 3.836 0 00-1.719-.755V6z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
                           <div
                             class="font-bold tracking-wide text-xl xl:text-[23px]"
                           >
@@ -2693,7 +2747,7 @@
                           <div
                             class="text-justify text-xs xl:text-sm tracking-wider"
                             :class="screenMode? 'text-slate-500':'text-slate-100'"
-                            style="text-justify: distribute"
+                            style="hyphens: auto; -webkit-hyphens: auto"
                           >
                             Професионален опит при работа с финансови средства.
                             Обмяна на над 30 вида валути. Отчитане на наличната
@@ -2716,9 +2770,34 @@
                         class="bg-[#FAA0A0] w-full md:w-72 flex text-center justify-center items-center text-white rounded-t md:rounded-t-none md:rounded-l"
                       >
                         <div class="p-4 md:p-2">
-                          <i
-                            class="fa-solid fa-champagne-glasses fa-4x mb-1.5"
-                          ></i>
+                          <div
+                            class="flex justify-center items-center h-full w-full"
+                          >
+                            <svg
+                              viewBox="0 0 206.395 206.395"
+                              fill="currentColor"
+                              class="w-28 h-28 md:w-20 md:h-20"
+                            >
+                              <path
+                                d="M162.976,80.961c10.913,0,19.745,8.832,19.745,19.765c0,10.874-8.822,19.716-19.745,19.716
+                                c-10.884,0-19.726-8.842-19.726-19.716C143.25,89.793,152.082,80.961,162.976,80.961z M143.709,190.621l0.166-0.889
+                                c0.469-3.674,0.733-7.289,0.928-10.933c0.303-7.22,0.059-14.431-0.703-21.514c-1.505-14.186-5.198-28.07-11.206-40.751
+                                c-5.237-11.177-22.618-39.032-33.219-51.85c3.322-1.798,9.897-5.041,12.242-5.979c5.413-2.316,11.255-3.762,17.235-4.113
+                                c6.028-0.371,12.222,0.352,18.26,2.169c6.018,1.856,11.871,4.787,17.332,8.451c-4.445-4.836-9.555-9.194-15.456-12.691
+                                c-5.872-3.429-12.516-5.97-19.54-7.201c-7.005-1.251-14.343-1.192-21.485-0.039c-2.833,0.44-5.589,1.124-8.324,1.895l1.456-4.553
+                                c2.062-5.53,4.924-10.776,8.764-15.408c3.859-4.67,8.588-8.705,14.059-11.841c5.471-3.195,11.597-5.403,17.977-6.927
+                                c-6.546-0.02-13.229,0.713-19.775,2.667c-6.536,1.915-12.897,5.041-18.563,9.36c-5.745,4.23-10.679,9.643-14.753,15.652
+                                c-2.022,3.029-3.791,6.224-5.393,9.565c-0.791,1.671-1.524,3.4-2.169,5.12l-0.811,2.286l-1.749-0.254
+                                c-1.856-0.234-3.713-0.391-5.559-0.489c-3.674-0.137-7.328-0.029-10.923,0.361c-7.23,0.772-14.323,2.657-20.781,5.696
+                                C35.3,61.459,29.565,65.68,24.816,70.575c-4.758,4.885-8.549,10.444-11.568,16.258c4.27-4.944,9.155-9.35,14.499-12.701
+                                c5.325-3.361,11.138-5.745,17.039-6.917c5.882-1.26,11.89-1.358,17.723-0.596c1.456,0.186,4.553,0.752,7.611,1.358l-0.752,0.86
+                                c-4.572,5.647-8.236,11.988-10.64,18.7c-2.423,6.693-3.507,13.708-3.4,20.537c0.068,6.849,1.348,13.454,3.341,19.716
+                                c-0.489-6.556-0.166-13.072,1.251-19.237c1.378-6.165,3.84-11.89,7.132-16.941c3.332-5.041,7.464-9.379,12.125-12.926
+                                c1.729-1.309,6.321-4.475,9.682-6.634c4.924,5.374,9.409,11.021,13.17,17c6.614,10.493,11.265,21.856,13.659,33.443
+                                c2.403,11.607,2.618,23.37,1.104,34.821c-0.752,5.716-4.24,23.82-5.813,29.252l-1.329,4.055H0v7.328h206.395v-7.328H143.709z"
+                              />
+                            </svg>
+                          </div>
                           <div
                             class="font-bold tracking-wide text-xl xl:text-[23px]"
                           >
@@ -2744,7 +2823,7 @@
                           <div
                             class="text-justify text-xs xl:text-sm tracking-wider"
                             :class="screenMode? 'text-slate-500':'text-slate-100'"
-                            style="text-justify: distribute"
+                            style="hyphens: auto; -webkit-hyphens: auto"
                           >
                             Имам 3 месеца опит като а ла карт сервитьор.
                             Задълженията ми бяха сервиране, отсервиране и работа
@@ -2784,17 +2863,26 @@
                     >
                       <!-- Item 1 -->
                       <div
-                        class="hidden duration-700 ease-in-out flex justify-center items-center w-full"
+                        class="duration-700 ease-in-out flex justify-center items-center w-full"
                         data-carousel-item="active"
                       >
                         <div class="-mt-2">
                           <div
-                            class="text-center font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5 md:mb-0"
+                            class="flex justify-center items-center w-full font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5"
                             :class="screenMode? 'text-slate-700':'text-slate-100'"
                           >
-                            <i
-                              class="fa-solid fa-certificate text-[#FAD5A5]"
-                            ></i>
+                            <svg
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              class="w-7 h-7 mr-1 text-[#FAD5A5]"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+
                             Сертификат
                           </div>
                           <div class="flex md:mx-20 lg:mx-36 items-center">
@@ -2806,11 +2894,11 @@
                             <div
                               class="text-slate-700 md:ml-6 tracking-wide text-justify px-16 sm:px-20 md:px-0 text-xs md:text-base"
                               :class="screenMode? 'text-slate-700':'text-slate-100'"
-                              style="text-justify: distribute"
+                              style="hyphens: auto; -webkit-hyphens: auto"
                             >
                               Сертификат за първо място през 2022, "Преглед на
-                              студетската дейност" към катедра "Информатика" с
-                              разработка (Платформа за сранение на цени и
+                              студентската дейност" към катедра "Информатика" с
+                              разработка (Платформа за сравнение на цени и
                               продукти от различни сайтове).
                             </div>
                           </div>
@@ -2818,17 +2906,26 @@
                       </div>
                       <!-- Item 2 -->
                       <div
-                        class="hidden duration-700 ease-in-out flex justify-center items-center w-full"
+                        class="duration-700 ease-in-out flex justify-center items-center w-full"
                         data-carousel-item
                       >
                         <div class="-mt-2">
                           <div
-                            class="text-center font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5 md:mb-0"
+                            class="flex justify-center items-center w-full font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5"
                             :class="screenMode? 'text-slate-700':'text-slate-100'"
                           >
-                            <i
-                              class="fa-solid fa-certificate text-[#FAD5A5]"
-                            ></i>
+                            <svg
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              class="w-7 h-7 mr-1 text-[#FAD5A5]"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+
                             Сертификат
                           </div>
                           <div class="flex md:mx-20 lg:mx-36 items-center">
@@ -2840,7 +2937,7 @@
                             <div
                               class="text-slate-700 md:ml-6 tracking-wide text-justify px-16 sm:px-20 md:px-0 text-xs md:text-base"
                               :class="screenMode? 'text-slate-700':'text-slate-100'"
-                              style="text-justify: distribute"
+                              style="hyphens: auto; -webkit-hyphens: auto"
                             >
                               Сертификат за компютърна грамотност. Изкаран през
                               2018. Обхваща работа с MS Office и уеб базирани
@@ -2851,15 +2948,26 @@
                       </div>
                       <!-- Item 3 -->
                       <div
-                        class="hidden duration-700 ease-in-out flex justify-center items-center w-full"
+                        class="duration-700 ease-in-out flex justify-center items-center w-full"
                         data-carousel-item
                       >
                         <div class="-mt-2">
                           <div
-                            class="text-center font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5 md:mb-0"
+                            class="flex justify-center items-center font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5"
                             :class="screenMode? 'text-slate-700':'text-slate-100'"
                           >
-                            <i class="fa-solid fa-trophy text-[#FFD700]"></i>
+                            <svg
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              class="w-6 h-6 mr-1 text-[#FFD700]"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M5.166 2.621v.858c-1.035.148-2.059.33-3.071.543a.75.75 0 00-.584.859 6.753 6.753 0 006.138 5.6 6.73 6.73 0 002.743 1.346A6.707 6.707 0 019.279 15H8.54c-1.036 0-1.875.84-1.875 1.875V19.5h-.75a2.25 2.25 0 00-2.25 2.25c0 .414.336.75.75.75h15a.75.75 0 00.75-.75 2.25 2.25 0 00-2.25-2.25h-.75v-2.625c0-1.036-.84-1.875-1.875-1.875h-.739a6.706 6.706 0 01-1.112-3.173 6.73 6.73 0 002.743-1.347 6.753 6.753 0 006.139-5.6.75.75 0 00-.585-.858 47.077 47.077 0 00-3.07-.543V2.62a.75.75 0 00-.658-.744 49.22 49.22 0 00-6.093-.377c-2.063 0-4.096.128-6.093.377a.75.75 0 00-.657.744zm0 2.629c0 1.196.312 2.32.857 3.294A5.266 5.266 0 013.16 5.337a45.6 45.6 0 012.006-.343v.256zm13.5 0v-.256c.674.1 1.343.214 2.006.343a5.265 5.265 0 01-2.863 3.207 6.72 6.72 0 00.857-3.294z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+
                             Спортни постижения
                           </div>
                           <div class="flex md:mx-20 lg:mx-36 items-center">
@@ -2871,12 +2979,12 @@
                             <div
                               class="text-slate-700 md:ml-6 tracking-wide text-justify px-16 sm:px-20 md:px-0 text-xs md:text-base"
                               :class="screenMode? 'text-slate-700':'text-slate-100'"
-                              style="text-justify: distribute"
+                              style="hyphens: auto; -webkit-hyphens: auto"
                             >
-                              1 път спотртист на годината на спортно училище
+                              1 път спортист на годината на спортно училище
                               Варна през 2017. 5 пъти отличаван с отбор на
                               годината. 3-то място на Европейско първенство по
-                              хандбалл. Много индивидуални награди и медали от
+                              хандбал. Много индивидуални награди и медали от
                               държавни първенства.
                             </div>
                           </div>
@@ -2884,15 +2992,30 @@
                       </div>
                       <!-- Item 4 -->
                       <div
-                        class="hidden duration-700 ease-in-out flex justify-center items-center w-full"
+                        class="duration-700 ease-in-out flex justify-center items-center w-full"
                         data-carousel-item
                       >
                         <div class="-mt-2">
                           <div
-                            class="text-center font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5 md:mb-0"
+                            class="flex justify-center items-center font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5"
                             :class="screenMode? 'text-slate-700':'text-slate-100'"
                           >
-                            <i class="fa-solid fa-graduation-cap"></i>
+                            <svg
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              class="w-7 h-7 mr-1 text-slate-600"
+                            >
+                              <path
+                                d="M11.7 2.805a.75.75 0 01.6 0A60.65 60.65 0 0122.83 8.72a.75.75 0 01-.231 1.337 49.949 49.949 0 00-9.902 3.912l-.003.002-.34.18a.75.75 0 01-.707 0A50.009 50.009 0 007.5 12.174v-.224c0-.131.067-.248.172-.311a54.614 54.614 0 014.653-2.52.75.75 0 00-.65-1.352 56.129 56.129 0 00-4.78 2.589 1.858 1.858 0 00-.859 1.228 49.803 49.803 0 00-4.634-1.527.75.75 0 01-.231-1.337A60.653 60.653 0 0111.7 2.805z"
+                              />
+                              <path
+                                d="M13.06 15.473a48.45 48.45 0 017.666-3.282c.134 1.414.22 2.843.255 4.285a.75.75 0 01-.46.71 47.878 47.878 0 00-8.105 4.342.75.75 0 01-.832 0 47.877 47.877 0 00-8.104-4.342.75.75 0 01-.461-.71c.035-1.442.121-2.87.255-4.286A48.4 48.4 0 016 13.18v1.27a1.5 1.5 0 00-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.661a6.729 6.729 0 00.551-1.608 1.5 1.5 0 00.14-2.67v-.645a48.549 48.549 0 013.44 1.668 2.25 2.25 0 002.12 0z"
+                              />
+                              <path
+                                d="M4.462 19.462c.42-.419.753-.89 1-1.394.453.213.902.434 1.347.661a6.743 6.743 0 01-1.286 1.794.75.75 0 11-1.06-1.06z"
+                              />
+                            </svg>
+
                             Курс
                           </div>
                           <div class="flex md:mx-20 lg:mx-36 items-center">
@@ -2904,7 +3027,7 @@
                             <div
                               class="text-slate-700 md:ml-6 tracking-wide text-justify px-16 sm:px-20 md:px-0 text-xs md:text-base"
                               :class="screenMode? 'text-slate-700':'text-slate-100'"
-                              style="text-justify: distribute"
+                              style="hyphens: auto; -webkit-hyphens: auto"
                             >
                               Част от IT Master Class 9. Университета ни
                               позволява да станем част от компаниите в IT
@@ -2915,15 +3038,29 @@
                       </div>
                       <!-- Item 5 -->
                       <div
-                        class="hidden duration-700 ease-in-out flex justify-center items-center w-full"
+                        class="duration-700 ease-in-out flex justify-center items-center w-full"
                         data-carousel-item
                       >
                         <div class="-mt-2">
                           <div
-                            class="text-center font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5 md:mb-0"
+                            class="flex justify-center items-center font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5"
                             :class="screenMode? 'text-slate-700':'text-slate-100'"
                           >
-                            <i class="fa-solid fa-book text-[#007ced]"></i>
+                            <svg
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              class="w-7 h-7 text-blue-500"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0016.5 9h-1.875a1.875 1.875 0 01-1.875-1.875V5.25A3.75 3.75 0 009 1.5H5.625zM7.5 15a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5A.75.75 0 017.5 15zm.75 2.25a.75.75 0 000 1.5H12a.75.75 0 000-1.5H8.25z"
+                                clip-rule="evenodd"
+                              />
+                              <path
+                                d="M12.971 1.816A5.23 5.23 0 0114.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 013.434 1.279 9.768 9.768 0 00-6.963-6.963z"
+                              />
+                            </svg>
+
                             Научна публикация
                           </div>
                           <div class="flex md:mx-20 lg:mx-36 items-center">
@@ -2935,7 +3072,7 @@
                             <div
                               class="text-slate-700 md:ml-6 tracking-wide text-justify px-16 sm:px-20 md:px-0 text-xs md:text-base"
                               :class="screenMode? 'text-slate-700':'text-slate-100'"
-                              style="text-justify: distribute"
+                              style="hyphens: auto; -webkit-hyphens: auto"
                             >
                               Научна публикация в сборник "Студентска научна
                               конференция" с тема "Развитие на уеб платформите
@@ -2948,17 +3085,26 @@
                       </div>
                       <!-- Item 6 -->
                       <div
-                        class="hidden duration-700 ease-in-out flex justify-center items-center w-full"
+                        class="duration-700 ease-in-out flex justify-center items-center w-full"
                         data-carousel-item
                       >
                         <div class="-mt-2">
                           <div
-                            class="text-center font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5 md:mb-0"
+                            class="flex justify-center items-center w-full font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5"
                             :class="screenMode? 'text-slate-700':'text-slate-100'"
                           >
-                            <i
-                              class="fa-solid fa-certificate text-[#FAD5A5]"
-                            ></i>
+                            <svg
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              class="w-7 h-7 mr-1 text-[#FAD5A5]"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+
                             Сертификат
                           </div>
                           <div class="flex md:mx-20 lg:mx-36 items-center">
@@ -2970,28 +3116,37 @@
                             <div
                               class="text-slate-700 md:ml-6 tracking-wide text-justify px-16 sm:px-20 md:px-0 text-xs md:text-base"
                               :class="screenMode? 'text-slate-700':'text-slate-100'"
-                              style="text-justify: distribute"
+                              style="hyphens: auto; -webkit-hyphens: auto"
                             >
-                              Сертификат за упешно преминат курс по Microsoft
-                              Azure Claud (fundamental). Курса включва работа с
-                              Databricks, Data Factory, Key Vault, Cntainers.
+                              Сертификат за успешно преминат курс по Microsoft
+                              Azure Cloud (fundamental). Курса включва работа с
+                              Databricks, Data Factory, Key Vault, Containers.
                             </div>
                           </div>
                         </div>
                       </div>
                       <div
                         id="projects"
-                        class="hidden duration-700 ease-in-out flex justify-center items-center w-full"
+                        class="duration-700 ease-in-out flex justify-center items-center w-full"
                         data-carousel-item
                       >
                         <div class="-mt-2">
                           <div
-                            class="text-center font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5 md:mb-0"
+                            class="flex justify-center items-center w-full font-bold text-lg sm:text-xl md:text-2xl mb-1.5 md:mb-2.5"
                             :class="screenMode? 'text-slate-700':'text-slate-100'"
                           >
-                            <i
-                              class="fa-solid fa-certificate text-[#FAD5A5]"
-                            ></i>
+                            <svg
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              class="w-7 h-7 mr-1 text-[#FAD5A5]"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+
                             Сертификат
                           </div>
                           <div class="flex md:mx-20 lg:mx-36 items-center">
@@ -3003,10 +3158,10 @@
                             <div
                               class="text-slate-700 md:ml-6 tracking-wide text-justify px-16 sm:px-20 md:px-0 text-xs md:text-base"
                               :class="screenMode? 'text-slate-700':'text-slate-100'"
-                              style="text-justify: distribute"
+                              style="hyphens: auto; -webkit-hyphens: auto"
                             >
-                              Сертификат за упешно преминат курс по Scaled Agile
-                              (SAFe methodology). Темите на курса обхващат
+                              Сертификат за успешно преминат курс по Scaled
+                              Agile (SAFe methodology). Темите на курса обхващат
                               Предимства от използването на SAFe, SAFe принципи,
                               SAFe и Agile.
                             </div>
@@ -3016,7 +3171,7 @@
                     </div>
                     <!-- Slider indicators -->
                     <div
-                      class="hidden md:block absolute z-30 flex space-x-3 -translate-x-1/2 bottom-4 left-1/2"
+                      class="hidden md:flex absolute z-30 space-x-3 -translate-x-1/2 bottom-4 left-1/2"
                     >
                       <button
                         type="button"
@@ -3077,7 +3232,6 @@
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             stroke-linecap="round"
@@ -3103,7 +3257,6 @@
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             stroke-linecap="round"
@@ -3142,11 +3295,10 @@
                       style="box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3)"
                     >
                       <div
-                        class="rounded-full flex justify-center items-center mx-auto my-auto shadow w-40 h-40 grid place-items-cente shadow-2xl"
+                        class="rounded-full flex justify-center items-center mx-auto my-auto w-40 h-40 shadow"
                         :class="screenMode? 'bg-blue-100 border border-blue-200':'bg-blue-200 border border-blue-300'"
                       >
                         <svg
-                          xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke-width="1.5"
@@ -3218,12 +3370,12 @@
                         <p
                           class="text-sm lg:text-base text-justify sm:text-left"
                           :class="screenMode? 'text-gray-500':'text-gray-400'"
-                          style="text-justify: distribute"
+                          style="hyphens: auto; -webkit-hyphens: auto"
                         >
                           Платформа за сравняване на цени и продукти от различни
                           сайтове. С развитието на е-търговията, онлайн
-                          пространството се заплъни с много информация. Това
-                          доведе нуждата от плаформите за сравнение на продукти
+                          пространството се запълни с много информация. Това
+                          доведе нуждата от платформите за сравнение на продукти
                           и услуги.....
                         </p>
 
@@ -3259,7 +3411,6 @@
                                 class="w-5 h-5"
                                 fill="currentColor"
                                 viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   fill-rule="evenodd"
@@ -3277,7 +3428,7 @@
                             >
                               <div>
                                 <ul
-                                  class="flex -mb-px text-sm font-medium text-center justify-between rounded-lg bg-slate-50 mx-1 md:mx-5 mt-2 px-3 md:px-4 py-1.5"
+                                  class="flex text-sm font-medium text-center justify-between rounded-lg bg-slate-50 mx-1 md:mx-5 mt-2 px-0.5 md:px-4 py-1.5"
                                   data-tabs-toggle="#project1Tabs"
                                 >
                                   <li class="mr-2">
@@ -3289,13 +3440,12 @@
                                       checked
                                     />
                                     <label
-                                      class="rounded-lg flex items-center py-1.5 px-2 md:py-2.5 md:px-3.5 peer-checked:bg-white peer-checked:border font-semibold peer-checked:border-slate-100 peer-checked:shadow-xl font-medium peer-checked text-blue-700 cursor-pointer"
+                                      class="rounded-lg flex items-center py-1.5 px-2 md:py-2.5 md:px-3.5 peer-checked:bg-white peer-checked:border font-semibold peer-checked:border-slate-100 peer-checked:shadow-xl peer-checked text-blue-700 cursor-pointer"
                                       data-tabs-target="#informationTab1"
                                       role="tab"
                                       for="information1"
                                     >
                                       <svg
-                                        xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke-width="1.5"
@@ -3325,7 +3475,6 @@
                                       for="technologies1"
                                     >
                                       <svg
-                                        xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke-width="1.5"
@@ -3360,7 +3509,6 @@
                                       for="gallery1"
                                     >
                                       <svg
-                                        xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke-width="1.5"
@@ -3382,26 +3530,32 @@
                                 <div id="informationTab1" class="hidden p-4">
                                   <p
                                     class="text-sm text-gray-500 text-justify px-2 indent-4 tracking-wide"
-                                    style="text-justify: distribute"
+                                    style="hyphens: auto; -webkit-hyphens: auto"
                                   >
                                     Платформа за сравняване на цени и продукти
                                     от различни сайтове. С развитието на
                                     е-търговията, онлайн пространството се
-                                    заплъни с много информация. Това доведе
-                                    нуждата от плаформите за сравнение на
+                                    запълни с много информация. Това доведе
+                                    нуждата от платформите за сравнение на
                                     продукти и услуги. Идеята на цялата
-                                    разработка е да улсени потребителския избор
-                                    и да намали врмето за търсене и целия процес
-                                    да е бърз и ефективен.
+                                    разработка е да улесни потребителския избор
+                                    и да намали времето за търсене и целия
+                                    процес да е бърз и ефективен.
                                   </p>
                                   <a
                                     href="https://github.com/webDevVarna/webPlatformForPriceComparing"
                                     target="_blank"
                                     class="inline-flex justify-center items-center transition-all ml-2 mt-3 py-1 px-3.5 text-base font-medium text-gray-500 bg-gray-100 rounded-lg hover:text-gray-900 hover:bg-gray-200"
                                   >
-                                    <i
-                                      class="fa-brands fa-github text-slate-700 mr-1.5"
-                                    ></i>
+                                    <svg
+                                      fill="currentColor"
+                                      viewBox="0 0 32 32"
+                                      class="w-5 h-5 mr-1.5"
+                                    >
+                                      <path
+                                        d="M16 0.396c-8.839 0-16 7.167-16 16 0 7.073 4.584 13.068 10.937 15.183 0.803 0.151 1.093-0.344 1.093-0.772 0-0.38-0.009-1.385-0.015-2.719-4.453 0.964-5.391-2.151-5.391-2.151-0.729-1.844-1.781-2.339-1.781-2.339-1.448-0.989 0.115-0.968 0.115-0.968 1.604 0.109 2.448 1.645 2.448 1.645 1.427 2.448 3.744 1.74 4.661 1.328 0.14-1.031 0.557-1.74 1.011-2.135-3.552-0.401-7.287-1.776-7.287-7.907 0-1.751 0.62-3.177 1.645-4.297-0.177-0.401-0.719-2.031 0.141-4.235 0 0 1.339-0.427 4.4 1.641 1.281-0.355 2.641-0.532 4-0.541 1.36 0.009 2.719 0.187 4 0.541 3.043-2.068 4.381-1.641 4.381-1.641 0.859 2.204 0.317 3.833 0.161 4.235 1.015 1.12 1.635 2.547 1.635 4.297 0 6.145-3.74 7.5-7.296 7.891 0.556 0.479 1.077 1.464 1.077 2.959 0 2.14-0.020 3.864-0.020 4.385 0 0.416 0.28 0.916 1.104 0.755 6.4-2.093 10.979-8.093 10.979-15.156 0-8.833-7.161-16-16-16z"
+                                      />
+                                    </svg>
                                     <span class="w-full text-sm md:text-base">
                                       Линк към проекта в GitHub
                                     </span>
@@ -3410,7 +3564,6 @@
                                       class="ml-1 md:ml-1.5 w-6 h-6 mt-0.5"
                                       fill="currentColor"
                                       viewBox="0 0 20 20"
-                                      xmlns="http://www.w3.org/2000/svg"
                                     >
                                       <path
                                         fill-rule="evenodd"
@@ -3630,11 +3783,10 @@
                       style="box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3)"
                     >
                       <div
-                        class="rounded-full flex justify-center items-center mx-auto my-auto shadow w-40 h-40 grid place-items-cente border shadow-2xl"
+                        class="rounded-full flex justify-center items-center mx-auto my-auto w-40 h-40 border shadow"
                         :class="screenMode? 'bg-indigo-100 border-indigo-200':'bg-indigo-200 border-indigo-300'"
                       >
                         <svg
-                          xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke-width="1.5"
@@ -3718,9 +3870,9 @@
                         <p
                           class="text-sm lg:text-base text-justify sm:text-left"
                           :class="screenMode? 'text-gray-500':'text-gray-400'"
-                          style="text-justify: distribute"
+                          style="hyphens: auto; -webkit-hyphens: auto"
                         >
-                          Уеб базирана систма за управление на работния процес.
+                          Уеб базирана система за управление на работния процес.
                           Предвидено е всеки потребител през сайта да може да
                           направи заявка/поръчка за някакъв вид услуга. След
                           това администратор ще отработи тяхната поръчка, през
@@ -3758,7 +3910,6 @@
                                 class="w-5 h-5"
                                 fill="currentColor"
                                 viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   fill-rule="evenodd"
@@ -3776,7 +3927,7 @@
                             >
                               <div>
                                 <ul
-                                  class="flex -mb-px text-sm font-medium text-center justify-between rounded-lg bg-slate-50 mx-1 md:mx-5 mt-2 px-3 md:px-4 py-1.5"
+                                  class="flex text-sm font-medium text-center justify-between rounded-lg bg-slate-50 mx-1 md:mx-5 mt-2 px-0.5 md:px-4 py-1.5"
                                   data-tabs-toggle="#project2Tabs"
                                 >
                                   <li class="mr-2">
@@ -3788,13 +3939,12 @@
                                       checked
                                     />
                                     <label
-                                      class="rounded-lg flex items-center py-1.5 px-2 md:py-2.5 md:px-3.5 peer-checked:bg-white peer-checked:border font-semibold peer-checked:border-slate-100 peer-checked:shadow-xl font-medium peer-checked text-blue-700 cursor-pointer"
+                                      class="rounded-lg flex items-center py-1.5 px-2 md:py-2.5 md:px-3.5 peer-checked:bg-white peer-checked:border font-semibold peer-checked:border-slate-100 peer-checked:shadow-xl peer-checked text-blue-700 cursor-pointer"
                                       data-tabs-target="#informationTab"
                                       role="tab"
                                       for="information"
                                     >
                                       <svg
-                                        xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke-width="1.5"
@@ -3824,7 +3974,6 @@
                                       for="technologies"
                                     >
                                       <svg
-                                        xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke-width="1.5"
@@ -3859,7 +4008,6 @@
                                       for="gallery"
                                     >
                                       <svg
-                                        xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke-width="1.5"
@@ -3881,9 +4029,9 @@
                                 <div id="informationTab" class="hidden p-4">
                                   <p
                                     class="text-sm text-gray-500 text-justify px-2 indent-4 tracking-wide"
-                                    style="text-justify: distribute"
+                                    style="hyphens: auto; -webkit-hyphens: auto"
                                   >
-                                    Уеб базирана систма за управление на
+                                    Уеб базирана система за управление на
                                     работния процес. Предвидено е всеки
                                     потребител през сайта да може да направи
                                     заявка/поръчка за някакъв вид услуга. След
@@ -3900,9 +4048,15 @@
                                     target="_blank"
                                     class="inline-flex justify-center items-center transition-all ml-2 mt-3 py-1 px-3.5 text-base font-medium text-gray-500 bg-gray-100 rounded-lg hover:text-gray-900 hover:bg-gray-200"
                                   >
-                                    <i
-                                      class="fa-brands fa-github text-slate-700 mr-1.5"
-                                    ></i>
+                                    <svg
+                                      fill="currentColor"
+                                      viewBox="0 0 32 32"
+                                      class="w-5 h-5 mr-1.5"
+                                    >
+                                      <path
+                                        d="M16 0.396c-8.839 0-16 7.167-16 16 0 7.073 4.584 13.068 10.937 15.183 0.803 0.151 1.093-0.344 1.093-0.772 0-0.38-0.009-1.385-0.015-2.719-4.453 0.964-5.391-2.151-5.391-2.151-0.729-1.844-1.781-2.339-1.781-2.339-1.448-0.989 0.115-0.968 0.115-0.968 1.604 0.109 2.448 1.645 2.448 1.645 1.427 2.448 3.744 1.74 4.661 1.328 0.14-1.031 0.557-1.74 1.011-2.135-3.552-0.401-7.287-1.776-7.287-7.907 0-1.751 0.62-3.177 1.645-4.297-0.177-0.401-0.719-2.031 0.141-4.235 0 0 1.339-0.427 4.4 1.641 1.281-0.355 2.641-0.532 4-0.541 1.36 0.009 2.719 0.187 4 0.541 3.043-2.068 4.381-1.641 4.381-1.641 0.859 2.204 0.317 3.833 0.161 4.235 1.015 1.12 1.635 2.547 1.635 4.297 0 6.145-3.74 7.5-7.296 7.891 0.556 0.479 1.077 1.464 1.077 2.959 0 2.14-0.020 3.864-0.020 4.385 0 0.416 0.28 0.916 1.104 0.755 6.4-2.093 10.979-8.093 10.979-15.156 0-8.833-7.161-16-16-16z"
+                                      />
+                                    </svg>
                                     <span class="w-full text-sm md:text-base">
                                       Линк към проекта в GitHub
                                     </span>
@@ -3911,7 +4065,6 @@
                                       class="ml-1 md:ml-1.5 w-6 h-6 mt-0.5"
                                       fill="currentColor"
                                       viewBox="0 0 20 20"
-                                      xmlns="http://www.w3.org/2000/svg"
                                     >
                                       <path
                                         fill-rule="evenodd"
@@ -4175,11 +4328,10 @@
                       style="box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3)"
                     >
                       <div
-                        class="rounded-full flex justify-center items-center mx-auto my-auto shadow w-40 h-40 bg-white grid place-items-cente border shadow-2xl"
+                        class="rounded-full flex justify-center items-center mx-auto my-auto w-40 h-40 bg-white border shadow"
                         :class="screenMode? 'bg-purple-100 border-purple-200':'bg-purple-200 border-purple-300'"
                       >
                         <svg
-                          xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke-width="1.5"
@@ -4226,7 +4378,7 @@
                         <p
                           class="text-sm lg:text-base text-justify sm:text-left"
                           :class="screenMode? 'text-gray-500':'text-gray-400'"
-                          style="text-justify: distribute"
+                          style="hyphens: auto; -webkit-hyphens: auto"
                         >
                           Система позволява на потребителите вписване в
                           системата и много функционални възможности. Основни
@@ -4265,7 +4417,6 @@
                                 class="w-5 h-5"
                                 fill="currentColor"
                                 viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   fill-rule="evenodd"
@@ -4283,7 +4434,7 @@
                             >
                               <div>
                                 <ul
-                                  class="flex -mb-px text-sm font-medium text-center justify-between rounded-lg bg-slate-50 mx-1 md:mx-5 mt-2 px-3 md:px-4 py-1.5"
+                                  class="flex text-sm font-medium text-center justify-between rounded-lg bg-slate-50 mx-1 md:mx-5 mt-2 px-0.5 md:px-4 py-1.5"
                                   data-tabs-toggle="#project3Tabs"
                                 >
                                   <li class="mr-2">
@@ -4295,13 +4446,12 @@
                                       checked
                                     />
                                     <label
-                                      class="rounded-lg flex items-center py-1.5 px-2 md:py-2.5 md:px-3.5 peer-checked:bg-white peer-checked:border font-semibold peer-checked:border-slate-100 peer-checked:shadow-xl font-medium peer-checked text-blue-700 cursor-pointer"
+                                      class="rounded-lg flex items-center py-1.5 px-2 md:py-2.5 md:px-3.5 peer-checked:bg-white peer-checked:border font-semibold peer-checked:border-slate-100 peer-checked:shadow-xl peer-checked text-blue-700 cursor-pointer"
                                       data-tabs-target="#informationTab2"
                                       role="tab"
                                       for="information2"
                                     >
                                       <svg
-                                        xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke-width="1.5"
@@ -4331,7 +4481,6 @@
                                       for="technologies2"
                                     >
                                       <svg
-                                        xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke-width="1.5"
@@ -4367,7 +4516,6 @@
                                       for="gallery2"
                                     >
                                       <svg
-                                        xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke-width="1.5"
@@ -4389,7 +4537,7 @@
                                 <div id="informationTab2" class="hidden p-4">
                                   <p
                                     class="text-sm text-gray-500 text-justify px-2 indent-4 tracking-wide"
-                                    style="text-justify: distribute"
+                                    style="hyphens: auto; -webkit-hyphens: auto"
                                   >
                                     Система позволява на потребителите вписване
                                     в системата и много функционални
@@ -4404,9 +4552,15 @@
                                     target="_blank"
                                     class="inline-flex justify-center items-center ml-2 transition-all mt-3 py-1 px-3.5 text-base font-medium text-gray-500 bg-gray-100 rounded-lg hover:text-gray-900 hover:bg-gray-200"
                                   >
-                                    <i
-                                      class="fa-brands fa-github text-slate-700 mr-1.5"
-                                    ></i>
+                                    <svg
+                                      fill="currentColor"
+                                      viewBox="0 0 32 32"
+                                      class="w-5 h-5 mr-1.5"
+                                    >
+                                      <path
+                                        d="M16 0.396c-8.839 0-16 7.167-16 16 0 7.073 4.584 13.068 10.937 15.183 0.803 0.151 1.093-0.344 1.093-0.772 0-0.38-0.009-1.385-0.015-2.719-4.453 0.964-5.391-2.151-5.391-2.151-0.729-1.844-1.781-2.339-1.781-2.339-1.448-0.989 0.115-0.968 0.115-0.968 1.604 0.109 2.448 1.645 2.448 1.645 1.427 2.448 3.744 1.74 4.661 1.328 0.14-1.031 0.557-1.74 1.011-2.135-3.552-0.401-7.287-1.776-7.287-7.907 0-1.751 0.62-3.177 1.645-4.297-0.177-0.401-0.719-2.031 0.141-4.235 0 0 1.339-0.427 4.4 1.641 1.281-0.355 2.641-0.532 4-0.541 1.36 0.009 2.719 0.187 4 0.541 3.043-2.068 4.381-1.641 4.381-1.641 0.859 2.204 0.317 3.833 0.161 4.235 1.015 1.12 1.635 2.547 1.635 4.297 0 6.145-3.74 7.5-7.296 7.891 0.556 0.479 1.077 1.464 1.077 2.959 0 2.14-0.020 3.864-0.020 4.385 0 0.416 0.28 0.916 1.104 0.755 6.4-2.093 10.979-8.093 10.979-15.156 0-8.833-7.161-16-16-16z"
+                                      />
+                                    </svg>
                                     <span class="w-full text-sm md:text-base">
                                       Линк към проекта в GitHub
                                     </span>
@@ -4415,7 +4569,6 @@
                                       class="ml-1 md:ml-1.5 w-6 h-6 mt-0.5"
                                       fill="currentColor"
                                       viewBox="0 0 20 20"
-                                      xmlns="http://www.w3.org/2000/svg"
                                     >
                                       <path
                                         fill-rule="evenodd"
@@ -4498,11 +4651,10 @@
                       style="box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3)"
                     >
                       <div
-                        class="rounded-full flex justify-center items-center mx-auto my-auto shadow w-40 h-40 bg-white grid place-items-cente border shadow-2xl"
+                        class="rounded-full flex justify-center items-center mx-auto my-auto w-40 h-40 bg-white border shadow"
                         :class="screenMode? 'bg-pink-100 border-pink-200':'bg-pink-200 border-pink-300'"
                       >
                         <svg
-                          xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke-width="1.5"
@@ -4550,7 +4702,7 @@
                         <p
                           class="text-sm lg:text-base text-justify sm:text-left"
                           :class="screenMode? 'text-gray-500':'text-gray-400'"
-                          style="text-justify: distribute"
+                          style="hyphens: auto; -webkit-hyphens: auto"
                         >
                           Система позволява на потребителите вписване в
                           системата и много функционални възможности. Основни
@@ -4590,7 +4742,6 @@
                                 class="w-5 h-5"
                                 fill="currentColor"
                                 viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
                                   fill-rule="evenodd"
@@ -4608,7 +4759,7 @@
                             >
                               <div>
                                 <ul
-                                  class="flex text-sm font-medium text-center justify-between rounded-lg bg-slate-50 mx-1 md:mx-5 mt-2 px-3 md:px-4 py-1.5"
+                                  class="flex text-sm font-medium text-center justify-between rounded-lg bg-slate-50 mx-1 md:mx-5 mt-2 px-0.5 md:px-4 py-1.5"
                                   data-tabs-toggle="#project4Tabs"
                                 >
                                   <li class="mr-2">
@@ -4620,13 +4771,12 @@
                                       checked
                                     />
                                     <label
-                                      class="rounded-lg flex items-center py-1.5 px-2 md:py-2.5 md:px-3.5 peer-checked:bg-white peer-checked:border font-semibold peer-checked:border-slate-100 peer-checked:shadow-xl font-medium peer-checked text-blue-700 cursor-pointer"
+                                      class="rounded-lg flex items-center py-1.5 px-2 md:py-2.5 md:px-3.5 peer-checked:bg-white peer-checked:border peer-checked:border-slate-100 peer-checked:shadow-xl font-medium peer-checked text-blue-700 cursor-pointer"
                                       data-tabs-target="#informationTab3"
                                       role="tab"
                                       for="information3"
                                     >
                                       <svg
-                                        xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke-width="1.5"
@@ -4656,7 +4806,6 @@
                                       for="technologies3"
                                     >
                                       <svg
-                                        xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke-width="1.5"
@@ -4691,7 +4840,6 @@
                                       for="gallery3"
                                     >
                                       <svg
-                                        xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke-width="1.5"
@@ -4713,7 +4861,7 @@
                                 <div id="informationTab3" class="hidden p-4">
                                   <p
                                     class="text-sm text-gray-500 text-justify px-2 indent-4 tracking-wide"
-                                    style="text-justify: distribute"
+                                    style="hyphens: auto; -webkit-hyphens: auto"
                                   >
                                     Система позволява на потребителите вписване
                                     в системата и много функционални
@@ -4739,7 +4887,6 @@
                                       class="ml-1 md:ml-1.5 w-6 h-6 mt-0.5"
                                       fill="currentColor"
                                       viewBox="0 0 20 20"
-                                      xmlns="http://www.w3.org/2000/svg"
                                     >
                                       <path
                                         fill-rule="evenodd"
@@ -4849,48 +4996,76 @@
                   <div class="flex items-center gap-4 flex-wrap">
                     <a
                       target="_blank"
-                      class="group hover:scale-110 transition-all duration-500"
+                      class="group flex items-center hover:scale-110 transition-all duration-500"
                       href="https://www.facebook.com/ersin.mehmed/"
                     >
-                      <i
-                        class="fa-brands fa-facebook-f group-hover:text-blue-600"
-                        :class="screenMode? 'text-[#3b5998]':'text-slate-100'"
-                      ></i>
+                      <svg
+                        fill="currentColor"
+                        viewBox="0 0 310 310"
+                        class="w-4 h-4 mr-[1px] text-[#3b5998]"
+                        :class="screenMode? 'text-[#3b5998] group-hover:text-blue-600':'text-slate-100 group-hover:text-blue-500'"
+                      >
+                        <path
+                          id="XMLID_835_"
+                          d="M81.703,165.106h33.981V305c0,2.762,2.238,5,5,5h57.616c2.762,0,5-2.238,5-5V165.765h39.064
+                          c2.54,0,4.677-1.906,4.967-4.429l5.933-51.502c0.163-1.417-0.286-2.836-1.234-3.899c-0.949-1.064-2.307-1.673-3.732-1.673h-44.996
+                          V71.978c0-9.732,5.24-14.667,15.576-14.667c1.473,0,29.42,0,29.42,0c2.762,0,5-2.239,5-5V5.037c0-2.762-2.238-5-5-5h-40.545
+                          C187.467,0.023,186.832,0,185.896,0c-7.035,0-31.488,1.381-50.804,19.151c-21.402,19.692-18.427,43.27-17.716,47.358v37.752H81.703
+                          c-2.762,0-5,2.238-5,5v50.844C76.703,162.867,78.941,165.106,81.703,165.106z"
+                        />
+                      </svg>
                       <span
-                        class="group-hover:text-blue-600"
-                        :class="screenMode? 'text-slate-700':'text-slate-100'"
+                        :class="screenMode? 'text-slate-700 group-hover:text-blue-600':'text-slate-100 group-hover:text-blue-500'"
                       >
                         Facebook
                       </span>
                     </a>
                     <a
                       target="_blank"
-                      class="group hover:scale-110 transition-all duration-500"
+                      class="group flex items-center hover:scale-110 transition-all duration-500"
                       href="https://www.linkedin.com/in/ersin-hyusein-72a184241/"
                     >
-                      <i
-                        class="fa-brands fa-linkedin group-hover:text-blue-600"
-                        :class="screenMode? 'text-[#0a66c2]':'text-slate-100'"
-                      ></i>
+                      <svg
+                        fill="currentColor"
+                        viewBox="0 0 382 382"
+                        class="w-4 h-4 mr-[3px] text-[#0a66c2]"
+                        :class="screenMode? 'text-[#0a66c2] group-hover:text-blue-600':'text-slate-100 group-hover:text-blue-500'"
+                      >
+                        <path
+                          d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889
+                          C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056
+                          H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806
+                          c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1
+                          s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73
+                          c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079
+                          c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426
+                          c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472
+                          L341.91,330.654L341.91,330.654z"
+                        />
+                      </svg>
                       <span
-                        class="group-hover:text-blue-600"
-                        :class="screenMode? 'text-slate-700':'text-slate-100 '"
+                        :class="screenMode? 'text-slate-700 group-hover:text-blue-600':'text-slate-100 group-hover:text-blue-500'"
                       >
                         LinkedIn
                       </span>
                     </a>
                     <a
                       target="_blank"
-                      class="group hover:scale-110 transition-all duration-500"
+                      class="group flex items-center hover:scale-110 transition-all duration-500"
                       href="https://github.com/ErsinMehmed"
                     >
-                      <i
-                        class="fa-brands fa-github group-hover:text-blue-600"
-                        :class="screenMode? '':'text-slate-100'"
-                      ></i>
+                      <svg
+                        fill="currentColor"
+                        viewBox="0 0 32 32"
+                        class="w-[18px] h-[18px] mr-1"
+                        :class="screenMode? '':'text-slate-100 group-hover:text-blue-500'"
+                      >
+                        <path
+                          d="M16 0.396c-8.839 0-16 7.167-16 16 0 7.073 4.584 13.068 10.937 15.183 0.803 0.151 1.093-0.344 1.093-0.772 0-0.38-0.009-1.385-0.015-2.719-4.453 0.964-5.391-2.151-5.391-2.151-0.729-1.844-1.781-2.339-1.781-2.339-1.448-0.989 0.115-0.968 0.115-0.968 1.604 0.109 2.448 1.645 2.448 1.645 1.427 2.448 3.744 1.74 4.661 1.328 0.14-1.031 0.557-1.74 1.011-2.135-3.552-0.401-7.287-1.776-7.287-7.907 0-1.751 0.62-3.177 1.645-4.297-0.177-0.401-0.719-2.031 0.141-4.235 0 0 1.339-0.427 4.4 1.641 1.281-0.355 2.641-0.532 4-0.541 1.36 0.009 2.719 0.187 4 0.541 3.043-2.068 4.381-1.641 4.381-1.641 0.859 2.204 0.317 3.833 0.161 4.235 1.015 1.12 1.635 2.547 1.635 4.297 0 6.145-3.74 7.5-7.296 7.891 0.556 0.479 1.077 1.464 1.077 2.959 0 2.14-0.020 3.864-0.020 4.385 0 0.416 0.28 0.916 1.104 0.755 6.4-2.093 10.979-8.093 10.979-15.156 0-8.833-7.161-16-16-16z"
+                        />
+                      </svg>
                       <span
-                        class="group-hover:text-blue-600"
-                        :class="screenMode? 'text-slate-700':'text-slate-100'"
+                        :class="screenMode? 'text-slate-700 group-hover:text-blue-600':'text-slate-100 group-hover:text-blue-500'"
                       >
                         GitHub
                       </span>
